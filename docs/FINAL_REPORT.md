@@ -167,3 +167,30 @@ GitHub inspection layer added:
 
 Documentation QA: every ID token in the generated index resolves to a real
 entity in the canonical JSON; batch records all present.
+
+---
+
+## Addendum — Phase 6 run
+
+Batches 011–016 built, deliberately spanning 6 distinct domains (no
+more Algebra tunneling):
+
+- 011 Number & Numeration: fraction/decimal operations + percentages
+- 012 Geometry: parallel-line angles + triangle angle properties
+- 013 Coordinate Geometry: gradient of a line segment
+- 014 Trigonometry: ratios of acute angles
+- 015 Statistics: mean of ungrouped data
+- 016 Calculus: differentiation of explicit algebraic functions
+
+Graph state: 97 entities (22 KCs all ACCEPTED, 22 TMs, 35 Methods,
+17 Items, 1 Misconception), 146 Claims, 144 Evidence items, 18 Sources.
+Canonical `examples/math_cdg_v2.json`; export_view 97 nodes / ~146 edges.
+Store validation: []. pytest: **72 passed**. Coverage ledger now shows
+every domain at least REPRESENTED (Algebra, Number & Numeration,
+Geometry, Coordinate Geometry, Trigonometry, Calculus, Statistics &
+Probability, Functions).
+
+Anti-coverage checks throughout: duplicate-KC scan, prerequisite
+auditor found zero direction/scope errors, no equivalence relations,
+no manufactured review events; the two accept events in each batch are
+backed by a recorded HUMAN review Activity.
