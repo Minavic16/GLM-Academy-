@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 14
-- TaskModels: 14
-- Methods: 26
-- Items: 11
+- Knowledge Components: 22
+- TaskModels: 22
+- Methods: 35
+- Items: 17
 - Misconceptions: 1
-- Claims: 105
-- Evidence records: 103
-- Sources: 14
-- Activities: 30
+- Claims: 146
+- Evidence records: 144
+- Sources: 18
+- Activities: 48
 - Agents: 2
-- Exported nodes: 66
-- Exported edges: 105
-- Accepted Claims: 103; PROPOSED Claims: 2
+- Exported nodes: 97
+- Exported edges: 146
+- Accepted Claims: 144; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -26,17 +26,25 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.algebraic_expressions` | Algebraic expressions: terms, coefficients, like terms, substitution | Algebra | ACCEPTED | tm.handle_algebraic_expressions |
 | `kc.change_of_subject` | Change of subject of a formula/relation | Algebra | ACCEPTED | tm.make_subject |
 | `kc.completing_the_square` | Completing the square | Algebra | ACCEPTED | tm.complete_square |
+| `kc.differentiation_algebraic` | Differentiation of explicit algebraic functions | Calculus | ACCEPTED | tm.differentiate_explicit |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
+| `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
 | `kc.function_concept` | Function concept and notation | Functions | ACCEPTED | tm.evaluate_and_represent_function |
+| `kc.gradient` | Gradient of a line segment | Coordinate Geometry | ACCEPTED | tm.compute_gradient |
 | `kc.integer_arithmetic` | Signed-number (integer) arithmetic | Number & Numeration | ACCEPTED | tm.signed_number_arithmetic |
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
+| `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
+| `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
+| `kc.percentage_concept` | Percentages | Number & Numeration | ACCEPTED | tm.percentage_problems |
 | `kc.quadratic_by_factorisation` | Solving quadratic equations by factorisation | Algebra | ACCEPTED | tm.solve_quadratic_by_factorisation |
 | `kc.quadratic_formula` | Quadratic formula | Algebra | ACCEPTED | tm.apply_quadratic_formula |
 | `kc.quadratic_roots` | Roots of quadratic equations (any method) | Algebra | ACCEPTED | tm.find_quadratic_roots |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
+| `kc.triangle_angle_properties` | Triangle angle properties | Geometry | ACCEPTED | tm.triangle_angle_problems |
+| `kc.trig_ratios_acute` | Trigonometric ratios of acute angles | Trigonometry | ACCEPTED | tm.trig_ratio_problems |
 
 ### KC Prerequisite Index
 
@@ -58,6 +66,15 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.quadratic_by_factorisation` | → | `kc.quadratic_roots` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.quadratic_roots` | → | `kc.simultaneous_linear_quadratic` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.simultaneous_linear_equations` | → | `kc.simultaneous_linear_quadratic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.fraction_decimal_operations` | → | `kc.percentage_concept` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.fraction_decimal_operations` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.parallel_line_angles` | → | `kc.triangle_angle_properties` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.parallel_line_angles` | → | `kc.triangle_angle_properties` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.algebraic_expressions` | → | `kc.gradient` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.trig_ratios_acute` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.fraction_decimal_operations` | → | `kc.mean_ungrouped_data` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.differentiation_algebraic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.function_concept` | → | `kc.differentiation_algebraic` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -74,6 +91,24 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.completing_the_square
 - Methods: m.cts_standard_form, m.cts_then_roots
+- Status: ACCEPTED
+
+### `tm.compute_gradient` — Compute the gradient of a line segment
+
+- Targets: kc.gradient
+- Methods: m.gradient_from_two_points
+- Status: ACCEPTED
+
+### `tm.compute_mean` — Compute the mean of a set of values
+
+- Targets: kc.mean_ungrouped_data
+- Methods: m.sum_divide_count
+- Status: ACCEPTED
+
+### `tm.differentiate_explicit` — Differentiate an explicit algebraic function
+
+- Targets: kc.differentiation_algebraic
+- Methods: m.power_rule
 - Status: ACCEPTED
 
 ### `tm.evaluate_and_represent_function` — Evaluate and represent functions
@@ -94,16 +129,34 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.roots_via_completing_square, m.roots_via_factorisation, m.roots_via_formula
 - Status: ACCEPTED
 
+### `tm.fraction_decimal_operations` — Perform operations on fractions/decimals
+
+- Targets: kc.fraction_decimal_operations
+- Methods: m.convert_common_denominator
+- Status: ACCEPTED
+
 ### `tm.handle_algebraic_expressions` — Simplify and evaluate algebraic expressions
 
 - Targets: kc.algebraic_expressions
 - Methods: m.collect_like_terms, m.expand_simplify
 - Status: ACCEPTED
 
+### `tm.identify_parallel_line_angles` — Identify/apply parallel-line angle relations
+
+- Targets: kc.parallel_line_angles
+- Methods: m.corresponding_alternate
+- Status: ACCEPTED
+
 ### `tm.make_subject` — Make a specified variable the subject
 
 - Targets: kc.change_of_subject
 - Methods: m.collect_factor_subject, m.inverse_operations
+- Status: ACCEPTED
+
+### `tm.percentage_problems` — Solve percentage problems
+
+- Targets: kc.percentage_concept
+- Methods: m.percent_as_fraction
 - Status: ACCEPTED
 
 ### `tm.signed_number_arithmetic` — Perform signed-number arithmetic
@@ -148,6 +201,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.solve_by_elimination, m.solve_by_substitution
 - Status: ACCEPTED
 
+### `tm.triangle_angle_problems` — Solve triangle angle problems
+
+- Targets: kc.triangle_angle_properties
+- Methods: m.exterior_angle, m.triangle_angle_sum
+- Status: ACCEPTED
+
+### `tm.trig_ratio_problems` — Solve right-triangle problems using trigonometric ratios
+
+- Targets: kc.trig_ratios_acute
+- Methods: m.label_sides_match_ratio
+- Status: ACCEPTED
+
 ## Method Index (AND within method, OR across methods)
 
 ### `tm.apply_quadratic_formula`
@@ -158,6 +223,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.cts_standard_form`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.cts_then_roots`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
+### `tm.compute_gradient`
+
+- **`m.gradient_from_two_points`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
+### `tm.compute_mean`
+
+- **`m.sum_divide_count`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
+
+### `tm.differentiate_explicit`
+
+- **`m.power_rule`** requires: kc.algebraic_expressions, kc.function_concept
 
 ### `tm.evaluate_and_represent_function`
 
@@ -175,15 +252,27 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.roots_via_factorisation`** requires: kc.quadratic_by_factorisation
 - **`m.roots_via_formula`** requires: kc.quadratic_formula
 
+### `tm.fraction_decimal_operations`
+
+- **`m.convert_common_denominator`** requires: kc.integer_arithmetic
+
 ### `tm.handle_algebraic_expressions`
 
 - **`m.collect_like_terms`** requires: kc.integer_arithmetic
 - **`m.expand_simplify`** requires: kc.integer_arithmetic
 
+### `tm.identify_parallel_line_angles`
+
+- **`m.corresponding_alternate`** requires: kc.integer_arithmetic
+
 ### `tm.make_subject`
 
 - **`m.collect_factor_subject`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.inverse_operations`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
+
+### `tm.percentage_problems`
+
+- **`m.percent_as_fraction`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
 
 ### `tm.signed_number_arithmetic`
 
@@ -218,6 +307,15 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.solve_by_elimination`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 - **`m.solve_by_substitution`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 
+### `tm.triangle_angle_problems`
+
+- **`m.exterior_angle`** requires: kc.parallel_line_angles
+- **`m.triangle_angle_sum`** requires: kc.integer_arithmetic, kc.parallel_line_angles
+
+### `tm.trig_ratio_problems`
+
+- **`m.label_sides_match_ratio`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
 ## Misconceptions
 
 - `mis.factorisation_sign_error` — Factorising with unchanged middle-term sign (PROPOSED)
@@ -246,3 +344,9 @@ See [`docs/batch_records/`](../batch_records/).
 | 008 | kc.equations_in_indices |
 | 009 | kc.change_of_subject |
 | 010 | kc.simultaneous_linear_quadratic |
+| 011 | kc.fraction_decimal_operations, kc.percentage_concept |
+| 012 | kc.parallel_line_angles, kc.triangle_angle_properties |
+| 013 | kc.gradient |
+| 014 | kc.trig_ratios_acute |
+| 015 | kc.mean_ungrouped_data |
+| 016 | kc.differentiation_algebraic |

@@ -8,10 +8,11 @@ REVIEW_REQUIRED (needs owner/reviewer decision), BLOCKED.
 
 | Domain | Subdomain | Status | KCs | TaskModels | Evidence | Open Issues |
 |---|---|---|---|---|---|---|
-| Number & Numeration | general | REPRESENTED | 2 | 2 | 103 | — |
-| Algebra | general | REPRESENTED | 11 | 11 | 103 | — |
-| Geometry | general | NOT_STARTED | 0 | 0 | 0 | no representation yet |
-| Coordinate Geometry | general | NOT_STARTED | 0 | 0 | 0 | no representation yet |
-| Calculus | general | NOT_STARTED | 0 | 0 | 0 | no representation yet |
-| Statistics & Probability | general | NOT_STARTED | 0 | 0 | 0 | no representation yet |
-| Functions | general | REPRESENTED | 1 | 1 | 2 | — |
+| Number & Numeration | general | REPRESENTED | 4 | 4 | 144 | — |
+| Algebra | general | REPRESENTED | 11 | 11 | 144 | — |
+| Geometry | general | REPRESENTED | 2 | 2 | 144 | — |
+| Coordinate Geometry | general | REPRESENTED | 1 | 1 | 2 | — |
+| Trigonometry | general | REPRESENTED | 1 | 1 | 2 | — |
+| Calculus | general | REPRESENTED | 1 | 1 | 3 | — |
+| Statistics & Probability | general | REPRESENTED | 1 | 1 | 2 | — |
+| Functions | general | REPRESENTED | 1 | 1 | 144 | — |
