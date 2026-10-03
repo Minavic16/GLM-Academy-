@@ -1,0 +1,14 @@
+# Migration Ledger (Phase 3, metadata only)
+
+No legacy records have been migrated into the v0.2 graph as authoritative
+data. Legacy disposition below reflects actual use in the pipeline so far.
+
+| Disposition | Legacy material | Notes |
+|---|---|---|
+| MAPPED (as inherited evidence only) | Evidence records E0089, E0098, E0099, E0100, E0112, E0119, E0120, E0122–E0124, E0126–E0129, E0131, E0134–E0139, E0153, E0156, E0168, E0207, E0297, E0298, E0309, E0043, E0083, E0084 | ~27 legacy evidence items carried into v0.2 as `EvidenceItem.inherited_from_legacy=True` with `legacy_id` preserved across batches 001–010. Original assertions/statuses not overwritten. |
+| PENDING_REVIEW | All other legacy nodes (~150), edges (~275), evidence (~590) | Remain out of the v0.2 graph until individually dispositioned. |
+| RETIRED | none yet | `related_to` edges (10) and `applies_to` (1) are candidates for RETIRED disposition. |
+| REJECTED | none decided yet | No rejection decisions made without owner/reviewer input. |
+
+The legacy graph remains outside the CDG store. `MigrationRecord`
+metadata is produced only when a record is actually dispositioned.

@@ -1,0 +1,8 @@
+[project]
+name = "glm-academy-cdg"
+version = "0.2.0"
+description = "GLM Academy Curriculum Dependency Graph v0.2 machine-readable contracts (bootstrap)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
