@@ -21,3 +21,13 @@ def test_v29_method_and_or_and_ids():
         if c.status == ClaimStatus.ACCEPTED:
             assert "REVIEW:" in (c.review_rationale or "")
             assert c.acceptance_bases, c.id
+
+
+def test_evidence_source_resolution():
+    s = build_graph_v29()
+    src_ids = set(s.sources)
+    for e in s.evidence.values():
+        assert e.source_id in src_ids, e.id
+    claim_ids = set(s.claims)
+    for e in s.evidence.values():
+        assert e.claim_id in claim_ids, e.id

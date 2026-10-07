@@ -12,7 +12,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Misconceptions: 1
 - Claims: 221
 - Evidence records: 207
-- Sources: 28
+- Sources: 30
 - Activities: 87
 - Agents: 2
 - Exported nodes: 151

@@ -239,3 +239,31 @@ Graph: 151 entities (36 KCs all ACCEPTED, 35 TMs, 49 Methods, 30 Items, 1
 Misconception), 221 Claims (219 ACCEPTED, 2 PROPOSED), 207 Evidence, 28
 Sources, export_view 151 / 221. Store validation: []. pytest: **76 passed**.
 Generator output verified byte-identical across runs. Governance unchanged.
+
+---
+
+## Addendum — Phase 10 (Coverage Completion + BA Readiness Audit)
+
+Full audit written to `docs/architecture/MATHEMATICS_CDG_READINESS_AUDIT.md`.
+
+Corrections applied (local, evidence-free architecture change):
+- Added two missing Source records referenced by 23 evidence items
+  (`SRC.OSX.IA2E.5.4`, `SRC.OSX.AT2E.7.2`) to the canonical store;
+  locked with `test_evidence_source_resolution`.
+
+Audit outcomes:
+- Structural audit: 0 orphan refs, 0 TMs without target/Method, 0 Methods
+  without `requires`, 0 KCs without a TM, no ALL-scope EXECUTE cycles, no
+  duplicate labels, all ACCEPTED Claims have review refs, evidence→source
+  and evidence→claim resolve fully (after correction).
+- TaskModel audit: 35/35 READY.
+- Method audit: 49/49 READY (AND/OR semantics intact, nothing flattened).
+- BA readiness: 36/36 KCs structurally BA_READY.
+- Legacy question answered: no legacy capability blocks BA on the
+  currently scoped chapters; migration remains deferrable.
+- Recommendation: **BA READY AFTER TARGETED CORRECTIONS** — no new corpus
+  wave required; freeze assessment: **FREEZE READY AFTER OWNER DECISIONS**.
+
+Graph state: 151 entities / 36 KCs / 35 TMs / 49 Methods / 30 Items /
+221 Claims (219 ACCEPTED) / 207 Evidence / 28 Sources; store validation
+[]; pytest **77 passed**; docs deterministic.

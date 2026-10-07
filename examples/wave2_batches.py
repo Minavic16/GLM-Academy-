@@ -305,3 +305,22 @@ def build_graph_v29() -> CDGStore:
     s.add_evidence(ev("ev.b29.r2", "cl.req29.grid", "SRC.WAEC.WASSCE.MATH.SYL", "E0247",
                       "Distance on a coordinate grid.", True, f"act.b{nn}.interpret"))
     return s
+
+# --- canonicalization patch (Phase 10): add two source records that were
+# referenced by evidence but never added to the canonical store ---
+if True:
+    _orig = build_graph_v29
+    def build_graph_v29() -> CDGStore:  # type: ignore[no-redef]
+        s = _orig()
+        if "SRC.OSX.IA2E.5.4" not in s.sources:
+            s.add_source(Source(id="SRC.OSX.IA2E.5.4",
+                                title="Intermediate Algebra 2e, 5.4 Dividing Polynomials",
+                                identifier_or_url="legacy:SRC.OSX.IA2E.5.4",
+                                publisher="OpenStax", source_type=SourceType.TEXTBOOK, tier="primary"))
+        if "SRC.OSX.AT2E.7.2" not in s.sources:
+            s.add_source(Source(id="SRC.OSX.AT2E.7.2",
+                                title="Algebra and Trigonometry 2e, 7.2 Right Triangle Trigonometry",
+                                identifier_or_url="legacy:SRC.OSX.AT2E.7.2",
+                                publisher="OpenStax", source_type=SourceType.TEXTBOOK, tier="primary"))
+        return s
+

@@ -11969,6 +11969,28 @@
       "source_type": "TEXTBOOK",
       "tier": "reference",
       "title": "Algebra and Trigonometry 2e, 13.5 Multiplication Principle"
+    },
+    {
+      "content_hash": null,
+      "edition_or_version": null,
+      "id": "SRC.OSX.IA2E.5.4",
+      "identifier_or_url": "legacy:SRC.OSX.IA2E.5.4",
+      "publisher": "OpenStax",
+      "retrieved_at": null,
+      "source_type": "TEXTBOOK",
+      "tier": "primary",
+      "title": "Intermediate Algebra 2e, 5.4 Dividing Polynomials"
+    },
+    {
+      "content_hash": null,
+      "edition_or_version": null,
+      "id": "SRC.OSX.AT2E.7.2",
+      "identifier_or_url": "legacy:SRC.OSX.AT2E.7.2",
+      "publisher": "OpenStax",
+      "retrieved_at": null,
+      "source_type": "TEXTBOOK",
+      "tier": "primary",
+      "title": "Algebra and Trigonometry 2e, 7.2 Right Triangle Trigonometry"
     }
   ]
 }
