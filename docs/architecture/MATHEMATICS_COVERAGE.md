@@ -8,11 +8,11 @@ REVIEW_REQUIRED (needs owner/reviewer decision), BLOCKED.
 
 | Domain | Subdomain | Status | KCs | TaskModels | Evidence | Open Issues |
 |---|---|---|---|---|---|---|
-| Number & Numeration | general | REPRESENTED | 4 | 4 | 144 | — |
-| Algebra | general | REPRESENTED | 11 | 11 | 144 | — |
-| Geometry | general | REPRESENTED | 2 | 2 | 144 | — |
-| Coordinate Geometry | general | REPRESENTED | 1 | 1 | 2 | — |
-| Trigonometry | general | REPRESENTED | 1 | 1 | 2 | — |
-| Calculus | general | REPRESENTED | 1 | 1 | 3 | — |
-| Statistics & Probability | general | REPRESENTED | 1 | 1 | 2 | — |
-| Functions | general | REPRESENTED | 1 | 1 | 144 | — |
+| Number & Numeration | general | REPRESENTED | 4 | 4 | 187 | — |
+| Algebra | general | REPRESENTED | 11 | 11 | 187 | — |
+| Geometry | general | REPRESENTED | 3 | 3 | 187 | — |
+| Coordinate Geometry | general | REPRESENTED | 2 | 2 | 187 | — |
+| Trigonometry | general | REPRESENTED | 3 | 2 | 187 | — |
+| Calculus | general | REPRESENTED | 4 | 4 | 187 | — |
+| Statistics & Probability | general | REPRESENTED | 2 | 2 | 4 | — |
+| Functions | general | REPRESENTED | 1 | 1 | 187 | — |

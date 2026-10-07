@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.batch16_calculus import build_graph_v16
+from examples.batch23_circles import build_graph_v23
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -40,6 +40,14 @@ DOMAIN_OF = {
     "kc.trig_ratios_acute": "Trigonometry",
     "kc.mean_ungrouped_data": "Statistics & Probability",
     "kc.differentiation_algebraic": "Calculus",
+    "kc.rate_of_change": "Calculus",
+    "kc.maxima_minima": "Calculus",
+    "kc.integration_algebraic": "Calculus",
+    "kc.theoretical_probability": "Statistics & Probability",
+    "kc.sine_rule": "Trigonometry",
+    "kc.cosine_rule": "Trigonometry",
+    "kc.equation_of_line": "Coordinate Geometry",
+    "kc.circle_angle_theorems": "Geometry",
 }
 
 BATCH_OF = {
@@ -65,6 +73,14 @@ BATCH_OF = {
     "kc.trig_ratios_acute": "014",
     "kc.mean_ungrouped_data": "015",
     "kc.differentiation_algebraic": "016",
+    "kc.rate_of_change": "017",
+    "kc.maxima_minima": "018",
+    "kc.integration_algebraic": "019",
+    "kc.theoretical_probability": "020",
+    "kc.sine_rule": "021",
+    "kc.cosine_rule": "021",
+    "kc.equation_of_line": "022",
+    "kc.circle_angle_theorems": "023",
 }
 
 
@@ -73,7 +89,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v16()
+    s = build_graph_v23()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

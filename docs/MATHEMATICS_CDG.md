@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 22
-- TaskModels: 22
-- Methods: 35
-- Items: 17
+- Knowledge Components: 30
+- TaskModels: 29
+- Methods: 43
+- Items: 24
 - Misconceptions: 1
-- Claims: 146
-- Evidence records: 144
-- Sources: 18
-- Activities: 48
+- Claims: 189
+- Evidence records: 187
+- Sources: 24
+- Activities: 69
 - Agents: 2
-- Exported nodes: 97
-- Exported edges: 146
-- Accepted Claims: 144; PROPOSED Claims: 2
+- Exported nodes: 127
+- Exported edges: 189
+- Accepted Claims: 187; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -25,24 +25,32 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 |---|---|---|---|---|
 | `kc.algebraic_expressions` | Algebraic expressions: terms, coefficients, like terms, substitution | Algebra | ACCEPTED | tm.handle_algebraic_expressions |
 | `kc.change_of_subject` | Change of subject of a formula/relation | Algebra | ACCEPTED | tm.make_subject |
+| `kc.circle_angle_theorems` | Basic circle angle theorems | Geometry | ACCEPTED | tm.circle_angle_problems |
 | `kc.completing_the_square` | Completing the square | Algebra | ACCEPTED | tm.complete_square |
+| `kc.cosine_rule` | Cosine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
 | `kc.differentiation_algebraic` | Differentiation of explicit algebraic functions | Calculus | ACCEPTED | tm.differentiate_explicit |
+| `kc.equation_of_line` | Equation of a straight line (all forms) | Coordinate Geometry | ACCEPTED | tm.find_line_equation |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
 | `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
 | `kc.function_concept` | Function concept and notation | Functions | ACCEPTED | tm.evaluate_and_represent_function |
 | `kc.gradient` | Gradient of a line segment | Coordinate Geometry | ACCEPTED | tm.compute_gradient |
 | `kc.integer_arithmetic` | Signed-number (integer) arithmetic | Number & Numeration | ACCEPTED | tm.signed_number_arithmetic |
+| `kc.integration_algebraic` | Elementary integration of algebraic functions | Calculus | ACCEPTED | tm.integrate_polynomial |
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
+| `kc.maxima_minima` | Maxima and minima of a function | Calculus | ACCEPTED | tm.find_maxima_minima |
 | `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
 | `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
 | `kc.percentage_concept` | Percentages | Number & Numeration | ACCEPTED | tm.percentage_problems |
 | `kc.quadratic_by_factorisation` | Solving quadratic equations by factorisation | Algebra | ACCEPTED | tm.solve_quadratic_by_factorisation |
 | `kc.quadratic_formula` | Quadratic formula | Algebra | ACCEPTED | tm.apply_quadratic_formula |
 | `kc.quadratic_roots` | Roots of quadratic equations (any method) | Algebra | ACCEPTED | tm.find_quadratic_roots |
+| `kc.rate_of_change` | Rate of change of a function | Calculus | ACCEPTED | tm.compute_rate_of_change |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
+| `kc.sine_rule` | Sine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
+| `kc.theoretical_probability` | Theoretical probability of an event | Statistics & Probability | ACCEPTED | tm.compute_probability |
 | `kc.triangle_angle_properties` | Triangle angle properties | Geometry | ACCEPTED | tm.triangle_angle_problems |
 | `kc.trig_ratios_acute` | Trigonometric ratios of acute angles | Trigonometry | ACCEPTED | tm.trig_ratio_problems |
 
@@ -75,6 +83,16 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.fraction_decimal_operations` | → | `kc.mean_ungrouped_data` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.differentiation_algebraic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.function_concept` | → | `kc.differentiation_algebraic` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.differentiation_algebraic` | → | `kc.rate_of_change` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.differentiation_algebraic` | → | `kc.maxima_minima` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.quadratic_roots` | → | `kc.maxima_minima` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.differentiation_algebraic` | → | `kc.integration_algebraic` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.fraction_decimal_operations` | → | `kc.theoretical_probability` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.trig_ratios_acute` | → | `kc.cosine_rule` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.trig_ratios_acute` | → | `kc.sine_rule` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.gradient` | → | `kc.equation_of_line` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.change_of_subject` | → | `kc.equation_of_line` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.triangle_angle_properties` | → | `kc.circle_angle_theorems` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -85,6 +103,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.quadratic_formula
 - Methods: m.substitute_formula
+- Status: ACCEPTED
+
+### `tm.circle_angle_problems` — Solve circle angle problems using theorems
+
+- Targets: kc.circle_angle_theorems
+- Methods: m.centre_vs_circumference
 - Status: ACCEPTED
 
 ### `tm.complete_square` — Complete the square
@@ -105,6 +129,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.sum_divide_count
 - Status: ACCEPTED
 
+### `tm.compute_probability` — Compute the theoretical probability of an event
+
+- Targets: kc.theoretical_probability
+- Methods: m.favourable_over_total
+- Status: ACCEPTED
+
+### `tm.compute_rate_of_change` — Compute the rate of change of a function at a point
+
+- Targets: kc.rate_of_change
+- Methods: m.derivative_at_point
+- Status: ACCEPTED
+
 ### `tm.differentiate_explicit` — Differentiate an explicit algebraic function
 
 - Targets: kc.differentiation_algebraic
@@ -121,6 +157,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.factorisation_quadratic_trinomial
 - Methods: m.factorise_by_grouping, m.factorise_unit_leading
+- Status: ACCEPTED
+
+### `tm.find_line_equation` — Find the equation of a straight line
+
+- Targets: kc.equation_of_line
+- Methods: m.point_gradient
+- Status: ACCEPTED
+
+### `tm.find_maxima_minima` — Find local maxima and minima
+
+- Targets: kc.maxima_minima
+- Methods: m.first_derivative
 - Status: ACCEPTED
 
 ### `tm.find_quadratic_roots` — Find the roots of a quadratic equation
@@ -145,6 +193,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.parallel_line_angles
 - Methods: m.corresponding_alternate
+- Status: ACCEPTED
+
+### `tm.integrate_polynomial` — Integrate a polynomial term-by-term
+
+- Targets: kc.integration_algebraic
+- Methods: m.reverse_power_rule
 - Status: ACCEPTED
 
 ### `tm.make_subject` — Make a specified variable the subject
@@ -189,6 +243,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.substitute_linear_into_quadratic
 - Status: ACCEPTED
 
+### `tm.solve_oblique_triangle` — Solve a non-right triangle
+
+- Targets: kc.cosine_rule, kc.sine_rule
+- Methods: m.cosine_rule, m.sine_rule
+- Status: ACCEPTED
+
 ### `tm.solve_quadratic_by_factorisation` — Solve a quadratic equation by factorisation
 
 - Targets: kc.quadratic_by_factorisation
@@ -219,6 +279,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.substitute_formula`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 
+### `tm.circle_angle_problems`
+
+- **`m.centre_vs_circumference`** requires: kc.integer_arithmetic, kc.triangle_angle_properties
+
 ### `tm.complete_square`
 
 - **`m.cts_standard_form`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -231,6 +295,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.compute_mean`
 
 - **`m.sum_divide_count`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
+
+### `tm.compute_probability`
+
+- **`m.favourable_over_total`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
+
+### `tm.compute_rate_of_change`
+
+- **`m.derivative_at_point`** requires: kc.differentiation_algebraic, kc.integer_arithmetic
 
 ### `tm.differentiate_explicit`
 
@@ -245,6 +317,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.factorise_by_grouping`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.factorise_unit_leading`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
+### `tm.find_line_equation`
+
+- **`m.point_gradient`** requires: kc.algebraic_expressions, kc.change_of_subject, kc.gradient
+
+### `tm.find_maxima_minima`
+
+- **`m.first_derivative`** requires: kc.differentiation_algebraic, kc.quadratic_roots
 
 ### `tm.find_quadratic_roots`
 
@@ -264,6 +344,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.identify_parallel_line_angles`
 
 - **`m.corresponding_alternate`** requires: kc.integer_arithmetic
+
+### `tm.integrate_polynomial`
+
+- **`m.reverse_power_rule`** requires: kc.algebraic_expressions, kc.function_concept
 
 ### `tm.make_subject`
 
@@ -296,6 +380,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.solve_linear_quadratic_system`
 
 - **`m.substitute_linear_into_quadratic`** requires: kc.change_of_subject, kc.quadratic_roots, kc.simultaneous_linear_equations
+
+### `tm.solve_oblique_triangle`
+
+- **`m.cosine_rule`** requires: kc.algebraic_expressions, kc.trig_ratios_acute
+- **`m.sine_rule`** requires: kc.algebraic_expressions, kc.trig_ratios_acute
 
 ### `tm.solve_quadratic_by_factorisation`
 
@@ -350,3 +439,10 @@ See [`docs/batch_records/`](../batch_records/).
 | 014 | kc.trig_ratios_acute |
 | 015 | kc.mean_ungrouped_data |
 | 016 | kc.differentiation_algebraic |
+| 017 | kc.rate_of_change |
+| 018 | kc.maxima_minima |
+| 019 | kc.integration_algebraic |
+| 020 | kc.theoretical_probability |
+| 021 | kc.cosine_rule, kc.sine_rule |
+| 022 | kc.equation_of_line |
+| 023 | kc.circle_angle_theorems |

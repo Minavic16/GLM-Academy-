@@ -194,3 +194,29 @@ Anti-coverage checks throughout: duplicate-KC scan, prerequisite
 auditor found zero direction/scope errors, no equivalence relations,
 no manufactured review events; the two accept events in each batch are
 backed by a recorded HUMAN review Activity.
+
+---
+
+## Addendum — Phase 8 (Priority Wave 1)
+
+7 curriculum batches added (017–023), prioritized by dependency chains in the
+thinnest domains:
+
+- 017 Rate of change (requires differentiation)
+- 018 Maxima/minima (requires differentiation + quadratic roots)
+- 019 Integration (UNDERSTAND↔differentiation link preserved, E0325/E0326)
+- 020 Theoretical probability (requires fractions + integer arithmetic)
+- 021 Sine rule / cosine rule under one oblique-triangle TaskModel (OR across
+  methods; requires trig ratios + algebra)
+- 022 Equation of a straight line (requires gradient + change of subject)
+- 023 Circle angle theorems (requires triangle angle properties)
+
+Graph: 127 entities (30 KCs all ACCEPTED, 29 TMs, 43 Methods, 24 Items,
+1 Misconception), 189 Claims, 187 Evidence, 24 Sources. export_view:
+127 nodes / 189 edges. Store validation: []. pytest: **74 passed**.
+Docs regenerated deterministically (byte-identical on rerun). All new
+claims went through the human-review/ACCEPTED lifecycle.
+
+Governance unchanged: FREEZE doc still absent, `indicates` still
+OWNER_SIGN_OFF_REQUIRED, 12-vs-13 entity count unresolved, no bulk legacy
+migration.
