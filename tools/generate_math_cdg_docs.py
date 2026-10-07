@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.batch23_circles import build_graph_v23
+from examples.wave2_batches import build_graph_v29
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -48,6 +48,12 @@ DOMAIN_OF = {
     "kc.cosine_rule": "Trigonometry",
     "kc.equation_of_line": "Coordinate Geometry",
     "kc.circle_angle_theorems": "Geometry",
+    "kc.parallel_perpendicular_lines": "Coordinate Geometry",
+    "kc.ratio_proportion_rate": "Number & Numeration",
+    "kc.direct_variation": "Algebra",
+    "kc.special_angle_values": "Trigonometry",
+    "kc.counting_principle": "Statistics & Probability",
+    "kc.distance_formula": "Coordinate Geometry",
 }
 
 BATCH_OF = {
@@ -81,6 +87,12 @@ BATCH_OF = {
     "kc.cosine_rule": "021",
     "kc.equation_of_line": "022",
     "kc.circle_angle_theorems": "023",
+    "kc.parallel_perpendicular_lines": "024",
+    "kc.ratio_proportion_rate": "025",
+    "kc.direct_variation": "026",
+    "kc.special_angle_values": "027",
+    "kc.counting_principle": "028",
+    "kc.distance_formula": "029",
 }
 
 
@@ -89,7 +101,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v23()
+    s = build_graph_v29()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

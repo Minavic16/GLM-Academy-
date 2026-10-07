@@ -220,3 +220,22 @@ claims went through the human-review/ACCEPTED lifecycle.
 Governance unchanged: FREEZE doc still absent, `indicates` still
 OWNER_SIGN_OFF_REQUIRED, 12-vs-13 entity count unresolved, no bulk legacy
 migration.
+
+---
+
+## Addendum — Phase 9 (Wave 2)
+
+Stage A produced `docs/architecture/DEPENDENCY_GAP_AUDIT.md` — explicit
+per-domain audit with gap classifications (CORE_MISSING / IMPORTANT_GAP /
+SECONDARY_GAP / NOT_YET_JUSTIFIED).
+
+Wave 2 added 6 batches (024–029): coordinate parallel/perpendicular
+classification, ratio/proportion/rate, direct variation, special-angle
+values, counting principle, distance formula. 6 new KCs (all ACCEPTED via
+human-review lifecycle), 6 TMs, 6 Methods, 17 new Claims, 20 new evidence
+items, 4 new Sources.
+
+Graph: 151 entities (36 KCs all ACCEPTED, 35 TMs, 49 Methods, 30 Items, 1
+Misconception), 221 Claims (219 ACCEPTED, 2 PROPOSED), 207 Evidence, 28
+Sources, export_view 151 / 221. Store validation: []. pytest: **76 passed**.
+Generator output verified byte-identical across runs. Governance unchanged.
