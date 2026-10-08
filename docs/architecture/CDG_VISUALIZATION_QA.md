@@ -41,10 +41,17 @@ Outputs to: `docs/visualizations/`:
 ## Update (interactive layer)
 
 The HTML artifacts are now clickable: every node rect is a `<g class="node"
-onclick="cdgSelect('<id>')">` card that opens a fixed side panel showing the
+onclick="cdgSelect('<id>')">` card that opens a floating card positioned just below the clicked node showing the
 node's id, type, status, label, subject, legacy IDs, and every canonical
 claim in which it participates (direction, predicate, other endpoint
 id/type/label, prerequisite purpose/scope/origin, and any linked evidence
 excerpt + legacy id + source id). Deterministic: bytes identical across
 runs. Verified by `test_viz_node_edge_resolution`,
 `test_viz_clickable_cards_and_details`, `test_viz_deterministic`.
+
+## Update (floating card)
+
+Details now render as an on-svg floating card (`#ccard`) anchored to the
+clicked node (clamped to the viewport), with a close button and Escape-key
+close, instead of a fixed side panel. Selected node is highlighted in red.
+Deterministic and covered by `test_viz_clickable_cards_and_details`.

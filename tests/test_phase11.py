@@ -54,7 +54,7 @@ def test_viz_clickable_cards_and_details():
     # every node is a clickable card
     ids = {e['id'] for e in data['entities']}
     for i in ids:
-        assert f'cdgSelect(\'{i}\')' in html, i
+        assert f"cdgSelect('{i}', event)" in html, i
     # connections and prerequisites survive into the interactive payload
     assert 'purpose' in html and 'scope' in html and 'origin' in html
     assert 'legacy_id' in html and 'excerpt' in html

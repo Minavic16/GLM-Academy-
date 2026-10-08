@@ -132,7 +132,7 @@ def _svg(title, node_ids, nodes, edges):
         fill = TYPE_COLORS.get(e["entity_type"], "#eee")
         label = e.get("label", "")[:36].replace('"', "'")
         parts.append(
-            f'<g class="node" data-id="{nid}" onclick="cdgSelect(\'{nid}\')">'
+            f'<g class="node" data-id="{nid}" onclick="cdgSelect(\'{nid}\', event)">'
             f'<rect x="{x-118}" y="{y-18}" width="236" height="36" rx="6" fill="{fill}" stroke="#333"/>'
             f'<text x="{x}" y="{y+4}" text-anchor="middle" font-size="11" fill="white">{label}</text>'
             f'<title>{nid} | {e["entity_type"]}</title></g>')
@@ -150,13 +150,16 @@ def _html(title, svg_markup, legend, details_json):
             '#legend span{display:inline-block;margin-right:12px;font-size:12px}'
             '#legend .sw{display:inline-block;width:12px;height:12px;margin-right:4px;border:1px solid #333}'
             'g.node{cursor:pointer}g.node:hover rect{stroke:#d70000;stroke-width:3}'
-            '#panel{position:fixed;right:0;top:0;width:min(460px,92vw);height:100vh;overflow:auto;'
-            'background:#fff;border-left:2px solid #333;padding:16px;box-shadow:0 0 12px rgba(0,0,0,.2)}'
-            '#panel.hidden{display:none}.c{border-bottom:1px solid #eee;padding:8px 0;font-size:13px}'
+            '#ccard{position:absolute;width:min(420px,92vw);max-height:70vh;overflow:auto;z-index:10;'
+            'background:#fff;border:2px solid #333;border-radius:10px;padding:14px 16px;'
+            'box-shadow:0 8px 24px rgba(0,0,0,.35)}'
+            '#ccard.hidden{display:none}#ccard .x{position:absolute;right:8px;top:6px;cursor:pointer;'
+            'font-size:20px;color:#666}#ccard .x:hover{color:#d70000}'
+            '.c{border-bottom:1px solid #eee;padding:8px 0;font-size:13px}'
             '.m{color:#666;font-size:11px}.ev{color:#555;font-size:11px;margin-left:12px}</style></head>'
             '<body><h1>' + title + '</h1>' + legend +
             '<script>' + js + '</script>' + svg_markup +
-            '<aside id="panel" class="hidden"></aside></body></html>')
+            '<div id="ccard" class="hidden"></div></body></html>')
 
 
 def _dot(title, node_ids, nodes, edges):
