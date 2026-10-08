@@ -100,3 +100,33 @@
 ## 13. Explicit exclusions
 - No physics KCs entered into the CDG in this phase.
 - No examination question banks, scoring, or learner observations.
+
+---
+
+## Phase 12 update — sources retrieved and slice status
+
+### Retrieved (verified reachable, fetched)
+| Source | Evidence used |
+|---|---|
+| SRC.OSX.UP1.1.2 Units and Standards (HTTP 200) | kc.measurement_units_dimensions |
+| SRC.OSX.UP1.3.4 Constant Acceleration (HTTP 200) | kc.motion_equations_constant_acceleration; Math→Physics edges ev.p.x1/ev.p.x2 |
+| SRC.OSX.UP1.4.2 Acceleration Vector (HTTP 200) | kc.motion_graph_interpretation; ev.p.x3 |
+| SRC.OSX.UP1.5.2 Newton's First Law (HTTP 200, VERBATIM quote in evidence) | kc.newtons_laws; ev.p.x4 |
+| SRC.OSX.UP1.5.4 Mass and Weight (HTTP 200) | kc.mass_and_weight |
+
+### Retrieval GAPS (recorded, not fabricated)
+- JAMB/IBASS Physics PDF: portal is a JS app with hashed asset URLs; the
+  per-subject PDF could not be resolved in this run. Registered as
+  SRC.JAMB.IBASS.PHYSICS with metadata only — NO content claims attached.
+- WAEC Physics syllabus PDF: portal reachable, document not retrieved.
+  Registered as SRC.WAEC.PHYSICS, metadata only.
+- NERDC SSS Physics: behind portal. Registered as SRC.NERDC.SS.PHYSICS,
+  metadata only.
+
+### Status of slice content
+- OpenStax-derived capability definitions: SOURCE-DERIVED (textbook reference).
+- KC/TM/Method decomposition and cross-subject edges: RESEARCH SYNTHESIS →
+  reviewed acceptance (human review activity `act.physics.review`).
+- Official-board confirmation of topic selection: OWNER_REVIEW_REQUIRED.
+- kc.measurement_errors_precision, kc.practical_measurement: PROPOSED
+  (no supporting syllabus/TM evidence yet).
