@@ -1,5 +1,5 @@
 digraph g {
-label="Mathematics TM/Method";
+label="Mathematics — TaskModel/Method";
 node [shape=box,style=filled,fontname="monospace"];
 "kc.algebraic_expressions" [fillcolor="#27ae60",label="kc.algebraic_expressions"];
 "kc.algebraic_expressions" [fillcolor="#27ae60",label="kc.algebraic_expressions"];

@@ -37,3 +37,14 @@ Outputs to: `docs/visualizations/`:
   type, claim id and label.
 - Physics/Chemistry visualization will follow the same generator once
   their KCs enter the store; no inference will be added.
+
+## Update (interactive layer)
+
+The HTML artifacts are now clickable: every node rect is a `<g class="node"
+onclick="cdgSelect('<id>')">` card that opens a fixed side panel showing the
+node's id, type, status, label, subject, legacy IDs, and every canonical
+claim in which it participates (direction, predicate, other endpoint
+id/type/label, prerequisite purpose/scope/origin, and any linked evidence
+excerpt + legacy id + source id). Deterministic: bytes identical across
+runs. Verified by `test_viz_node_edge_resolution`,
+`test_viz_clickable_cards_and_details`, `test_viz_deterministic`.

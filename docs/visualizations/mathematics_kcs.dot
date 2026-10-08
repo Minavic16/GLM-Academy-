@@ -1,5 +1,5 @@
 digraph g {
-label="Mathematics KCs";
+label="Mathematics — KCs / TMs / Methods";
 node [shape=box,style=filled,fontname="monospace"];
 "kc.algebraic_expressions" [fillcolor="#27ae60",label="kc.algebraic_expressions"];
 "kc.change_of_subject" [fillcolor="#27ae60",label="kc.change_of_subject"];

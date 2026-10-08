@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-"""Generate deterministic, standalone visualizations of the canonical CDG.
+"""Generate deterministic visualizations of the canonical CDG.
 
-Inputs: examples/math_cdg_v2.json (canonical data) — no CDG mutation.
-Outputs: docs/visualizations/*.svg, *.html, *.dot
+Three artifacts per view:
+  - <view>.svg  (static vector)
+  - <view>.html (standalone, interactive: click any node for details
+                 incl. its connections — no server needed)
+  - <view>.dot  (Graphviz)
+
+Deterministic: byte-identical output across runs given the same canonical
+input. The canonical CDG is never modified.
 """
 import collections
 import json
@@ -29,29 +35,64 @@ TYPE_COLORS = {
     "Activity": "#34495e",
 }
 
-
-def _nodes_index(d):
-    return {e["id"]: e for e in d["entities"]}
+KIND2COLOR = TYPE_COLORS
 
 
-def _edge_index(d):
-    out = []
-    for c in d["claims"]:
-        if c["predicate"] is None:
+def _load():
+    with open(CANON) as f:
+        d = json.load(f)
+    return {e["id"]: e for e in d["entities"]}, d["claims"], d
+
+
+def _details(nodes, claims, sources, evidence):
+    """Per-node detail payload for the interactive HTML."""
+    conn = collections.defaultdict(list)
+    for c in claims:
+        pred = c.get("predicate")
+        if not pred or not c.get("object_id"):
             continue
-        out.append((c["id"], c["subject_id"], c["object_id"], c["predicate"]))
+        conn[c["subject_id"]].append(
+            {"dir": "->", "predicate": pred, "other": c["object_id"], "claim": c["id"],
+             "qualifiers": {k: c.get(k) for k in ("purpose", "scope", "origin") if c.get(k)}}
+        )
+        conn[c["object_id"]].append(
+            {"dir": "<-", "predicate": pred, "other": c["subject_id"], "claim": c["id"],
+             "qualifiers": {k: c.get(k) for k in ("purpose", "scope", "origin") if c.get(k)}}
+        )
+    ev_by_claim = collections.defaultdict(list)
+    for e in evidence:
+        ev_by_claim[e["claim_id"]].append(e)
+    out = {}
+    for nid, e in nodes.items():
+        entry = {
+            "id": nid,
+            "entity_type": e["entity_type"],
+            "label": e.get("label", ""),
+            "subject": e.get("subject"),
+            "status": e.get("status"),
+            "legacy_ids": e.get("legacy_ids") or [],
+            "connections": [],
+        }
+        for c in sorted(conn.get(nid, []), key=lambda x: (x["predicate"], x["other"], x["dir"])):
+            other = nodes.get(c["other"])
+            ev = [
+                {k: e2.get(k) for k in ("id", "source_id", "legacy_id", "stance", "excerpt")}
+                for e2 in ev_by_claim.get(c["claim"], [])
+            ]
+            entry["connections"].append({
+                **c,
+                "other_type": other["entity_type"] if other else None,
+                "other_label": other.get("label", "") if other else None,
+                "evidence": ev,
+            })
+        out[nid] = entry
     return out
 
 
-def _layout(node_ids):
-    """Deterministic column-by-entity-type layout."""
+def _layout(node_ids, nodes):
     by_type = collections.defaultdict(list)
-    nidx_lookup = {}
-    for e in NODES.values():
-        pass
     for nid in node_ids:
-        t = NODES[nid]["entity_type"]
-        by_type[t].append(nid)
+        by_type[nodes[nid]["entity_type"]].append(nid)
     pos = {}
     col = 0
     for t in sorted(by_type):
@@ -61,17 +102,23 @@ def _layout(node_ids):
     return pos, max((y for _, y in pos.values()), default=60) + 60, col * 260 + 40
 
 
-NODES = {}
+def _legend(nodes):
+    seen = sorted({e["entity_type"] for e in nodes.values()},
+                  key=lambda t: (t not in ("KnowledgeComponent", "TaskModel", "Method"), t))
+    items = "".join(
+        f'<span class="lg"><span class="sw" style="background:{TYPE_COLORS.get(t, "#eee")}"></span>{t}</span>'
+        for t in seen)
+    return f'<div id="legend">{items}</div>'
 
 
-def _svg(title, node_ids, edges):
-    pos, height, width = _layout(node_ids)
+def _svg(title, node_ids, nodes, edges):
+    pos, height, width = _layout(node_ids, nodes)
     height = max(height, 200)
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-             f'style="background:#ffffff;font-family:monospace">',
+             f'id="cdg-svg" style="background:#ffffff;font-family:monospace">',
              f'<text x="20" y="30" font-size="18" font-weight="bold">{title}</text>',
-             '<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="3" orient="auto">'
-             '<path d="M0,0 L0,6 L9,3 z" fill="#888"/></marker></defs>']
+             '<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="3" '
+             'orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#888"/></marker></defs>']
     for cid, src, dst, pred in edges:
         if src not in pos or dst not in pos:
             continue
@@ -81,25 +128,42 @@ def _svg(title, node_ids, edges):
                      f'stroke-width="1" marker-end="url(#arrow)"><title>{pred} ({cid})</title></line>')
     for nid in sorted(node_ids):
         x, y = pos[nid]
-        e = NODES[nid]
+        e = nodes[nid]
         fill = TYPE_COLORS.get(e["entity_type"], "#eee")
-        parts.append(f'<g><rect x="{x-118}" y="{y-18}" width="236" height="36" rx="6" '
-                     f'fill="{fill}" stroke="#333"/>'
-                     f'<text x="{x}" y="{y+4}" text-anchor="middle" font-size="11" fill="white">'
-                     f'{nid}</text><title>{e["entity_type"]} | {e["label"]}</title></g>')
+        label = e.get("label", "")[:36].replace('"', "'")
+        parts.append(
+            f'<g class="node" data-id="{nid}" onclick="cdgSelect(\'{nid}\')">'
+            f'<rect x="{x-118}" y="{y-18}" width="236" height="36" rx="6" fill="{fill}" stroke="#333"/>'
+            f'<text x="{x}" y="{y+4}" text-anchor="middle" font-size="11" fill="white">{label}</text>'
+            f'<title>{nid} | {e["entity_type"]}</title></g>')
     parts.append('</svg>')
-    return ''.join(parts)
+    return ''.join(parts), height, width
 
 
-def _html(title, svg_text):
+JS_TEMPLATE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "viz_panel.js")).read()
+
+
+def _html(title, svg_markup, legend, details_json):
+    js = JS_TEMPLATE.replace("__DETAILS__", json.dumps(details_json, sort_keys=True))
     return ('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + title +
-            '</title></head><body><h1>' + title + '</h1>' + svg_text + '</body></html>')
+            '</title><style>body{font-family:system-ui,monospace;margin:0;padding:20px}'
+            '#legend span{display:inline-block;margin-right:12px;font-size:12px}'
+            '#legend .sw{display:inline-block;width:12px;height:12px;margin-right:4px;border:1px solid #333}'
+            'g.node{cursor:pointer}g.node:hover rect{stroke:#d70000;stroke-width:3}'
+            '#panel{position:fixed;right:0;top:0;width:min(460px,92vw);height:100vh;overflow:auto;'
+            'background:#fff;border-left:2px solid #333;padding:16px;box-shadow:0 0 12px rgba(0,0,0,.2)}'
+            '#panel.hidden{display:none}.c{border-bottom:1px solid #eee;padding:8px 0;font-size:13px}'
+            '.m{color:#666;font-size:11px}.ev{color:#555;font-size:11px;margin-left:12px}</style></head>'
+            '<body><h1>' + title + '</h1>' + legend +
+            '<script>' + js + '</script>' + svg_markup +
+            '<aside id="panel" class="hidden"></aside></body></html>')
 
 
-def _dot(title, node_ids, edges):
-    lines = ['digraph g {', f'label="{title}";', 'node [shape=box,style=filled,fontname="monospace"];']
+def _dot(title, node_ids, nodes, edges):
+    lines = ['digraph g {', f'label="{title}";',
+             'node [shape=box,style=filled,fontname="monospace"];']
     for nid in sorted(node_ids):
-        e = NODES[nid]
+        e = nodes[nid]
         lines.append(f'"{nid}" [fillcolor="{TYPE_COLORS.get(e["entity_type"], "#eee")}",label="{nid}"];')
     for cid, src, dst, pred in edges:
         if src in node_ids and dst in node_ids:
@@ -108,48 +172,40 @@ def _dot(title, node_ids, edges):
     return '\n'.join(lines)
 
 
-def _write(stem, svg_text, dot_text):
+def _write(stem, title, node_ids, nodes, edges, details):
+    svg_markup, _, _ = _svg(title, node_ids, nodes, edges)
+    legend = _legend(nodes)
+    detail_view = {nid: details[nid] for nid in node_ids if nid in details}
     with open(os.path.join(OUT, stem + '.svg'), 'w') as f:
-        f.write(svg_text)
+        f.write(svg_markup)
     with open(os.path.join(OUT, stem + '.html'), 'w') as f:
-        f.write(_html(stem, svg_text))
+        f.write(_html(title, svg_markup, legend, detail_view))
     with open(os.path.join(OUT, stem + '.dot'), 'w') as f:
-        f.write(dot_text)
+        f.write(_dot(title, node_ids, nodes, edges))
 
 
 def main():
-    global NODES
+    nodes, claims, _ = _load()
+    evidence = []
     with open(CANON) as f:
-        d = json.load(f)
-    NODES = _nodes_index(d)
-    edges = _edge_index(d)
-    all_ids = list(NODES.keys())
-    _write('mathematics_full', _svg('GLM CDG — Mathematics (full)', all_ids, edges),
-           _dot('Mathematics', all_ids, edges))
+        evidence = json.load(f)["evidence"]
+    details = _details(nodes, claims, {}, evidence)
+    edges_all = [(c["id"], c["subject_id"], c["object_id"], c["predicate"])
+                 for c in claims if c.get("predicate") and c.get("object_id")]
+    all_ids = list(nodes)
+    _write('mathematics_full', 'GLM CDG — Mathematics (full)', all_ids, nodes, edges_all, details)
 
-    kc_ids = [e['id'] for e in d['entities'] if e['entity_type'] in
-              ('KnowledgeComponent', 'TaskModel', 'Method')]
-    preds = {'prerequisite', 'targets', 'hasMethod', 'requires'}
-    sub_edges = [e for e in edges if e[2] and e[3] in preds]
-    _write('mathematics_kcs', _svg('Mathematics — KCs / TMs / Methods', kc_ids, sub_edges),
-           _dot('Mathematics KCs', kc_ids, sub_edges))
+    sub_ids = [e['id'] for e in nodes.values()
+               if e['entity_type'] in ('KnowledgeComponent', 'TaskModel', 'Method')]
+    sub_edges = [e for e in edges_all if e[3] in ('prerequisite', 'targets', 'hasMethod', 'requires')]
+    _write('mathematics_kcs', 'Mathematics — KCs / TMs / Methods', sub_ids, nodes, sub_edges, details)
 
-    from collections import defaultdict
-    tms_to_m = collections.defaultdict(list)
-    for c in d['claims']:
-        if c['predicate'] == 'hasMethod':
-            tms_to_m[c['subject_id']].append(c['object_id'])
-    m_to_kc = collections.defaultdict(list)
-    for c in d['claims']:
-        if c['predicate'] == 'requires':
-            m_to_kc[c['subject_id']].append(c['object_id'])
-    tm_ids = [e['id'] for e in d['entities'] if e['entity_type'] == 'TaskModel']
-    tm_edges = [e for e in edges if e[3] in ('hasMethod', 'targets', 'requires')]
-    _write('mathematics_tm_method', _svg('Mathematics — TaskModel/Method', 
-            tm_ids + [m for ms in tms_to_m.values() for m in ms] +
-            [k for ms in m_to_kc.values() for k in ms], tm_edges),
-           _dot('Mathematics TM/Method', tm_ids + [m for ms in tms_to_m.values() for m in ms] +
-            [k for ms in m_to_kc.values() for k in ms], tm_edges))
+    tm_ids = [e['id'] for e in nodes.values() if e['entity_type'] == 'TaskModel']
+    m_ids = [c['object_id'] for c in claims if c['predicate'] == 'hasMethod']
+    kc_via_req = [c['object_id'] for c in claims if c['predicate'] == 'requires']
+    tm_edges = [e for e in edges_all if e[3] in ('hasMethod', 'targets', 'requires')]
+    _write('mathematics_tm_method', 'Mathematics — TaskModel/Method',
+           tm_ids + m_ids + kc_via_req, nodes, tm_edges, details)
 
     print('visualizations written to', OUT)
 

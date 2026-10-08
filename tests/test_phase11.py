@@ -35,14 +35,31 @@ def test_viz_deterministic():
     assert a == b
 
 def test_viz_node_edge_resolution():
+    import json
     data = json.load(open('examples/math_cdg_v2.json'))
     ids = {e['id'] for e in data['entities']}
     svg = open('docs/visualizations/mathematics_full.svg').read()
     for i in ids:
-        assert f'>{i}<' in svg, i
+        assert f'<g class="node" data-id="{i}"' in svg, i
+    # every canonical claim appears as an SVG edge with its predicate in the title
     for c in data['claims']:
         if c['predicate'] and c['object_id'] in ids:
-            assert f'({c["id"]})' in svg or True  # titles; direction preserved by marker-end
+            assert f'({c["id"]})' in svg
+
+
+def test_viz_clickable_cards_and_details():
+    import json
+    data = json.load(open('examples/math_cdg_v2.json'))
+    html = open('docs/visualizations/mathematics_full.html').read()
+    # every node is a clickable card
+    ids = {e['id'] for e in data['entities']}
+    for i in ids:
+        assert f'cdgSelect(\'{i}\')' in html, i
+    # connections and prerequisites survive into the interactive payload
+    assert 'purpose' in html and 'scope' in html and 'origin' in html
+    assert 'legacy_id' in html and 'excerpt' in html
+    assert 'other' in html and 'predicate' in html
+
 
 def test_mathematics_backward_compatibility():
     from examples.wave2_batches import build_graph_v29

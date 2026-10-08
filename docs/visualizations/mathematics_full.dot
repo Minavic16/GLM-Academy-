@@ -1,5 +1,5 @@
 digraph g {
-label="Mathematics";
+label="GLM CDG — Mathematics (full)";
 node [shape=box,style=filled,fontname="monospace"];
 "it.mcq.alg_simplify" [fillcolor="#16a085",label="it.mcq.alg_simplify"];
 "it.mcq.circle" [fillcolor="#16a085",label="it.mcq.circle"];
