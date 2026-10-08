@@ -29,3 +29,33 @@ policy before being added.
 - Cross-subject edges are not stored until the target capability exists.
 - Today's canonical CDG contains zero accepted cross-subject edges; that is
   correct given Physics/Chemistry construction has not begun.
+
+
+## Phase 12 — first real cross-subject edges (created, evidence-backed, DERIVED)
+
+| # | Source KC (Math) | → Target KC (Physics) | Purpose | Scope | Origin | Evidence |
+|---|---|---|---|---|---|---|
+| 1 | kc.algebraic_expressions | kc.motion_equations_constant_acceleration | EXECUTE | SPECIFIC_TASK_MODEL (tm.solve_constant_acceleration) | DERIVED | ev.p.x1 (OSX UP1 3.4) |
+| 2 | kc.linear_equations_one_var | kc.motion_equations_constant_acceleration | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED | ev.p.x2 (OSX UP1 3.4) |
+| 3 | kc.gradient | kc.motion_graph_interpretation | EXECUTE | SPECIFIC_TASK_MODEL (tm.interpret_motion_graph) | DERIVED | ev.p.x3 (OSX UP1 4.2) |
+| 4 | kc.algebraic_expressions | kc.newtons_laws | EXECUTE | SPECIFIC_TASK_MODEL (tm.apply_newtons_second_law) | DERIVED | ev.p.x4 (OSX UP1 5.2) |
+
+Still PROPOSED (no Physics KC exists yet): ratio/proportion → concentration/
+stoichiometry; trigonometry → vector resolution; differentiation → kinematics
+s→v; integration → area under curve; quadratics → projectile motion.
+
+## Future dependency matrix (research only; none accepted)
+- Math → Physics: partially instantiated above; graph interpretation → motion
+  graphs realized; trig → vectors POSSIBLE.
+- Math → Chemistry: ratio/proportion → stoichiometry (PROPOSED); logs → pH
+  (blocked: no Math log KC).
+- Math → Biology: statistics → data analysis (POSSIBLE); ratio →
+  dilution/concentration (POSSIBLE).
+- Math → English: NONE justified — reading comprehension is not a Math
+  dependency; arithmetic in comprehension questions is not a prerequisite at
+  CDG level. NOT_YET_JUSTIFIED.
+- English → all subjects: explicit reading comprehension of question stems is
+  USEFUL, not a prerequisite at capability level — NOT_YET_JUSTIFIED until
+  assessment-level evidence appears.
+- Physics → Chemistry: units/scientific measurement shared. (POSSIBLE.)
+- Chemistry → Physics: energetics overlap. (POSSIBLE.)

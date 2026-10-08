@@ -1,8 +1,16 @@
-# Subject Expansion Plan (Phase 11 research output)
+# Subject Expansion Plan (five-subject roadmap)
 
-Phase boundary: this is a plan. Nothing below is implemented yet.
+PHASE 11 — Multi-subject architecture + visualization — COMPLETE
+PHASE 12 — Physics vertical slice (measurement, kinematics, Newton) — COMPLETE (this repo state)
+PHASE 13 — Chemistry slice — PLANNED
+PHASE 14 — Biology slice — PLANNED
+PHASE 15 — English Language slice — PLANNED
+PHASE 16 — Cross-subject integration + whole-curriculum audit — PLANNED
 
-## Phase 12 — Physics CDG bootstrap
+Principle: internal subject coherence first; cross-subject edges added only
+where a target TaskModel/Method requires the source KC (Phase 12 proved the
+pattern with four Mathematics → Physics DERIVED prerequisites).
+ — Physics CDG bootstrap
 1. Retrieve and archive the actual source PDFs (JAMB iBASS Physics, WAEC
    May/June Physics, NERDC SSS Physics).
 2. Register their bytes as read-only LEGACY_DATASET or new Sources in the

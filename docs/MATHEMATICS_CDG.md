@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 36
-- TaskModels: 35
-- Methods: 49
-- Items: 30
+- Knowledge Components: 44
+- TaskModels: 39
+- Methods: 57
+- Items: 31
 - Misconceptions: 1
-- Claims: 221
-- Evidence records: 207
-- Sources: 30
-- Activities: 87
+- Claims: 260
+- Evidence records: 218
+- Sources: 38
+- Activities: 90
 - Agents: 2
-- Exported nodes: 151
-- Exported edges: 221
-- Accepted Claims: 219; PROPOSED Claims: 2
+- Exported nodes: 174
+- Exported edges: 260
+- Accepted Claims: 258; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -31,6 +31,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.counting_principle` | Fundamental (multiplication) counting principle | Statistics & Probability | ACCEPTED | tm.count_outcomes |
 | `kc.differentiation_algebraic` | Differentiation of explicit algebraic functions | Calculus | ACCEPTED | tm.differentiate_explicit |
 | `kc.direct_variation` | Direct variation | Algebra | ACCEPTED | tm.direct_variation_problems |
+| `kc.displacement_velocity` | Displacement, velocity and acceleration | Physics | ACCEPTED | tm.interpret_motion_graph |
 | `kc.distance_formula` | Distance between two points in the plane | Coordinate Geometry | ACCEPTED | tm.compute_distance |
 | `kc.equation_of_line` | Equation of a straight line (all forms) | Coordinate Geometry | ACCEPTED | tm.find_line_equation |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
@@ -42,11 +43,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.integration_algebraic` | Elementary integration of algebraic functions | Calculus | ACCEPTED | tm.integrate_polynomial |
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
+| `kc.mass_and_weight` | Mass, weight and inertia | Physics | ACCEPTED | tm.apply_newtons_second_law |
 | `kc.maxima_minima` | Maxima and minima of a function | Calculus | ACCEPTED | tm.find_maxima_minima |
 | `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
+| `kc.measurement_errors_precision` | Measurement errors, precision and significant figures | Physics | PROPOSED | — |
+| `kc.measurement_units_dimensions` | Physical quantities, SI units and dimensions | Physics | ACCEPTED | tm.convert_and_check_units |
+| `kc.motion_equations_constant_acceleration` | Equations of motion (constant acceleration) | Physics | ACCEPTED | tm.solve_constant_acceleration |
+| `kc.motion_graph_interpretation` | Interpretation of motion graphs | Physics | ACCEPTED | tm.interpret_motion_graph |
+| `kc.newtons_laws` | Newton's laws of motion | Physics | ACCEPTED | tm.apply_newtons_second_law |
 | `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
 | `kc.parallel_perpendicular_lines` | Conditions for parallel and perpendicular lines | Coordinate Geometry | ACCEPTED | tm.classify_line_relationships |
 | `kc.percentage_concept` | Percentages | Number & Numeration | ACCEPTED | tm.percentage_problems |
+| `kc.practical_measurement` | Experimental measurement practice | Physics | PROPOSED | — |
 | `kc.quadratic_by_factorisation` | Solving quadratic equations by factorisation | Algebra | ACCEPTED | tm.solve_quadratic_by_factorisation |
 | `kc.quadratic_formula` | Quadratic formula | Algebra | ACCEPTED | tm.apply_quadratic_formula |
 | `kc.quadratic_roots` | Roots of quadratic equations (any method) | Algebra | ACCEPTED | tm.find_quadratic_roots |
@@ -75,8 +83,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.integer_arithmetic` | → | `kc.algebraic_expressions` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.integer_arithmetic` | → | `kc.factorisation_quadratic_trinomial` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.integer_arithmetic` | → | `kc.linear_equations_one_var` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.displacement_velocity` | → | `kc.motion_equations_constant_acceleration` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.displacement_velocity` | → | `kc.motion_graph_interpretation` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.quadratic_by_factorisation` | EXECUTE | ALL_RELEVANT_METHODS | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.simultaneous_linear_equations` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.mass_and_weight` | → | `kc.newtons_laws` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.quadratic_by_factorisation` | → | `kc.quadratic_roots` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.quadratic_roots` | → | `kc.simultaneous_linear_quadratic` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.simultaneous_linear_equations` | → | `kc.simultaneous_linear_quadratic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -109,8 +120,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.motion_equations_constant_acceleration` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.newtons_laws` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.gradient` | → | `kc.motion_graph_interpretation` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.linear_equations_one_var` | → | `kc.motion_equations_constant_acceleration` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 
 ## TaskModel Index
+
+### `tm.apply_newtons_second_law` — Apply Newton's second law to force problems
+
+- Targets: kc.mass_and_weight, kc.newtons_laws
+- Methods: m.f_equals_ma, m.resultant_force
+- Status: ACCEPTED
 
 ### `tm.apply_quadratic_formula` — Apply the quadratic formula
 
@@ -164,6 +185,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.rate_of_change
 - Methods: m.derivative_at_point
+- Status: ACCEPTED
+
+### `tm.convert_and_check_units` — Convert physical quantities and check dimensions
+
+- Targets: kc.measurement_units_dimensions
+- Methods: m.dimensional_consistency, m.si_prefix_conversion
 - Status: ACCEPTED
 
 ### `tm.count_outcomes` — Count outcomes of a multi-stage experiment
@@ -238,6 +265,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.reverse_power_rule
 - Status: ACCEPTED
 
+### `tm.interpret_motion_graph` — Interpret and construct motion graphs (displacement/velocity)
+
+- Targets: kc.displacement_velocity, kc.motion_graph_interpretation
+- Methods: m.displacement_from_st, m.slope_of_vt
+- Status: ACCEPTED
+
 ### `tm.make_subject` — Make a specified variable the subject
 
 - Targets: kc.change_of_subject
@@ -260,6 +293,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.integer_arithmetic
 - Methods: m.sign_rules
+- Status: ACCEPTED
+
+### `tm.solve_constant_acceleration` — Solve constant-acceleration motion problems
+
+- Targets: kc.motion_equations_constant_acceleration
+- Methods: m.graph_extract_motion, m.suvat_equations
 - Status: ACCEPTED
 
 ### `tm.solve_index_equation` — Solve an equation involving indices
@@ -324,6 +363,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Method Index (AND within method, OR across methods)
 
+### `tm.apply_newtons_second_law`
+
+- **`m.f_equals_ma`** requires: kc.algebraic_expressions, kc.mass_and_weight, kc.newtons_laws
+- **`m.resultant_force`** requires: kc.algebraic_expressions, kc.mass_and_weight, kc.newtons_laws
+
 ### `tm.apply_quadratic_formula`
 
 - **`m.substitute_formula`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -360,6 +404,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.compute_rate_of_change`
 
 - **`m.derivative_at_point`** requires: kc.differentiation_algebraic, kc.integer_arithmetic
+
+### `tm.convert_and_check_units`
+
+- **`m.dimensional_consistency`** requires: kc.algebraic_expressions
+- **`m.si_prefix_conversion`** requires: kc.algebraic_expressions
 
 ### `tm.count_outcomes`
 
@@ -414,6 +463,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.reverse_power_rule`** requires: kc.algebraic_expressions, kc.function_concept
 
+### `tm.interpret_motion_graph`
+
+- **`m.displacement_from_st`** requires: kc.displacement_velocity, kc.gradient
+- **`m.slope_of_vt`** requires: kc.algebraic_expressions, kc.displacement_velocity, kc.gradient
+
 ### `tm.make_subject`
 
 - **`m.collect_factor_subject`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -430,6 +484,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.signed_number_arithmetic`
 
 - **`m.sign_rules`** requires: kc.integer_arithmetic
+
+### `tm.solve_constant_acceleration`
+
+- **`m.graph_extract_motion`** requires: kc.algebraic_expressions, kc.motion_graph_interpretation
+- **`m.suvat_equations`** requires: kc.algebraic_expressions, kc.displacement_velocity, kc.linear_equations_one_var
 
 ### `tm.solve_index_equation`
 
@@ -484,7 +543,9 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Open Review Items
 
-- PROPOSED KCs: 0
+- PROPOSED KCs: 2
+  - `kc.measurement_errors_precision` — Measurement errors, precision and significant figures
+  - `kc.practical_measurement` — Experimental measurement practice
 - PROPOSED Claims: 2 (misconception catalog entry, item indicator, etc.)
 - Owner sign-off: `indicates` domain (OWNER_SIGN_OFF_REQUIRED)
 - Owner input: 12 vs 13 frozen-entity count discrepancy
@@ -525,3 +586,4 @@ See [`docs/batch_records/`](../batch_records/).
 | 027 | kc.special_angle_values |
 | 028 | kc.counting_principle |
 | 029 | kc.distance_formula |
+| 030 | kc.displacement_velocity, kc.mass_and_weight, kc.measurement_errors_precision, kc.measurement_units_dimensions, kc.motion_equations_constant_acceleration, kc.motion_graph_interpretation, kc.newtons_laws, kc.practical_measurement |

@@ -36,6 +36,13 @@ TYPE_COLORS = {
 }
 
 KIND2COLOR = TYPE_COLORS
+SUBJECT_COLORS = {"Mathematics": "#1b5e20", "Physics": "#0d47a1", "Chemistry": "#4a148c",
+                  "Biology": "#b71c1c", "English": "#004d40", None: "#333"}
+
+
+def _subj_color(nid, nodes):
+    e = nodes[nid]
+    return SUBJECT_COLORS.get(e.get("subject"), "#333")
 
 
 def _load():
@@ -131,9 +138,10 @@ def _svg(title, node_ids, nodes, edges):
         e = nodes[nid]
         fill = TYPE_COLORS.get(e["entity_type"], "#eee")
         label = e.get("label", "")[:36].replace('"', "'")
+        sc = _subj_color(nid, nodes)
         parts.append(
             f'<g class="node" data-id="{nid}" onclick="cdgSelect(\'{nid}\', event)">'
-            f'<rect x="{x-118}" y="{y-18}" width="236" height="36" rx="6" fill="{fill}" stroke="#333"/>'
+            f'<rect x="{x-118}" y="{y-18}" width="236" height="36" rx="6" fill="{fill}" stroke="{sc}" stroke-width="4"/>'
             f'<text x="{x}" y="{y+4}" text-anchor="middle" font-size="11" fill="white">{label}</text>'
             f'<title>{nid} | {e["entity_type"]}</title></g>')
     parts.append('</svg>')

@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.wave2_batches import build_graph_v29
+from examples.physics_slice import build_graph_v30
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -54,6 +54,14 @@ DOMAIN_OF = {
     "kc.special_angle_values": "Trigonometry",
     "kc.counting_principle": "Statistics & Probability",
     "kc.distance_formula": "Coordinate Geometry",
+    "kc.measurement_units_dimensions": "Physics",
+    "kc.measurement_errors_precision": "Physics",
+    "kc.displacement_velocity": "Physics",
+    "kc.motion_equations_constant_acceleration": "Physics",
+    "kc.motion_graph_interpretation": "Physics",
+    "kc.newtons_laws": "Physics",
+    "kc.mass_and_weight": "Physics",
+    "kc.practical_measurement": "Physics",
 }
 
 BATCH_OF = {
@@ -93,6 +101,14 @@ BATCH_OF = {
     "kc.special_angle_values": "027",
     "kc.counting_principle": "028",
     "kc.distance_formula": "029",
+    "kc.measurement_units_dimensions": "030",
+    "kc.displacement_velocity": "030",
+    "kc.motion_equations_constant_acceleration": "030",
+    "kc.motion_graph_interpretation": "030",
+    "kc.newtons_laws": "030",
+    "kc.mass_and_weight": "030",
+    "kc.practical_measurement": "030",
+    "kc.measurement_errors_precision": "030",
 }
 
 
@@ -101,7 +117,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v29()
+    s = build_graph_v30()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)
@@ -223,7 +239,7 @@ def main() -> None:
     cov.append("")
     cov.append("| Domain | Subdomain | Status | KCs | TaskModels | Evidence | Open Issues |")
     cov.append("|---|---|---|---|---|---|---|")
-    for domain in ["Number & Numeration", "Algebra", "Geometry", "Coordinate Geometry", "Trigonometry", "Calculus", "Statistics & Probability", "Functions"]:
+    for domain in ["Mathematics", "Physics", "Algebra", "Number & Numeration", "Geometry", "Coordinate Geometry", "Trigonometry", "Calculus", "Statistics & Probability", "Functions"]:
         dkcs = [k for k in kcs if DOMAIN_OF.get(k.id) == domain]
         tm_count = len({tm for tm, tgts in targets.items() if any(k.id in tgts for k in dkcs)})
         evid = sum(1 for e in s.evidence.values() if any(
