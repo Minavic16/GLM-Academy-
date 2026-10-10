@@ -5,27 +5,31 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 55
-- TaskModels: 51
-- Methods: 75
-- Items: 35
+- Knowledge Components: 66
+- TaskModels: 62
+- Methods: 92
+- Items: 39
 - Misconceptions: 1
-- Claims: 357
-- Evidence records: 235
-- Sources: 55
-- Activities: 126
+- Claims: 434
+- Evidence records: 249
+- Sources: 71
+- Activities: 159
 - Agents: 2
-- Exported nodes: 219
-- Exported edges: 357
-- Accepted Claims: 355; PROPOSED Claims: 2
+- Exported nodes: 263
+- Exported edges: 434
+- Accepted Claims: 432; PROPOSED Claims: 2
 
 ## KC Index
 
 | ID | Name | Domain | Status | Owning TMs |
 |---|---|---|---|---|
+| `kc.acids_bases_salts` | Acids, bases, salts and neutralisation | Chemistry | ACCEPTED | tm.acid_base_problems |
 | `kc.algebraic_expressions` | Algebraic expressions: terms, coefficients, like terms, substitution | Algebra | ACCEPTED | tm.handle_algebraic_expressions |
 | `kc.atomic_nuclear_physics` | Atomic structure, photoelectric effect and nuclei | Physics | ACCEPTED | tm.modern_physics_problems |
+| `kc.atomic_structure_periodicity` | Atomic structure and the periodic table | Chemistry | ACCEPTED | tm.atomic_model_problems |
 | `kc.change_of_subject` | Change of subject of a formula/relation | Algebra | ACCEPTED | tm.make_subject |
+| `kc.chemical_bonding` | Ionic and covalent bonding | Chemistry | ACCEPTED | tm.bonding_problems |
+| `kc.chemical_energetics` | Energy changes in chemical reactions | Chemistry | ACCEPTED | tm.energetics_problems |
 | `kc.circle_angle_theorems` | Basic circle angle theorems | Geometry | ACCEPTED | tm.circle_angle_problems |
 | `kc.completing_the_square` | Completing the square | Algebra | ACCEPTED | tm.complete_square |
 | `kc.cosine_rule` | Cosine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
@@ -41,6 +45,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
 | `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
 | `kc.function_concept` | Function concept and notation | Functions | ACCEPTED | tm.evaluate_and_represent_function |
+| `kc.gas_behaviour` | Gas laws and molar gas volumes | Chemistry | ACCEPTED | tm.gas_problems |
 | `kc.geometrical_optics` | Reflection, refraction and image formation | Physics | ACCEPTED | tm.optics_problems |
 | `kc.gradient` | Gradient of a line segment | Coordinate Geometry | ACCEPTED | tm.compute_gradient |
 | `kc.gravitation` | Gravitation and gravitational field | Physics | ACCEPTED | tm.gravitation_problems |
@@ -51,23 +56,29 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
 | `kc.linear_momentum` | Linear momentum and its conservation | Physics | ACCEPTED | tm.momentum_problems |
 | `kc.mass_and_weight` | Mass, weight and inertia | Physics | ACCEPTED | tm.apply_newtons_second_law |
+| `kc.matter_classification` | Elements, compounds, mixtures and separation | Chemistry | ACCEPTED | tm.classify_matter |
 | `kc.maxima_minima` | Maxima and minima of a function | Calculus | ACCEPTED | tm.find_maxima_minima |
 | `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
 | `kc.measurement_errors_precision` | Measurement errors, precision and significant figures | Physics | ACCEPTED | tm.practical_physics |
 | `kc.measurement_units_dimensions` | Physical quantities, SI units and dimensions | Physics | ACCEPTED | tm.convert_and_check_units |
+| `kc.mole_stoichiometry` | Mole concept and stoichiometry | Chemistry | ACCEPTED | tm.stoichiometry_problems |
 | `kc.motion_equations_constant_acceleration` | Equations of motion (constant acceleration) | Physics | ACCEPTED | tm.solve_constant_acceleration |
 | `kc.motion_graph_interpretation` | Interpretation of motion graphs | Physics | ACCEPTED | tm.interpret_motion_graph |
 | `kc.newtons_laws` | Newton's laws of motion | Physics | ACCEPTED | tm.apply_newtons_second_law |
+| `kc.organic_foundations` | Hydrocarbons and functional groups | Chemistry | ACCEPTED | tm.organic_problems |
 | `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
 | `kc.parallel_perpendicular_lines` | Conditions for parallel and perpendicular lines | Coordinate Geometry | ACCEPTED | tm.classify_line_relationships |
 | `kc.percentage_concept` | Percentages | Number & Numeration | ACCEPTED | tm.percentage_problems |
+| `kc.practical_chemistry` | Practical chemistry procedures | Chemistry | ACCEPTED | tm.practical_chemistry |
 | `kc.practical_measurement` | Experimental measurement practice | Physics | ACCEPTED | tm.practical_physics |
 | `kc.pressure_fluids` | Density, pressure and fluids at rest | Physics | ACCEPTED | tm.fluid_pressure_problems |
 | `kc.quadratic_by_factorisation` | Solving quadratic equations by factorisation | Algebra | ACCEPTED | tm.solve_quadratic_by_factorisation |
 | `kc.quadratic_formula` | Quadratic formula | Algebra | ACCEPTED | tm.apply_quadratic_formula |
 | `kc.quadratic_roots` | Roots of quadratic equations (any method) | Algebra | ACCEPTED | tm.find_quadratic_roots |
 | `kc.rate_of_change` | Rate of change of a function | Calculus | ACCEPTED | tm.compute_rate_of_change |
+| `kc.rates_equilibrium` | Reaction rates and chemical equilibrium | Chemistry | ACCEPTED | tm.rate_equilibrium_problems |
 | `kc.ratio_proportion_rate` | Ratio, proportion and rate | Number & Numeration | ACCEPTED | tm.solve_proportions |
+| `kc.redox_electrochemistry` | Redox reactions and electrolysis | Chemistry | ACCEPTED | tm.redox_problems |
 | `kc.scalar_vector_quantities` | Scalars, vectors and vector resolution | Physics | ACCEPTED | tm.resolve_vectors |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
@@ -158,6 +169,23 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.gradient` | → | `kc.practical_measurement` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.integer_arithmetic` | → | `kc.practical_measurement` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.measurement_units_dimensions` | → | `kc.practical_measurement` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.matter_classification` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.matter_classification` | → | `kc.atomic_structure_periodicity` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.atomic_structure_periodicity` | → | `kc.chemical_bonding` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.chemical_bonding` | → | `kc.mole_stoichiometry` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.percentage_concept` | → | `kc.mole_stoichiometry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.mole_stoichiometry` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.mole_stoichiometry` | → | `kc.acids_bases_salts` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.chemical_bonding` | → | `kc.redox_electrochemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.electric_circuits` | → | `kc.redox_electrochemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.mole_stoichiometry` | → | `kc.redox_electrochemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.mole_stoichiometry` | → | `kc.chemical_energetics` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.function_concept` | → | `kc.rates_equilibrium` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.mole_stoichiometry` | → | `kc.gas_behaviour` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.gas_behaviour` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.chemical_bonding` | → | `kc.organic_foundations` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.acids_bases_salts` | → | `kc.practical_chemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.matter_classification` | → | `kc.practical_chemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -167,6 +195,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_equations_one_var` | → | `kc.motion_equations_constant_acceleration` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 
 ## TaskModel Index
+
+### `tm.acid_base_problems` — Solve neutralisation and titration problems
+
+- Targets: kc.acids_bases_salts
+- Methods: m.neutralisation_titration
+- Status: ACCEPTED
 
 ### `tm.apply_newtons_second_law` — Apply Newton's second law to force problems
 
@@ -178,6 +212,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.quadratic_formula
 - Methods: m.substitute_formula
+- Status: ACCEPTED
+
+### `tm.atomic_model_problems` — Deduce structure and predict periodic trends
+
+- Targets: kc.atomic_structure_periodicity
+- Methods: m.electron_arrangement, m.trend_prediction
+- Status: ACCEPTED
+
+### `tm.bonding_problems` — Classify bonds and write formulae
+
+- Targets: kc.chemical_bonding
+- Methods: m.formula_from_valency, m.ionic_vs_covalent
 - Status: ACCEPTED
 
 ### `tm.circle_angle_problems` — Solve circle angle problems using theorems
@@ -196,6 +242,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.parallel_perpendicular_lines
 - Methods: m.compare_gradients
+- Status: ACCEPTED
+
+### `tm.classify_matter` — Classify matter and separate mixtures
+
+- Targets: kc.matter_classification
+- Methods: m.separate_mixtures
 - Status: ACCEPTED
 
 ### `tm.complete_square` — Complete the square
@@ -264,6 +316,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.faraday_rate
 - Status: ACCEPTED
 
+### `tm.energetics_problems` — Solve reaction-energy problems
+
+- Targets: kc.chemical_energetics
+- Methods: m.enthalpy_hess
+- Status: ACCEPTED
+
 ### `tm.evaluate_and_represent_function` — Evaluate and represent functions
 
 - Targets: kc.function_concept
@@ -304,6 +362,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.fraction_decimal_operations
 - Methods: m.convert_common_denominator
+- Status: ACCEPTED
+
+### `tm.gas_problems` — Solve gas-law problems
+
+- Targets: kc.gas_behaviour
+- Methods: m.combined_gas_law
 - Status: ACCEPTED
 
 ### `tm.gravitation_problems` — Solve gravitation and g-field problems
@@ -360,10 +424,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.mirror_lens_equation, m.reflection_refraction
 - Status: ACCEPTED
 
+### `tm.organic_problems` — Name hydrocarbons and classify groups
+
+- Targets: kc.organic_foundations
+- Methods: m.hydrocarbon_naming
+- Status: ACCEPTED
+
 ### `tm.percentage_problems` — Solve percentage problems
 
 - Targets: kc.percentage_concept
 - Methods: m.percent_as_fraction
+- Status: ACCEPTED
+
+### `tm.practical_chemistry` — Perform titration and qualitative tests
+
+- Targets: kc.practical_chemistry
+- Methods: m.qualitative_tests, m.titration_procedure
 - Status: ACCEPTED
 
 ### `tm.practical_physics` — Carry out measurements and analyse data
@@ -372,10 +448,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.instrument_tabulate, m.plot_gradient
 - Status: ACCEPTED
 
+### `tm.rate_equilibrium_problems` — Interpret rates and equilibria
+
+- Targets: kc.rates_equilibrium
+- Methods: m.le_chatelier, m.rate_curves
+- Status: ACCEPTED
+
 ### `tm.recall_special_values` — State exact trig values at special angles
 
 - Targets: kc.special_angle_values
 - Methods: m.from_special_triangles
+- Status: ACCEPTED
+
+### `tm.redox_problems` — Solve redox and electrolysis problems
+
+- Targets: kc.redox_electrochemistry
+- Methods: m.electrolysis_quantitative, m.redox_identification
 - Status: ACCEPTED
 
 ### `tm.resolve_vectors` — Classify quantities and resolve vectors
@@ -444,6 +532,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.solve_by_elimination, m.solve_by_substitution
 - Status: ACCEPTED
 
+### `tm.stoichiometry_problems` — Solve mole and equation problems
+
+- Targets: kc.mole_stoichiometry
+- Methods: m.empirical_formula, m.mole_ratio
+- Status: ACCEPTED
+
 ### `tm.thermal_problems` — Solve heat/temperature/gas problems
 
 - Targets: kc.heat_temperature
@@ -476,6 +570,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Method Index (AND within method, OR across methods)
 
+### `tm.acid_base_problems`
+
+- **`m.neutralisation_titration`** requires: kc.algebraic_expressions, kc.mole_stoichiometry
+
 ### `tm.apply_newtons_second_law`
 
 - **`m.f_equals_ma`** requires: kc.algebraic_expressions, kc.mass_and_weight, kc.newtons_laws
@@ -484,6 +582,16 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.apply_quadratic_formula`
 
 - **`m.substitute_formula`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
+### `tm.atomic_model_problems`
+
+- **`m.electron_arrangement`** requires: kc.integer_arithmetic, kc.matter_classification
+- **`m.trend_prediction`** requires: kc.matter_classification
+
+### `tm.bonding_problems`
+
+- **`m.formula_from_valency`** requires: kc.atomic_structure_periodicity, kc.integer_arithmetic
+- **`m.ionic_vs_covalent`** requires: kc.algebraic_expressions, kc.atomic_structure_periodicity
 
 ### `tm.circle_angle_problems`
 
@@ -497,6 +605,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.classify_line_relationships`
 
 - **`m.compare_gradients`** requires: kc.gradient, kc.integer_arithmetic
+
+### `tm.classify_matter`
+
+- **`m.separate_mixtures`** requires: kc.algebraic_expressions
 
 ### `tm.complete_square`
 
@@ -544,6 +656,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.faraday_rate`** requires: kc.algebraic_expressions, kc.rate_of_change
 
+### `tm.energetics_problems`
+
+- **`m.enthalpy_hess`** requires: kc.algebraic_expressions, kc.mole_stoichiometry
+
 ### `tm.evaluate_and_represent_function`
 
 - **`m.evaluate_substitution`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -575,6 +691,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.fraction_decimal_operations`
 
 - **`m.convert_common_denominator`** requires: kc.integer_arithmetic
+
+### `tm.gas_problems`
+
+- **`m.combined_gas_law`** requires: kc.algebraic_expressions, kc.mole_stoichiometry, kc.ratio_proportion_rate
 
 ### `tm.gravitation_problems`
 
@@ -616,18 +736,37 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.mirror_lens_equation`** requires: kc.algebraic_expressions, kc.ratio_proportion_rate
 - **`m.reflection_refraction`** requires: kc.algebraic_expressions, kc.triangle_angle_properties
 
+### `tm.organic_problems`
+
+- **`m.hydrocarbon_naming`** requires: kc.chemical_bonding
+
 ### `tm.percentage_problems`
 
 - **`m.percent_as_fraction`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
+
+### `tm.practical_chemistry`
+
+- **`m.qualitative_tests`** requires: kc.matter_classification
+- **`m.titration_procedure`** requires: kc.acids_bases_salts, kc.measurement_units_dimensions
 
 ### `tm.practical_physics`
 
 - **`m.instrument_tabulate`** requires: kc.integer_arithmetic, kc.measurement_units_dimensions
 - **`m.plot_gradient`** requires: kc.gradient, kc.measurement_units_dimensions
 
+### `tm.rate_equilibrium_problems`
+
+- **`m.le_chatelier`** requires: kc.chemical_bonding
+- **`m.rate_curves`** requires: kc.algebraic_expressions, kc.function_concept
+
 ### `tm.recall_special_values`
 
 - **`m.from_special_triangles`** requires: kc.algebraic_expressions, kc.trig_ratios_acute
+
+### `tm.redox_problems`
+
+- **`m.electrolysis_quantitative`** requires: kc.electric_circuits, kc.mole_stoichiometry
+- **`m.redox_identification`** requires: kc.chemical_bonding, kc.integer_arithmetic
 
 ### `tm.resolve_vectors`
 
@@ -680,6 +819,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.solve_by_elimination`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 - **`m.solve_by_substitution`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
+
+### `tm.stoichiometry_problems`
+
+- **`m.empirical_formula`** requires: kc.algebraic_expressions, kc.chemical_bonding, kc.percentage_concept
+- **`m.mole_ratio`** requires: kc.algebraic_expressions, kc.chemical_bonding, kc.ratio_proportion_rate
 
 ### `tm.thermal_problems`
 
@@ -763,3 +907,14 @@ See [`docs/batch_records/`](../batch_records/).
 | 039 | kc.electric_circuits |
 | 040 | kc.electromagnetism |
 | 041 | kc.atomic_nuclear_physics |
+| 043 | kc.matter_classification |
+| 044 | kc.atomic_structure_periodicity |
+| 045 | kc.chemical_bonding |
+| 046 | kc.mole_stoichiometry |
+| 047 | kc.acids_bases_salts |
+| 048 | kc.redox_electrochemistry |
+| 049a | kc.chemical_energetics |
+| 049b | kc.rates_equilibrium |
+| 050 | kc.gas_behaviour |
+| 051 | kc.organic_foundations |
+| 052 | kc.practical_chemistry |

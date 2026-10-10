@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.physics_wave3 import build_graph_v32
+from examples.chem_wave2 import build_graph_v34
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -73,6 +73,17 @@ DOMAIN_OF = {
     "kc.electric_circuits": "Physics",
     "kc.electromagnetism": "Physics",
     "kc.atomic_nuclear_physics": "Physics",
+    "kc.matter_classification": "Chemistry",
+    "kc.atomic_structure_periodicity": "Chemistry",
+    "kc.chemical_bonding": "Chemistry",
+    "kc.mole_stoichiometry": "Chemistry",
+    "kc.acids_bases_salts": "Chemistry",
+    "kc.redox_electrochemistry": "Chemistry",
+    "kc.chemical_energetics": "Chemistry",
+    "kc.rates_equilibrium": "Chemistry",
+    "kc.gas_behaviour": "Chemistry",
+    "kc.organic_foundations": "Chemistry",
+    "kc.practical_chemistry": "Chemistry",
 }
 
 BATCH_OF = {
@@ -106,6 +117,17 @@ BATCH_OF = {
     "kc.cosine_rule": "021",
     "kc.equation_of_line": "022",
     "kc.circle_angle_theorems": "023",
+    "kc.matter_classification": "043",
+    "kc.atomic_structure_periodicity": "044",
+    "kc.chemical_bonding": "045",
+    "kc.mole_stoichiometry": "046",
+    "kc.acids_bases_salts": "047",
+    "kc.redox_electrochemistry": "048",
+    "kc.chemical_energetics": "049a",
+    "kc.rates_equilibrium": "049b",
+    "kc.gas_behaviour": "050",
+    "kc.organic_foundations": "051",
+    "kc.practical_chemistry": "052",
     "kc.parallel_perpendicular_lines": "024",
     "kc.ratio_proportion_rate": "025",
     "kc.direct_variation": "026",
@@ -139,7 +161,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v32()
+    s = build_graph_v34()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

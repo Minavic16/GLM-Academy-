@@ -85,3 +85,14 @@
 ## 13. Explicit exclusions
 - No chemistry KCs created in CDG. No item bank, scoring, lab manual, or
   observations stored.
+
+---
+
+## Phase 13 update — foundational slice implemented (043–052)
+
+11 KCs ACCEPTED across matter → atomic → bonding → mole → acids/redox/
+energetics/rates/gases/organics/practical (see CHEMISTRY_COVERAGE_MATRIX.md).
+All content evidence OpenStax Chemistry 2e (URLs verified HTTP 200 pre-build);
+official JAMB/WAEC/NERDC Chemistry PDFs still pending — board-level
+confirmation remains OWNER_REVIEW_REQUIRED. Deferred: buffers/pH (needs Math
+log KC), polymers, industrial chemistry, transition-metal detail.

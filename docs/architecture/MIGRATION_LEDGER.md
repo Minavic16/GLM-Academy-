@@ -14,3 +14,5 @@ The legacy graph remains outside the CDG store. `MigrationRecord`
 metadata is produced only when a record is actually dispositioned.
 
 Phase 12B: no legacy-corpus reuse for Physics — all 12 new batches cite OpenStax UP pages directly (each verified HTTP 200). Legacy counts unchanged; no bulk migration performed.
+
+Phase 13: no legacy-corpus reuse for Chemistry — all batches cite OpenStax Chemistry 2e directly (each verified HTTP 200). No bulk migration performed.
