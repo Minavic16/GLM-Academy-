@@ -22,3 +22,5 @@ PEDAGOGICAL vs TEXTBOOK reference.
   public index pages of the official sources above; exact per-topic content
   will be ingested when the actual PDF documents are downloaded.
 - Nothing in this register is used to auto-accept any graph claim.
+
+Phase 12B additions (all OpenStax, TEXTBOOK/reference, URLs verified HTTP 200 2026-10-10): SRC.OSX.UP1.2.2/7.1/7.3/8.1/9.1/13.1/14.1/15.1/16.1, SRC.OSX.UP2.1.1/9.4/10.3/13.1/15.2/16.5, SRC.OSX.UP3.2.1/6.2/10.1. Official JAMB/WAEC/NERDC Physics PDFs: still pending (see PHYSICS_SOURCE_RESEARCH.md).

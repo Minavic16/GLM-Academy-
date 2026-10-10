@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.physics_slice import build_graph_v30
+from examples.physics_wave3 import build_graph_v32
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -62,6 +62,17 @@ DOMAIN_OF = {
     "kc.newtons_laws": "Physics",
     "kc.mass_and_weight": "Physics",
     "kc.practical_measurement": "Physics",
+    "kc.scalar_vector_quantities": "Physics",
+    "kc.work_energy_power": "Physics",
+    "kc.linear_momentum": "Physics",
+    "kc.gravitation": "Physics",
+    "kc.pressure_fluids": "Physics",
+    "kc.heat_temperature": "Physics",
+    "kc.wave_phenomena": "Physics",
+    "kc.geometrical_optics": "Physics",
+    "kc.electric_circuits": "Physics",
+    "kc.electromagnetism": "Physics",
+    "kc.atomic_nuclear_physics": "Physics",
 }
 
 BATCH_OF = {
@@ -108,6 +119,17 @@ BATCH_OF = {
     "kc.newtons_laws": "030",
     "kc.mass_and_weight": "030",
     "kc.practical_measurement": "030",
+    "kc.scalar_vector_quantities": "031",
+    "kc.work_energy_power": "032",
+    "kc.linear_momentum": "033",
+    "kc.gravitation": "034",
+    "kc.pressure_fluids": "035",
+    "kc.heat_temperature": "036",
+    "kc.wave_phenomena": "037",
+    "kc.geometrical_optics": "038",
+    "kc.electric_circuits": "039",
+    "kc.electromagnetism": "040",
+    "kc.atomic_nuclear_physics": "041",
     "kc.measurement_errors_precision": "030",
 }
 
@@ -117,7 +139,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v30()
+    s = build_graph_v32()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

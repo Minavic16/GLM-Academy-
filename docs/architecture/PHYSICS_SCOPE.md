@@ -130,3 +130,15 @@
 - Official-board confirmation of topic selection: OWNER_REVIEW_REQUIRED.
 - kc.measurement_errors_precision, kc.practical_measurement: PROPOSED
   (no supporting syllabus/TM evidence yet).
+
+---
+
+## Phase 12B update — expansion to full-scope coverage
+
+Slice extended from 8 to 19 Physics KCs across mechanics, thermal, waves,
+optics, electricity, magnetism, modern physics, and practicals (see
+PHYSICS_COVERAGE_MATRIX.md R01–R16 COVERED/PARTIAL; R17 fibre/LASER/
+electronics NOT_COVERED as SHOULD-level deferral; R18–R19 PARTIAL).
+Official JAMB/WAEC/NERDC PDFs still pending — board-level confirmation of
+topic selection remains OWNER_REVIEW_REQUIRED. All new content evidence is
+OpenStax UP1/UP2/UP3 (each URL verified HTTP 200 before citation).

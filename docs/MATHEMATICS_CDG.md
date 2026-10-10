@@ -5,25 +5,26 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 44
-- TaskModels: 39
-- Methods: 57
-- Items: 31
+- Knowledge Components: 55
+- TaskModels: 51
+- Methods: 75
+- Items: 35
 - Misconceptions: 1
-- Claims: 260
-- Evidence records: 218
-- Sources: 38
-- Activities: 90
+- Claims: 357
+- Evidence records: 235
+- Sources: 55
+- Activities: 126
 - Agents: 2
-- Exported nodes: 174
-- Exported edges: 260
-- Accepted Claims: 258; PROPOSED Claims: 2
+- Exported nodes: 219
+- Exported edges: 357
+- Accepted Claims: 355; PROPOSED Claims: 2
 
 ## KC Index
 
 | ID | Name | Domain | Status | Owning TMs |
 |---|---|---|---|---|
 | `kc.algebraic_expressions` | Algebraic expressions: terms, coefficients, like terms, substitution | Algebra | ACCEPTED | tm.handle_algebraic_expressions |
+| `kc.atomic_nuclear_physics` | Atomic structure, photoelectric effect and nuclei | Physics | ACCEPTED | tm.modern_physics_problems |
 | `kc.change_of_subject` | Change of subject of a formula/relation | Algebra | ACCEPTED | tm.make_subject |
 | `kc.circle_angle_theorems` | Basic circle angle theorems | Geometry | ACCEPTED | tm.circle_angle_problems |
 | `kc.completing_the_square` | Completing the square | Algebra | ACCEPTED | tm.complete_square |
@@ -33,20 +34,26 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.direct_variation` | Direct variation | Algebra | ACCEPTED | tm.direct_variation_problems |
 | `kc.displacement_velocity` | Displacement, velocity and acceleration | Physics | ACCEPTED | tm.interpret_motion_graph |
 | `kc.distance_formula` | Distance between two points in the plane | Coordinate Geometry | ACCEPTED | tm.compute_distance |
+| `kc.electric_circuits` | Current, voltage, resistance and circuits | Physics | ACCEPTED | tm.circuit_analysis |
+| `kc.electromagnetism` | Electromagnetic induction and AC basics | Physics | ACCEPTED | tm.emi_ac_problems |
 | `kc.equation_of_line` | Equation of a straight line (all forms) | Coordinate Geometry | ACCEPTED | tm.find_line_equation |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
 | `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
 | `kc.function_concept` | Function concept and notation | Functions | ACCEPTED | tm.evaluate_and_represent_function |
+| `kc.geometrical_optics` | Reflection, refraction and image formation | Physics | ACCEPTED | tm.optics_problems |
 | `kc.gradient` | Gradient of a line segment | Coordinate Geometry | ACCEPTED | tm.compute_gradient |
+| `kc.gravitation` | Gravitation and gravitational field | Physics | ACCEPTED | tm.gravitation_problems |
+| `kc.heat_temperature` | Heat, temperature and thermal behaviour | Physics | ACCEPTED | tm.thermal_problems |
 | `kc.integer_arithmetic` | Signed-number (integer) arithmetic | Number & Numeration | ACCEPTED | tm.signed_number_arithmetic |
 | `kc.integration_algebraic` | Elementary integration of algebraic functions | Calculus | ACCEPTED | tm.integrate_polynomial |
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
+| `kc.linear_momentum` | Linear momentum and its conservation | Physics | ACCEPTED | tm.momentum_problems |
 | `kc.mass_and_weight` | Mass, weight and inertia | Physics | ACCEPTED | tm.apply_newtons_second_law |
 | `kc.maxima_minima` | Maxima and minima of a function | Calculus | ACCEPTED | tm.find_maxima_minima |
 | `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
-| `kc.measurement_errors_precision` | Measurement errors, precision and significant figures | Physics | PROPOSED | — |
+| `kc.measurement_errors_precision` | Measurement errors, precision and significant figures | Physics | ACCEPTED | tm.practical_physics |
 | `kc.measurement_units_dimensions` | Physical quantities, SI units and dimensions | Physics | ACCEPTED | tm.convert_and_check_units |
 | `kc.motion_equations_constant_acceleration` | Equations of motion (constant acceleration) | Physics | ACCEPTED | tm.solve_constant_acceleration |
 | `kc.motion_graph_interpretation` | Interpretation of motion graphs | Physics | ACCEPTED | tm.interpret_motion_graph |
@@ -54,12 +61,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
 | `kc.parallel_perpendicular_lines` | Conditions for parallel and perpendicular lines | Coordinate Geometry | ACCEPTED | tm.classify_line_relationships |
 | `kc.percentage_concept` | Percentages | Number & Numeration | ACCEPTED | tm.percentage_problems |
-| `kc.practical_measurement` | Experimental measurement practice | Physics | PROPOSED | — |
+| `kc.practical_measurement` | Experimental measurement practice | Physics | ACCEPTED | tm.practical_physics |
+| `kc.pressure_fluids` | Density, pressure and fluids at rest | Physics | ACCEPTED | tm.fluid_pressure_problems |
 | `kc.quadratic_by_factorisation` | Solving quadratic equations by factorisation | Algebra | ACCEPTED | tm.solve_quadratic_by_factorisation |
 | `kc.quadratic_formula` | Quadratic formula | Algebra | ACCEPTED | tm.apply_quadratic_formula |
 | `kc.quadratic_roots` | Roots of quadratic equations (any method) | Algebra | ACCEPTED | tm.find_quadratic_roots |
 | `kc.rate_of_change` | Rate of change of a function | Calculus | ACCEPTED | tm.compute_rate_of_change |
 | `kc.ratio_proportion_rate` | Ratio, proportion and rate | Number & Numeration | ACCEPTED | tm.solve_proportions |
+| `kc.scalar_vector_quantities` | Scalars, vectors and vector resolution | Physics | ACCEPTED | tm.resolve_vectors |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
 | `kc.sine_rule` | Sine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
@@ -67,6 +76,8 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.theoretical_probability` | Theoretical probability of an event | Statistics & Probability | ACCEPTED | tm.compute_probability |
 | `kc.triangle_angle_properties` | Triangle angle properties | Geometry | ACCEPTED | tm.triangle_angle_problems |
 | `kc.trig_ratios_acute` | Trigonometric ratios of acute angles | Trigonometry | ACCEPTED | tm.trig_ratio_problems |
+| `kc.wave_phenomena` | Wave motion, frequency and wave speed | Physics | ACCEPTED | tm.wave_problems |
+| `kc.work_energy_power` | Work, energy and power | Physics | ACCEPTED | tm.work_energy_problems |
 
 ### KC Prerequisite Index
 
@@ -117,6 +128,36 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.integer_arithmetic` | → | `kc.counting_principle` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.distance_formula` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.gradient` | → | `kc.distance_formula` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.scalar_vector_quantities` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.trig_ratios_acute` | → | `kc.scalar_vector_quantities` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.measurement_units_dimensions` | → | `kc.scalar_vector_quantities` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.work_energy_power` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.newtons_laws` | → | `kc.work_energy_power` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.rate_of_change` | → | `kc.work_energy_power` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.linear_momentum` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.newtons_laws` | → | `kc.linear_momentum` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.gravitation` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.newtons_laws` | → | `kc.gravitation` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.pressure_fluids` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.pressure_fluids` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.heat_temperature` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.heat_temperature` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.heat_temperature` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.wave_phenomena` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.displacement_velocity` | → | `kc.wave_phenomena` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.geometrical_optics` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.geometrical_optics` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.triangle_angle_properties` | → | `kc.geometrical_optics` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.algebraic_expressions` | → | `kc.electric_circuits` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.electric_circuits` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.simultaneous_linear_equations` | → | `kc.electric_circuits` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.electromagnetism` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.rate_of_change` | → | `kc.electromagnetism` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.atomic_nuclear_physics` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.equations_in_indices` | → | `kc.atomic_nuclear_physics` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.gradient` | → | `kc.practical_measurement` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.practical_measurement` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.measurement_units_dimensions` | → | `kc.practical_measurement` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -143,6 +184,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.circle_angle_theorems
 - Methods: m.centre_vs_circumference
+- Status: ACCEPTED
+
+### `tm.circuit_analysis` — Analyse DC circuits
+
+- Targets: kc.electric_circuits
+- Methods: m.kirchhoff_loops, m.ohms_law
 - Status: ACCEPTED
 
 ### `tm.classify_line_relationships` — Classify whether two lines are parallel, perpendicular or neither
@@ -211,6 +258,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.find_constant
 - Status: ACCEPTED
 
+### `tm.emi_ac_problems` — Solve induction/AC problems
+
+- Targets: kc.electromagnetism
+- Methods: m.faraday_rate
+- Status: ACCEPTED
+
 ### `tm.evaluate_and_represent_function` — Evaluate and represent functions
 
 - Targets: kc.function_concept
@@ -241,10 +294,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.roots_via_completing_square, m.roots_via_factorisation, m.roots_via_formula
 - Status: ACCEPTED
 
+### `tm.fluid_pressure_problems` — Solve density/pressure problems
+
+- Targets: kc.pressure_fluids
+- Methods: m.hydrostatic
+- Status: ACCEPTED
+
 ### `tm.fraction_decimal_operations` — Perform operations on fractions/decimals
 
 - Targets: kc.fraction_decimal_operations
 - Methods: m.convert_common_denominator
+- Status: ACCEPTED
+
+### `tm.gravitation_problems` — Solve gravitation and g-field problems
+
+- Targets: kc.gravitation
+- Methods: m.inverse_square
 - Status: ACCEPTED
 
 ### `tm.handle_algebraic_expressions` — Simplify and evaluate algebraic expressions
@@ -277,16 +342,46 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.collect_factor_subject, m.inverse_operations
 - Status: ACCEPTED
 
+### `tm.modern_physics_problems` — Solve photoelectric/nuclear problems
+
+- Targets: kc.atomic_nuclear_physics
+- Methods: m.photoelectric_equation
+- Status: ACCEPTED
+
+### `tm.momentum_problems` — Solve momentum and collision problems
+
+- Targets: kc.linear_momentum
+- Methods: m.conservation_collisions
+- Status: ACCEPTED
+
+### `tm.optics_problems` — Solve reflection/refraction/image problems
+
+- Targets: kc.geometrical_optics
+- Methods: m.mirror_lens_equation, m.reflection_refraction
+- Status: ACCEPTED
+
 ### `tm.percentage_problems` — Solve percentage problems
 
 - Targets: kc.percentage_concept
 - Methods: m.percent_as_fraction
 - Status: ACCEPTED
 
+### `tm.practical_physics` — Carry out measurements and analyse data
+
+- Targets: kc.measurement_errors_precision, kc.practical_measurement
+- Methods: m.instrument_tabulate, m.plot_gradient
+- Status: ACCEPTED
+
 ### `tm.recall_special_values` — State exact trig values at special angles
 
 - Targets: kc.special_angle_values
 - Methods: m.from_special_triangles
+- Status: ACCEPTED
+
+### `tm.resolve_vectors` — Classify quantities and resolve vectors
+
+- Targets: kc.scalar_vector_quantities
+- Methods: m.classify_quantities, m.resolve_components
 - Status: ACCEPTED
 
 ### `tm.signed_number_arithmetic` — Perform signed-number arithmetic
@@ -349,6 +444,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.solve_by_elimination, m.solve_by_substitution
 - Status: ACCEPTED
 
+### `tm.thermal_problems` — Solve heat/temperature/gas problems
+
+- Targets: kc.heat_temperature
+- Methods: m.calorimetry, m.gas_law
+- Status: ACCEPTED
+
 ### `tm.triangle_angle_problems` — Solve triangle angle problems
 
 - Targets: kc.triangle_angle_properties
@@ -359,6 +460,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.trig_ratios_acute
 - Methods: m.label_sides_match_ratio
+- Status: ACCEPTED
+
+### `tm.wave_problems` — Solve wave speed/frequency problems
+
+- Targets: kc.wave_phenomena
+- Methods: m.wave_equation
+- Status: ACCEPTED
+
+### `tm.work_energy_problems` — Solve work/energy/power problems
+
+- Targets: kc.work_energy_power
+- Methods: m.power_as_rate, m.work_from_force
 - Status: ACCEPTED
 
 ## Method Index (AND within method, OR across methods)
@@ -375,6 +488,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.circle_angle_problems`
 
 - **`m.centre_vs_circumference`** requires: kc.integer_arithmetic, kc.triangle_angle_properties
+
+### `tm.circuit_analysis`
+
+- **`m.kirchhoff_loops`** requires: kc.algebraic_expressions, kc.simultaneous_linear_equations
+- **`m.ohms_law`** requires: kc.algebraic_expressions, kc.ratio_proportion_rate
 
 ### `tm.classify_line_relationships`
 
@@ -422,6 +540,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.find_constant`** requires: kc.integer_arithmetic, kc.linear_equations_one_var
 
+### `tm.emi_ac_problems`
+
+- **`m.faraday_rate`** requires: kc.algebraic_expressions, kc.rate_of_change
+
 ### `tm.evaluate_and_represent_function`
 
 - **`m.evaluate_substitution`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -446,9 +568,17 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.roots_via_factorisation`** requires: kc.quadratic_by_factorisation
 - **`m.roots_via_formula`** requires: kc.quadratic_formula
 
+### `tm.fluid_pressure_problems`
+
+- **`m.hydrostatic`** requires: kc.algebraic_expressions, kc.ratio_proportion_rate
+
 ### `tm.fraction_decimal_operations`
 
 - **`m.convert_common_denominator`** requires: kc.integer_arithmetic
+
+### `tm.gravitation_problems`
+
+- **`m.inverse_square`** requires: kc.algebraic_expressions, kc.newtons_laws
 
 ### `tm.handle_algebraic_expressions`
 
@@ -473,13 +603,36 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.collect_factor_subject`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.inverse_operations`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 
+### `tm.modern_physics_problems`
+
+- **`m.photoelectric_equation`** requires: kc.algebraic_expressions, kc.equations_in_indices
+
+### `tm.momentum_problems`
+
+- **`m.conservation_collisions`** requires: kc.algebraic_expressions, kc.newtons_laws
+
+### `tm.optics_problems`
+
+- **`m.mirror_lens_equation`** requires: kc.algebraic_expressions, kc.ratio_proportion_rate
+- **`m.reflection_refraction`** requires: kc.algebraic_expressions, kc.triangle_angle_properties
+
 ### `tm.percentage_problems`
 
 - **`m.percent_as_fraction`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
 
+### `tm.practical_physics`
+
+- **`m.instrument_tabulate`** requires: kc.integer_arithmetic, kc.measurement_units_dimensions
+- **`m.plot_gradient`** requires: kc.gradient, kc.measurement_units_dimensions
+
 ### `tm.recall_special_values`
 
 - **`m.from_special_triangles`** requires: kc.algebraic_expressions, kc.trig_ratios_acute
+
+### `tm.resolve_vectors`
+
+- **`m.classify_quantities`** requires: kc.measurement_units_dimensions
+- **`m.resolve_components`** requires: kc.algebraic_expressions, kc.trig_ratios_acute
 
 ### `tm.signed_number_arithmetic`
 
@@ -528,6 +681,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.solve_by_elimination`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 - **`m.solve_by_substitution`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 
+### `tm.thermal_problems`
+
+- **`m.calorimetry`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+- **`m.gas_law`** requires: kc.algebraic_expressions, kc.ratio_proportion_rate
+
 ### `tm.triangle_angle_problems`
 
 - **`m.exterior_angle`** requires: kc.parallel_line_angles
@@ -537,15 +695,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.label_sides_match_ratio`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 
+### `tm.wave_problems`
+
+- **`m.wave_equation`** requires: kc.algebraic_expressions, kc.displacement_velocity
+
+### `tm.work_energy_problems`
+
+- **`m.power_as_rate`** requires: kc.algebraic_expressions, kc.newtons_laws, kc.rate_of_change
+- **`m.work_from_force`** requires: kc.algebraic_expressions, kc.newtons_laws
+
 ## Misconceptions
 
 - `mis.factorisation_sign_error` — Factorising with unchanged middle-term sign (PROPOSED)
 
 ## Open Review Items
 
-- PROPOSED KCs: 2
-  - `kc.measurement_errors_precision` — Measurement errors, precision and significant figures
-  - `kc.practical_measurement` — Experimental measurement practice
+- PROPOSED KCs: 0
 - PROPOSED Claims: 2 (misconception catalog entry, item indicator, etc.)
 - Owner sign-off: `indicates` domain (OWNER_SIGN_OFF_REQUIRED)
 - Owner input: 12 vs 13 frozen-entity count discrepancy
@@ -587,3 +752,14 @@ See [`docs/batch_records/`](../batch_records/).
 | 028 | kc.counting_principle |
 | 029 | kc.distance_formula |
 | 030 | kc.displacement_velocity, kc.mass_and_weight, kc.measurement_errors_precision, kc.measurement_units_dimensions, kc.motion_equations_constant_acceleration, kc.motion_graph_interpretation, kc.newtons_laws, kc.practical_measurement |
+| 031 | kc.scalar_vector_quantities |
+| 032 | kc.work_energy_power |
+| 033 | kc.linear_momentum |
+| 034 | kc.gravitation |
+| 035 | kc.pressure_fluids |
+| 036 | kc.heat_temperature |
+| 037 | kc.wave_phenomena |
+| 038 | kc.geometrical_optics |
+| 039 | kc.electric_circuits |
+| 040 | kc.electromagnetism |
+| 041 | kc.atomic_nuclear_physics |

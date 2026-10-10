@@ -12,3 +12,5 @@ data. Legacy disposition below reflects actual use in the pipeline so far.
 
 The legacy graph remains outside the CDG store. `MigrationRecord`
 metadata is produced only when a record is actually dispositioned.
+
+Phase 12B: no legacy-corpus reuse for Physics — all 12 new batches cite OpenStax UP pages directly (each verified HTTP 200). Legacy counts unchanged; no bulk migration performed.
