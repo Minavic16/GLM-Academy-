@@ -9873,7 +9873,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null
     },
     {
@@ -9888,7 +9888,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.convert_and_check_units"
     },
@@ -9904,7 +9904,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.convert_and_check_units"
     },
@@ -9920,7 +9920,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null
     },
     {
@@ -9935,7 +9935,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.solve_constant_acceleration"
     },
@@ -9951,7 +9951,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.solve_constant_acceleration"
     },
@@ -9967,7 +9967,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null
     },
     {
@@ -9982,7 +9982,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.interpret_motion_graph"
     },
@@ -9998,7 +9998,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.interpret_motion_graph"
     },
@@ -10014,7 +10014,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null
     },
     {
@@ -10029,7 +10029,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.apply_newtons_second_law"
     },
@@ -10045,7 +10045,7 @@
       "review_rationale": null,
       "reviewed_by_activity": "act.physics.review",
       "status": "ACCEPTED",
-      "subject": null,
+      "subject": "Physics",
       "supersedes": null,
       "task_model_id": "tm.apply_newtons_second_law"
     },

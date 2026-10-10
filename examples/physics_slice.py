@@ -103,6 +103,7 @@ def build_graph_v30() -> CDGStore:
 
     def tm_and_method(tm_id, tm_label, mids_labels, target_ids):
         tm = TaskModel(id=tm_id, label=tm_label, status=ClaimStatus.ACCEPTED,
+                       subject=SUBJ,
                        created_by_activity=B_INTERP, cdg_version="v0.2.0")
         tm.reviewed_by_activity = B_REVIEW
         s.add_entity(tm)
@@ -114,6 +115,7 @@ def build_graph_v30() -> CDGStore:
             s.add_claim(accept(c, f"{tm_id} targets {k}", (AcceptanceBasis.EXPERT,), B_REVIEW))
         for m_id, m_label in mids_labels:
             m = Method(id=m_id, label=m_label, task_model_id=tm_id,
+                       subject=SUBJ,
                        status=ClaimStatus.ACCEPTED, created_by_activity=B_INTERP, cdg_version="v0.2.0")
             m.reviewed_by_activity = B_REVIEW
             s.add_entity(m)

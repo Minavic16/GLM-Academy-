@@ -57,3 +57,15 @@ def test_physics_review_lifecycle():
         if c.subject_id.startswith("cl.p.") or c.id.startswith("cl.p.") or c.id.startswith("cl.xs."):
             assert "REVIEW:" in (c.review_rationale or ""), c.id
             assert c.acceptance_bases, c.id
+
+
+def test_physics_tm_method_subject_identity():
+    s = build_graph_v30()
+    for e in s.entities.values():
+        if e.id in ("tm.convert_and_check_units", "tm.solve_constant_acceleration",
+                    "tm.interpret_motion_graph", "tm.apply_newtons_second_law",
+                    "m.si_prefix_conversion", "m.dimensional_consistency",
+                    "m.suvat_equations", "m.graph_extract_motion",
+                    "m.slope_of_vt", "m.displacement_from_st",
+                    "m.resultant_force", "m.f_equals_ma"):
+            assert e.subject == "Physics", e.id
