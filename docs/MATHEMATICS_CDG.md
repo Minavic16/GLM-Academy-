@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 66
-- TaskModels: 62
-- Methods: 92
-- Items: 39
+- Knowledge Components: 68
+- TaskModels: 64
+- Methods: 95
+- Items: 40
 - Misconceptions: 1
-- Claims: 434
-- Evidence records: 249
-- Sources: 71
-- Activities: 159
+- Claims: 451
+- Evidence records: 253
+- Sources: 73
+- Activities: 165
 - Agents: 2
-- Exported nodes: 263
-- Exported edges: 434
-- Accepted Claims: 432; PROPOSED Claims: 2
+- Exported nodes: 271
+- Exported edges: 451
+- Accepted Claims: 449; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -55,6 +55,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
 | `kc.linear_momentum` | Linear momentum and its conservation | Physics | ACCEPTED | tm.momentum_problems |
+| `kc.logarithms` | Logarithms and their laws | Number & Numeration | ACCEPTED | tm.logarithm_problems |
 | `kc.mass_and_weight` | Mass, weight and inertia | Physics | ACCEPTED | tm.apply_newtons_second_law |
 | `kc.matter_classification` | Elements, compounds, mixtures and separation | Chemistry | ACCEPTED | tm.classify_matter |
 | `kc.maxima_minima` | Maxima and minima of a function | Calculus | ACCEPTED | tm.find_maxima_minima |
@@ -69,6 +70,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
 | `kc.parallel_perpendicular_lines` | Conditions for parallel and perpendicular lines | Coordinate Geometry | ACCEPTED | tm.classify_line_relationships |
 | `kc.percentage_concept` | Percentages | Number & Numeration | ACCEPTED | tm.percentage_problems |
+| `kc.ph_scale` | pH scale and calculations | Chemistry | ACCEPTED | tm.ph_problems |
 | `kc.practical_chemistry` | Practical chemistry procedures | Chemistry | ACCEPTED | tm.practical_chemistry |
 | `kc.practical_measurement` | Experimental measurement practice | Physics | ACCEPTED | tm.practical_physics |
 | `kc.pressure_fluids` | Density, pressure and fluids at rest | Physics | ACCEPTED | tm.fluid_pressure_problems |
@@ -186,6 +188,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.chemical_bonding` | → | `kc.organic_foundations` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.acids_bases_salts` | → | `kc.practical_chemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.matter_classification` | → | `kc.practical_chemistry` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.logarithms` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.equations_in_indices` | → | `kc.logarithms` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.acids_bases_salts` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.logarithms` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -400,6 +407,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.displacement_from_st, m.slope_of_vt
 - Status: ACCEPTED
 
+### `tm.logarithm_problems` — Evaluate and manipulate logarithms
+
+- Targets: kc.logarithms
+- Methods: m.apply_log_laws, m.convert_exp_log
+- Status: ACCEPTED
+
 ### `tm.make_subject` — Make a specified variable the subject
 
 - Targets: kc.change_of_subject
@@ -434,6 +447,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.percentage_concept
 - Methods: m.percent_as_fraction
+- Status: ACCEPTED
+
+### `tm.ph_problems` — Compute pH from concentration
+
+- Targets: kc.ph_scale
+- Methods: m.ph_from_concentration
 - Status: ACCEPTED
 
 ### `tm.practical_chemistry` — Perform titration and qualitative tests
@@ -718,6 +737,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.displacement_from_st`** requires: kc.displacement_velocity, kc.gradient
 - **`m.slope_of_vt`** requires: kc.algebraic_expressions, kc.displacement_velocity, kc.gradient
 
+### `tm.logarithm_problems`
+
+- **`m.apply_log_laws`** requires: kc.algebraic_expressions, kc.equations_in_indices
+- **`m.convert_exp_log`** requires: kc.algebraic_expressions, kc.equations_in_indices
+
 ### `tm.make_subject`
 
 - **`m.collect_factor_subject`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -743,6 +767,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.percentage_problems`
 
 - **`m.percent_as_fraction`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
+
+### `tm.ph_problems`
+
+- **`m.ph_from_concentration`** requires: kc.acids_bases_salts, kc.algebraic_expressions, kc.logarithms
 
 ### `tm.practical_chemistry`
 
@@ -918,3 +946,5 @@ See [`docs/batch_records/`](../batch_records/).
 | 050 | kc.gas_behaviour |
 | 051 | kc.organic_foundations |
 | 052 | kc.practical_chemistry |
+| 055 | kc.logarithms |
+| 056 | kc.ph_scale |

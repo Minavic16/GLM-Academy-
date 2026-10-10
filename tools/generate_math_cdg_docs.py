@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.chem_wave2 import build_graph_v34
+from examples.closure_fixes import build_graph_v35
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -84,6 +84,8 @@ DOMAIN_OF = {
     "kc.gas_behaviour": "Chemistry",
     "kc.organic_foundations": "Chemistry",
     "kc.practical_chemistry": "Chemistry",
+    "kc.logarithms": "Number & Numeration",
+    "kc.ph_scale": "Chemistry",
 }
 
 BATCH_OF = {
@@ -128,6 +130,8 @@ BATCH_OF = {
     "kc.gas_behaviour": "050",
     "kc.organic_foundations": "051",
     "kc.practical_chemistry": "052",
+    "kc.logarithms": "055",
+    "kc.ph_scale": "056",
     "kc.parallel_perpendicular_lines": "024",
     "kc.ratio_proportion_rate": "025",
     "kc.direct_variation": "026",
@@ -161,7 +165,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v34()
+    s = build_graph_v35()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)
