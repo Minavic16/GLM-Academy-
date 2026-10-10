@@ -115,7 +115,11 @@ def _legend(nodes):
     items = "".join(
         f'<span class="lg"><span class="sw" style="background:{TYPE_COLORS.get(t, "#eee")}"></span>{t}</span>'
         for t in seen)
-    return f'<div id="legend">{items}</div>'
+    subs = sorted({e.get("subject") for e in nodes.values() if e.get("subject")})
+    sub_items = "".join(
+        f'<span class="lg"><span class="sw" style="background:{SUBJECT_COLORS.get(s, "#333")}"></span>{s}</span>'
+        for s in subs)
+    return f'<div id="legend">Type: {items} &nbsp;|&nbsp; Subject (outline): {sub_items}</div>'
 
 
 def _svg(title, node_ids, nodes, edges):
