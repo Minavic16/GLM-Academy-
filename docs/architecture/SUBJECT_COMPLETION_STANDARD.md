@@ -1,4 +1,4 @@
-# Subject Completion Standard v1.0 (Phase 13.5, PROPOSED — owner approval required)
+# Subject Completion Standard v1.1 (Phase 13.5; editorial additions 2026-10-15 — PROPOSED, owner approval required)
 
 A subject is COMPLETE only when all clauses below hold. Otherwise it is
 PARTIALLY_COMPLETE (gaps recorded) or BLOCKED (critical limitation).
