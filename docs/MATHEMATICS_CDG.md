@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 68
-- TaskModels: 64
-- Methods: 95
-- Items: 40
+- Knowledge Components: 70
+- TaskModels: 66
+- Methods: 99
+- Items: 42
 - Misconceptions: 1
-- Claims: 451
-- Evidence records: 253
-- Sources: 73
-- Activities: 165
+- Claims: 475
+- Evidence records: 260
+- Sources: 76
+- Activities: 171
 - Agents: 2
-- Exported nodes: 271
-- Exported edges: 451
-- Accepted Claims: 449; PROPOSED Claims: 2
+- Exported nodes: 281
+- Exported edges: 475
+- Accepted Claims: 473; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -62,6 +62,8 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
 | `kc.measurement_errors_precision` | Measurement errors, precision and significant figures | Physics | ACCEPTED | tm.practical_physics |
 | `kc.measurement_units_dimensions` | Physical quantities, SI units and dimensions | Physics | ACCEPTED | tm.convert_and_check_units |
+| `kc.measures_of_dispersion` | Measures of dispersion | Statistics & Probability | ACCEPTED | tm.compute_dispersion |
+| `kc.median_ungrouped` | Median of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_median |
 | `kc.mole_stoichiometry` | Mole concept and stoichiometry | Chemistry | ACCEPTED | tm.stoichiometry_problems |
 | `kc.motion_equations_constant_acceleration` | Equations of motion (constant acceleration) | Physics | ACCEPTED | tm.solve_constant_acceleration |
 | `kc.motion_graph_interpretation` | Interpretation of motion graphs | Physics | ACCEPTED | tm.interpret_motion_graph |
@@ -193,6 +195,13 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.acids_bases_salts` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.logarithms` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.fraction_decimal_operations` | → | `kc.median_ungrouped` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.median_ungrouped` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.mean_ungrouped_data` | → | `kc.median_ungrouped` | UNDERSTAND | SPECIFIC_TASK_MODEL | ASSERTED |
+| `kc.algebraic_expressions` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.fraction_decimal_operations` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.equations_in_indices` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.mean_ungrouped_data` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -263,6 +272,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.cts_standard_form, m.cts_then_roots
 - Status: ACCEPTED
 
+### `tm.compute_dispersion` — Compute and compare dispersion
+
+- Targets: kc.measures_of_dispersion
+- Methods: m.range, m.variance_sd
+- Status: ACCEPTED
+
 ### `tm.compute_distance` — Compute the distance between two coordinate points
 
 - Targets: kc.distance_formula
@@ -279,6 +294,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.mean_ungrouped_data
 - Methods: m.sum_divide_count
+- Status: ACCEPTED
+
+### `tm.compute_median` — Compute the median of ungrouped data
+
+- Targets: kc.median_ungrouped
+- Methods: m.median_ordered, m.quartile_from_ordered
 - Status: ACCEPTED
 
 ### `tm.compute_probability` — Compute the theoretical probability of an event
@@ -634,6 +655,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.cts_standard_form`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.cts_then_roots`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 
+### `tm.compute_dispersion`
+
+- **`m.range`** requires: kc.algebraic_expressions, kc.fraction_decimal_operations, kc.integer_arithmetic, kc.mean_ungrouped_data
+- **`m.variance_sd`** requires: kc.algebraic_expressions, kc.equations_in_indices, kc.integer_arithmetic, kc.mean_ungrouped_data
+
 ### `tm.compute_distance`
 
 - **`m.distance_formula`** requires: kc.algebraic_expressions, kc.gradient, kc.integer_arithmetic
@@ -645,6 +671,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.compute_mean`
 
 - **`m.sum_divide_count`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
+
+### `tm.compute_median`
+
+- **`m.median_ordered`** requires: kc.integer_arithmetic
+- **`m.quartile_from_ordered`** requires: kc.fraction_decimal_operations, kc.integer_arithmetic
 
 ### `tm.compute_probability`
 
@@ -948,3 +979,5 @@ See [`docs/batch_records/`](../batch_records/).
 | 052 | kc.practical_chemistry |
 | 055 | kc.logarithms |
 | 056 | kc.ph_scale |
+| 057 | kc.median_ungrouped |
+| 058 | kc.measures_of_dispersion |
