@@ -16,7 +16,13 @@ Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
 Next task: M-1 official-source verification plan (shared infra for 3 subjects).
 
-## PHYSICS — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED
+## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14)
+Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum
+depth (b060), energy sources/society (b061), fibre optics (b062), lasers
+(b063), electronics (b064); practical implementation acceptable with WAEC
+detail still unverified. Historical section below retained for audit trail.
+
+### PHYSICS — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED
 Counts: 19 KCs; 4 Math→Physics edges + further Science edges.
 Verified partial/deferred:
 - Fibre optics / LASER / elementary electronics — NOT_IMPLEMENTED
@@ -24,10 +30,8 @@ Verified partial/deferred:
 - Friction/machines, EM spectrum depth, energy-society — PARTIAL via parent
   KCs (R06/R18/R19).
 - Practicals — PARTIAL; WAEC practical detail SOURCE_UNVERIFIED (R16).
-Next task: Physics SHOULD-row triage → implement fibre/LASER/electronics
-slice (2 batches: 059 fibre-optics+optics-extension; 060 electronics basics)
-with OpenStax UP2/UP3 evidence + review. Completion criterion: R17 COVERED,
-R16 PARTIAL→COVERED on WAEC evidence, board rows verified.
+Next task: DONE in Phase 14 — Physics is IMPLEMENTATION_COMPLETE; next is board
+verification (M-1 plan) or Chemistry organic-reactions batch.
 
 ## CHEMISTRY — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED
 Counts: 12 KCs; pH dependency resolved (log→ph).

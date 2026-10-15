@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 70
-- TaskModels: 66
-- Methods: 99
+- Knowledge Components: 76
+- TaskModels: 72
+- Methods: 106
 - Items: 42
 - Misconceptions: 1
-- Claims: 475
-- Evidence records: 260
-- Sources: 76
-- Activities: 171
+- Claims: 509
+- Evidence records: 267
+- Sources: 80
+- Activities: 189
 - Agents: 2
-- Exported nodes: 281
-- Exported edges: 475
-- Accepted Claims: 473; PROPOSED Claims: 2
+- Exported nodes: 300
+- Exported edges: 509
+- Accepted Claims: 507; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -40,10 +40,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.distance_formula` | Distance between two points in the plane | Coordinate Geometry | ACCEPTED | tm.compute_distance |
 | `kc.electric_circuits` | Current, voltage, resistance and circuits | Physics | ACCEPTED | tm.circuit_analysis |
 | `kc.electromagnetism` | Electromagnetic induction and AC basics | Physics | ACCEPTED | tm.emi_ac_problems |
+| `kc.em_spectrum` | Electromagnetic spectrum ordering and properties | Physics | ACCEPTED | tm.em_spectrum_problems |
+| `kc.energy_sources` | Sources of energy: renewable and non-renewable | Physics | ACCEPTED | tm.classify_energy_sources |
 | `kc.equation_of_line` | Equation of a straight line (all forms) | Coordinate Geometry | ACCEPTED | tm.find_line_equation |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
+| `kc.fibre_optics` | Optical fibres and total internal reflection | Physics | ACCEPTED | tm.fibre_optics_problems |
 | `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
+| `kc.friction` | Frictional forces | Physics | ACCEPTED | tm.friction_machines |
 | `kc.function_concept` | Function concept and notation | Functions | ACCEPTED | tm.evaluate_and_represent_function |
 | `kc.gas_behaviour` | Gas laws and molar gas volumes | Chemistry | ACCEPTED | tm.gas_problems |
 | `kc.geometrical_optics` | Reflection, refraction and image formation | Physics | ACCEPTED | tm.optics_problems |
@@ -52,6 +56,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.heat_temperature` | Heat, temperature and thermal behaviour | Physics | ACCEPTED | tm.thermal_problems |
 | `kc.integer_arithmetic` | Signed-number (integer) arithmetic | Number & Numeration | ACCEPTED | tm.signed_number_arithmetic |
 | `kc.integration_algebraic` | Elementary integration of algebraic functions | Calculus | ACCEPTED | tm.integrate_polynomial |
+| `kc.laser_basics` | Lasers and coherence | Physics | ACCEPTED | tm.laser_problems |
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
 | `kc.linear_momentum` | Linear momentum and its conservation | Physics | ACCEPTED | tm.momentum_problems |
@@ -84,6 +89,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.ratio_proportion_rate` | Ratio, proportion and rate | Number & Numeration | ACCEPTED | tm.solve_proportions |
 | `kc.redox_electrochemistry` | Redox reactions and electrolysis | Chemistry | ACCEPTED | tm.redox_problems |
 | `kc.scalar_vector_quantities` | Scalars, vectors and vector resolution | Physics | ACCEPTED | tm.resolve_vectors |
+| `kc.semiconductor_electronics` | Semiconductor devices and logic basics | Physics | ACCEPTED | tm.electronics_problems |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
 | `kc.sine_rule` | Sine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
@@ -197,14 +203,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.logarithms` | → | `kc.ph_scale` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.fraction_decimal_operations` | → | `kc.median_ungrouped` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.integer_arithmetic` | → | `kc.median_ungrouped` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
-| `kc.mean_ungrouped_data` | → | `kc.median_ungrouped` | UNDERSTAND | SPECIFIC_TASK_MODEL | ASSERTED |
+| `kc.mean_ungrouped_data` | → | `kc.median_ungrouped` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.algebraic_expressions` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.fraction_decimal_operations` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.equations_in_indices` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.mean_ungrouped_data` | → | `kc.measures_of_dispersion` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.newtons_laws` | → | `kc.friction` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.work_energy_power` | → | `kc.friction` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.wave_phenomena` | → | `kc.em_spectrum` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.work_energy_power` | → | `kc.energy_sources` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.linear_inequalities_analytic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.equations_in_indices` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.linear_equations_one_var` | → | `kc.change_of_subject` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.geometrical_optics` | → | `kc.fibre_optics` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.atomic_structure_periodicity` | → | `kc.laser_basics` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.em_spectrum` | → | `kc.laser_basics` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.electric_circuits` | → | `kc.semiconductor_electronics` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.motion_equations_constant_acceleration` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.newtons_laws` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.gradient` | → | `kc.motion_graph_interpretation` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -252,6 +266,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.electric_circuits
 - Methods: m.kirchhoff_loops, m.ohms_law
+- Status: ACCEPTED
+
+### `tm.classify_energy_sources` — Classify energy sources and their uses
+
+- Targets: kc.energy_sources
+- Methods: m.renewable_classification
 - Status: ACCEPTED
 
 ### `tm.classify_line_relationships` — Classify whether two lines are parallel, perpendicular or neither
@@ -338,6 +358,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.find_constant
 - Status: ACCEPTED
 
+### `tm.electronics_problems` — Solve basic electronics/logic problems
+
+- Targets: kc.semiconductor_electronics
+- Methods: m.logic_gate_truth_tables
+- Status: ACCEPTED
+
+### `tm.em_spectrum_problems` — Classify EM radiation and compare properties
+
+- Targets: kc.em_spectrum
+- Methods: m.spectrum_ordering
+- Status: ACCEPTED
+
 ### `tm.emi_ac_problems` — Solve induction/AC problems
 
 - Targets: kc.electromagnetism
@@ -360,6 +392,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.factorisation_quadratic_trinomial
 - Methods: m.factorise_by_grouping, m.factorise_unit_leading
+- Status: ACCEPTED
+
+### `tm.fibre_optics_problems` — Solve fibre/TIR problems
+
+- Targets: kc.fibre_optics
+- Methods: m.tir_analysis
 - Status: ACCEPTED
 
 ### `tm.find_line_equation` — Find the equation of a straight line
@@ -390,6 +428,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.fraction_decimal_operations
 - Methods: m.convert_common_denominator
+- Status: ACCEPTED
+
+### `tm.friction_machines` — Solve friction and simple-machine problems
+
+- Targets: kc.friction
+- Methods: m.friction_calculation, m.machine_efficiency
 - Status: ACCEPTED
 
 ### `tm.gas_problems` — Solve gas-law problems
@@ -426,6 +470,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.displacement_velocity, kc.motion_graph_interpretation
 - Methods: m.displacement_from_st, m.slope_of_vt
+- Status: ACCEPTED
+
+### `tm.laser_problems` — Explain laser operation and uses
+
+- Targets: kc.laser_basics
+- Methods: m.stimulated_emission
 - Status: ACCEPTED
 
 ### `tm.logarithm_problems` — Evaluate and manipulate logarithms
@@ -642,6 +692,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.kirchhoff_loops`** requires: kc.algebraic_expressions, kc.simultaneous_linear_equations
 - **`m.ohms_law`** requires: kc.algebraic_expressions, kc.ratio_proportion_rate
 
+### `tm.classify_energy_sources`
+
+- **`m.renewable_classification`** requires: kc.work_energy_power
+
 ### `tm.classify_line_relationships`
 
 - **`m.compare_gradients`** requires: kc.gradient, kc.integer_arithmetic
@@ -702,6 +756,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.find_constant`** requires: kc.integer_arithmetic, kc.linear_equations_one_var
 
+### `tm.electronics_problems`
+
+- **`m.logic_gate_truth_tables`** requires: kc.electric_circuits, kc.integer_arithmetic
+
+### `tm.em_spectrum_problems`
+
+- **`m.spectrum_ordering`** requires: kc.algebraic_expressions, kc.wave_phenomena
+
 ### `tm.emi_ac_problems`
 
 - **`m.faraday_rate`** requires: kc.algebraic_expressions, kc.rate_of_change
@@ -719,6 +781,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.factorise_by_grouping`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.factorise_unit_leading`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
+### `tm.fibre_optics_problems`
+
+- **`m.tir_analysis`** requires: kc.geometrical_optics, kc.trig_ratios_acute
 
 ### `tm.find_line_equation`
 
@@ -741,6 +807,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.fraction_decimal_operations`
 
 - **`m.convert_common_denominator`** requires: kc.integer_arithmetic
+
+### `tm.friction_machines`
+
+- **`m.friction_calculation`** requires: kc.algebraic_expressions, kc.newtons_laws
+- **`m.machine_efficiency`** requires: kc.ratio_proportion_rate, kc.work_energy_power
 
 ### `tm.gas_problems`
 
@@ -767,6 +838,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.displacement_from_st`** requires: kc.displacement_velocity, kc.gradient
 - **`m.slope_of_vt`** requires: kc.algebraic_expressions, kc.displacement_velocity, kc.gradient
+
+### `tm.laser_problems`
+
+- **`m.stimulated_emission`** requires: kc.atomic_structure_periodicity, kc.em_spectrum
 
 ### `tm.logarithm_problems`
 
@@ -981,3 +1056,9 @@ See [`docs/batch_records/`](../batch_records/).
 | 056 | kc.ph_scale |
 | 057 | kc.median_ungrouped |
 | 058 | kc.measures_of_dispersion |
+| 059 | kc.friction |
+| 060 | kc.em_spectrum |
+| 061 | kc.energy_sources |
+| 062 | kc.fibre_optics |
+| 063 | kc.laser_basics |
+| 064 | kc.semiconductor_electronics |

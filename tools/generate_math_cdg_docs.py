@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.math_stats_closure import build_graph_v36
+from examples.physics_completion_b import build_graph_v38
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -88,6 +88,12 @@ DOMAIN_OF = {
     "kc.ph_scale": "Chemistry",
     "kc.median_ungrouped": "Statistics & Probability",
     "kc.measures_of_dispersion": "Statistics & Probability",
+    "kc.friction": "Physics",
+    "kc.em_spectrum": "Physics",
+    "kc.energy_sources": "Physics",
+    "kc.fibre_optics": "Physics",
+    "kc.laser_basics": "Physics",
+    "kc.semiconductor_electronics": "Physics",
 }
 
 BATCH_OF = {
@@ -136,6 +142,12 @@ BATCH_OF = {
     "kc.ph_scale": "056",
     "kc.median_ungrouped": "057",
     "kc.measures_of_dispersion": "058",
+    "kc.friction": "059",
+    "kc.em_spectrum": "060",
+    "kc.energy_sources": "061",
+    "kc.fibre_optics": "062",
+    "kc.laser_basics": "063",
+    "kc.semiconductor_electronics": "064",
     "kc.parallel_perpendicular_lines": "024",
     "kc.ratio_proportion_rate": "025",
     "kc.direct_variation": "026",
@@ -169,7 +181,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v36()
+    s = build_graph_v38()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

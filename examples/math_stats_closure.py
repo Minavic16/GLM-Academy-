@@ -96,12 +96,12 @@ def build_graph_v36() -> CDGStore:
          "DERIVED: both median methods need integer arithmetic"),
         ("cl.pre57.frac_median", "kc.fraction_decimal_operations", P.SPECIFIC_METHOD, "m.quartile_from_ordered",
          "DERIVED: quartile method needs fractions"),
-        ("cl.pre57.mean_median", "kc.mean_ungrouped_data", P.SPECIFIC_TASK_MODEL, "tm.compute_median",
+        ("cl.pre57.mean_median", "kc.mean_ungrouped_data", P.ALL_RELEVANT_METHODS, None,
          "UNDERSTAND: median is learned beside mean as a location measure"),
     ]:
         purpose = (PrerequisitePurpose.UNDERSTAND if cid == "cl.pre57.mean_median" else E)
         origin = (ClaimOrigin.ASSERTED if purpose == PrerequisitePurpose.UNDERSTAND
-                  else ClaimOrigin.DERIVED)
+                  else ClaimOrigin.DERIVED)  # UNDERSTAND ⇒ ASSERTED/ALL scope (validator rule)
         c = Claim(id=cid, predicate=RelationshipType.PREREQUISITE, subject_id=subj,
                   object_id=k.id, claim_type=ClaimType.DEPENDENCY, purpose=purpose,
                   scope=scope, scope_ref=(None if origin == ClaimOrigin.ASSERTED else ref),

@@ -9,7 +9,7 @@
 | CI-05 | All | Official PDFs inaccessible (IBASS SPA, WAEC placeholder, NERDC down; re-attempted 2026-10-10) | OFFICIAL_VERIFICATION_GAP | Recorded; owner decision on qualified-scope sign-off | Open |
 | CI-06 | All | 12-vs-13 entity count | GOVERNANCE_BLOCKER | **CLOSED 2026-10-15**: OD-02 RATIFIED (13 incl. Subject); test_entity_type_count_frozen locks count; sanity §12's '12' excludes Subject | Closed |
 | CI-07 | All | `indicates` sign-off; freeze doc absent | GOVERNANCE_BLOCKER | Preserved, unchanged | Open |
-| CI-08 | Physics | Fibre/LASER/electronics; EM-spectrum depth | IMPLEMENTATION_GAP (SHOULD-deferral stands) | Documented in matrix R17/R18 | Open |
+| CI-08 | Physics | Fibre/LASER/electronics; EM-spectrum depth | IMPLEMENTATION_GAP | **CLOSED 2026-10-15 (Phase 14)**: kc.fibre_optics, kc.laser_basics, kc.semiconductor_electronics, kc.em_spectrum accepted with evidence | Closed |
 | CI-09 | Chem | Buffers proper, polymers, industrial, transition metals | IMPLEMENTATION_GAP (deferrals stand) | Documented in matrix | Open |
 
 # Owner Decision Register (Phase 13.5)
@@ -48,3 +48,6 @@ docs-updated / implementation-verified / external-verified) kept distinct:
 only docs-updated and implementation-verified are complete; external
 official verification remains outstanding for all three subjects.
 No Biology artifacts created (BIOLOGY_HOLD_RECORD.md).
+
+Phase 14: CI-08 closed; Physics now IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED.
+Also fixed cl.pre57.mean_median UNDERSTAND/ALL/ASSERTED (test-found defect).
