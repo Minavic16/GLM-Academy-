@@ -9,12 +9,12 @@ REVIEW_REQUIRED (needs owner/reviewer decision), BLOCKED.
 | Domain | Subdomain | Status | KCs | TaskModels | Evidence | Open Issues |
 |---|---|---|---|---|---|---|
 | Mathematics | general | NOT_STARTED | 0 | 0 | 0 | no representation yet |
-| Physics | general | REPRESENTED | 25 | 22 | 267 | — |
-| Algebra | general | REPRESENTED | 12 | 12 | 267 | — |
-| Number & Numeration | general | REPRESENTED | 6 | 6 | 267 | — |
-| Geometry | general | REPRESENTED | 3 | 3 | 267 | — |
-| Coordinate Geometry | general | REPRESENTED | 4 | 4 | 267 | — |
-| Trigonometry | general | REPRESENTED | 4 | 3 | 267 | — |
-| Calculus | general | REPRESENTED | 4 | 4 | 267 | — |
-| Statistics & Probability | general | REPRESENTED | 5 | 5 | 267 | — |
-| Functions | general | REPRESENTED | 1 | 1 | 267 | — |
+| Physics | general | REPRESENTED | 25 | 22 | 276 | — |
+| Algebra | general | REPRESENTED | 12 | 12 | 276 | — |
+| Number & Numeration | general | REPRESENTED | 6 | 6 | 276 | — |
+| Geometry | general | REPRESENTED | 3 | 3 | 276 | — |
+| Coordinate Geometry | general | REPRESENTED | 4 | 4 | 276 | — |
+| Trigonometry | general | REPRESENTED | 4 | 3 | 276 | — |
+| Calculus | general | REPRESENTED | 4 | 4 | 276 | — |
+| Statistics & Probability | general | REPRESENTED | 5 | 5 | 276 | — |
+| Functions | general | REPRESENTED | 1 | 1 | 276 | — |

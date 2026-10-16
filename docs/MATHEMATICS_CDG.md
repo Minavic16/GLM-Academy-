@@ -5,28 +5,33 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 76
-- TaskModels: 72
-- Methods: 106
-- Items: 42
+- Knowledge Components: 85
+- TaskModels: 81
+- Methods: 119
+- Items: 51
 - Misconceptions: 1
-- Claims: 509
-- Evidence records: 267
-- Sources: 80
-- Activities: 189
+- Claims: 554
+- Evidence records: 276
+- Sources: 83
+- Activities: 192
 - Agents: 2
-- Exported nodes: 300
-- Exported edges: 509
-- Accepted Claims: 507; PROPOSED Claims: 2
+- Exported nodes: 340
+- Exported edges: 554
+- Accepted Claims: 552; PROPOSED Claims: 2
 
 ## KC Index
 
 | ID | Name | Domain | Status | Owning TMs |
 |---|---|---|---|---|
 | `kc.acids_bases_salts` | Acids, bases, salts and neutralisation | Chemistry | ACCEPTED | tm.acid_base_problems |
+| `kc.alcohols` | Alcohols | Chemistry | ACCEPTED | tm.alcohol_properties |
+| `kc.aldehydes_ketones` | Aldehydes and ketones | Chemistry | ACCEPTED | tm.aldehyde_reactions |
 | `kc.algebraic_expressions` | Algebraic expressions: terms, coefficients, like terms, substitution | Algebra | ACCEPTED | tm.handle_algebraic_expressions |
+| `kc.amides` | Amides | Chemistry | ACCEPTED | tm.amide_reactions |
+| `kc.amines` | Amines | Chemistry | ACCEPTED | tm.amine_properties |
 | `kc.atomic_nuclear_physics` | Atomic structure, photoelectric effect and nuclei | Physics | ACCEPTED | tm.modern_physics_problems |
 | `kc.atomic_structure_periodicity` | Atomic structure and the periodic table | Chemistry | ACCEPTED | tm.atomic_model_problems |
+| `kc.carboxylic_acids` | Carboxylic acids and esters | Chemistry | ACCEPTED | tm.carboxylic_acid_reactions |
 | `kc.change_of_subject` | Change of subject of a formula/relation | Algebra | ACCEPTED | tm.make_subject |
 | `kc.chemical_bonding` | Ionic and covalent bonding | Chemistry | ACCEPTED | tm.bonding_problems |
 | `kc.chemical_energetics` | Energy changes in chemical reactions | Chemistry | ACCEPTED | tm.energetics_problems |
@@ -44,6 +49,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.energy_sources` | Sources of energy: renewable and non-renewable | Physics | ACCEPTED | tm.classify_energy_sources |
 | `kc.equation_of_line` | Equation of a straight line (all forms) | Coordinate Geometry | ACCEPTED | tm.find_line_equation |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
+| `kc.ethers` | Ethers | Chemistry | ACCEPTED | tm.ether_properties |
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
 | `kc.fibre_optics` | Optical fibres and total internal reflection | Physics | ACCEPTED | tm.fibre_optics_problems |
 | `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
@@ -56,6 +62,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.heat_temperature` | Heat, temperature and thermal behaviour | Physics | ACCEPTED | tm.thermal_problems |
 | `kc.integer_arithmetic` | Signed-number (integer) arithmetic | Number & Numeration | ACCEPTED | tm.signed_number_arithmetic |
 | `kc.integration_algebraic` | Elementary integration of algebraic functions | Calculus | ACCEPTED | tm.integrate_polynomial |
+| `kc.isomerism` | Structural and geometric isomers | Chemistry | ACCEPTED | tm.isomer_identification |
 | `kc.laser_basics` | Lasers and coherence | Physics | ACCEPTED | tm.laser_problems |
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
@@ -87,6 +94,8 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.rate_of_change` | Rate of change of a function | Calculus | ACCEPTED | tm.compute_rate_of_change |
 | `kc.rates_equilibrium` | Reaction rates and chemical equilibrium | Chemistry | ACCEPTED | tm.rate_equilibrium_problems |
 | `kc.ratio_proportion_rate` | Ratio, proportion and rate | Number & Numeration | ACCEPTED | tm.solve_proportions |
+| `kc.reactions_of_alkanes` | Reactions characteristic of alkanes | Chemistry | ACCEPTED | tm.alkane_reactions |
+| `kc.reactions_of_alkenes` | Reactions characteristic of alkenes | Chemistry | ACCEPTED | tm.alkene_reactions |
 | `kc.redox_electrochemistry` | Redox reactions and electrolysis | Chemistry | ACCEPTED | tm.redox_problems |
 | `kc.scalar_vector_quantities` | Scalars, vectors and vector resolution | Physics | ACCEPTED | tm.resolve_vectors |
 | `kc.semiconductor_electronics` | Semiconductor devices and logic basics | Physics | ACCEPTED | tm.electronics_problems |
@@ -121,6 +130,16 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_equations_one_var` | → | `kc.simultaneous_linear_equations` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.mass_and_weight` | → | `kc.newtons_laws` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.quadratic_by_factorisation` | → | `kc.quadratic_roots` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.mole_stoichiometry` | → | `kc.reactions_of_alkanes` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.organic_foundations` | → | `kc.alcohols` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.aldehydes_ketones` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.amides` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.amines` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.carboxylic_acids` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.ethers` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.isomerism` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.reactions_of_alkanes` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.organic_foundations` | → | `kc.reactions_of_alkenes` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.quadratic_roots` | → | `kc.simultaneous_linear_quadratic` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.simultaneous_linear_equations` | → | `kc.simultaneous_linear_quadratic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.fraction_decimal_operations` | → | `kc.percentage_concept` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
@@ -232,6 +251,42 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.neutralisation_titration
 - Status: ACCEPTED
 
+### `tm.alcohol_properties` — Describe properties and naming of alcohols
+
+- Targets: kc.alcohols
+- Methods: m.alcohol_naming, m.alcohol_structure
+- Status: ACCEPTED
+
+### `tm.aldehyde_reactions` — Analyse reactions of aldehydes and ketones
+
+- Targets: kc.aldehydes_ketones
+- Methods: m.nucleophilic_addition, m.oxidation_reduction
+- Status: ACCEPTED
+
+### `tm.alkane_reactions` — Analyse combustion and fuel behaviour of alkanes
+
+- Targets: kc.reactions_of_alkanes
+- Methods: m.combustion_analysis, m.fuel_comparison
+- Status: ACCEPTED
+
+### `tm.alkene_reactions` — Analyse addition reactions of alkenes
+
+- Targets: kc.reactions_of_alkenes
+- Methods: m.addition_reactions
+- Status: ACCEPTED
+
+### `tm.amide_reactions` — Analyse amide reactions
+
+- Targets: kc.amides
+- Methods: m.amide_reactions
+- Status: ACCEPTED
+
+### `tm.amine_properties` — Describe properties and naming of amines
+
+- Targets: kc.amines
+- Methods: m.amine_naming, m.amine_properties
+- Status: ACCEPTED
+
 ### `tm.apply_newtons_second_law` — Apply Newton's second law to force problems
 
 - Targets: kc.mass_and_weight, kc.newtons_laws
@@ -254,6 +309,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.chemical_bonding
 - Methods: m.formula_from_valency, m.ionic_vs_covalent
+- Status: ACCEPTED
+
+### `tm.carboxylic_acid_reactions` — Analyse esterification of carboxylic acids
+
+- Targets: kc.carboxylic_acids
+- Methods: m.esterification
 - Status: ACCEPTED
 
 ### `tm.circle_angle_problems` — Solve circle angle problems using theorems
@@ -382,6 +443,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.enthalpy_hess
 - Status: ACCEPTED
 
+### `tm.ether_properties` — Describe properties and naming of ethers
+
+- Targets: kc.ethers
+- Methods: m.ether_structure
+- Status: ACCEPTED
+
 ### `tm.evaluate_and_represent_function` — Evaluate and represent functions
 
 - Targets: kc.function_concept
@@ -470,6 +537,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.displacement_velocity, kc.motion_graph_interpretation
 - Methods: m.displacement_from_st, m.slope_of_vt
+- Status: ACCEPTED
+
+### `tm.isomer_identification` — Identify isomers and compare their properties
+
+- Targets: kc.isomerism
+- Methods: m.isomer_comparison
 - Status: ACCEPTED
 
 ### `tm.laser_problems` — Explain laser operation and uses
@@ -664,6 +737,34 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.neutralisation_titration`** requires: kc.algebraic_expressions, kc.mole_stoichiometry
 
+### `tm.alcohol_properties`
+
+- **`m.alcohol_naming`** requires: kc.organic_foundations
+- **`m.alcohol_structure`** requires: kc.organic_foundations
+
+### `tm.aldehyde_reactions`
+
+- **`m.nucleophilic_addition`** requires: kc.organic_foundations
+- **`m.oxidation_reduction`** requires: kc.organic_foundations
+
+### `tm.alkane_reactions`
+
+- **`m.combustion_analysis`** requires: kc.chemical_energetics
+- **`m.fuel_comparison`** requires: kc.organic_foundations
+
+### `tm.alkene_reactions`
+
+- **`m.addition_reactions`** requires: kc.organic_foundations
+
+### `tm.amide_reactions`
+
+- **`m.amide_reactions`** requires: kc.organic_foundations
+
+### `tm.amine_properties`
+
+- **`m.amine_naming`** requires: kc.organic_foundations
+- **`m.amine_properties`** requires: kc.organic_foundations
+
 ### `tm.apply_newtons_second_law`
 
 - **`m.f_equals_ma`** requires: kc.algebraic_expressions, kc.mass_and_weight, kc.newtons_laws
@@ -682,6 +783,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.formula_from_valency`** requires: kc.atomic_structure_periodicity, kc.integer_arithmetic
 - **`m.ionic_vs_covalent`** requires: kc.algebraic_expressions, kc.atomic_structure_periodicity
+
+### `tm.carboxylic_acid_reactions`
+
+- **`m.esterification`** requires: kc.organic_foundations
 
 ### `tm.circle_angle_problems`
 
@@ -772,6 +877,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.enthalpy_hess`** requires: kc.algebraic_expressions, kc.mole_stoichiometry
 
+### `tm.ether_properties`
+
+- **`m.ether_structure`** requires: kc.organic_foundations
+
 ### `tm.evaluate_and_represent_function`
 
 - **`m.evaluate_substitution`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -838,6 +947,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.displacement_from_st`** requires: kc.displacement_velocity, kc.gradient
 - **`m.slope_of_vt`** requires: kc.algebraic_expressions, kc.displacement_velocity, kc.gradient
+
+### `tm.isomer_identification`
+
+- **`m.isomer_comparison`** requires: kc.organic_foundations
 
 ### `tm.laser_problems`
 
@@ -1062,3 +1175,4 @@ See [`docs/batch_records/`](../batch_records/).
 | 062 | kc.fibre_optics |
 | 063 | kc.laser_basics |
 | 064 | kc.semiconductor_electronics |
+| 065 | kc.alcohols, kc.aldehydes_ketones, kc.amides, kc.amines, kc.carboxylic_acids, kc.ethers, kc.isomerism, kc.reactions_of_alkanes, kc.reactions_of_alkenes |

@@ -33,19 +33,40 @@ Verified partial/deferred:
 Next task: DONE in Phase 14 — Physics is IMPLEMENTATION_COMPLETE; next is board
 verification (M-1 plan) or Chemistry organic-reactions batch.
 
-## CHEMISTRY — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED
-Counts: 12 KCs; pH dependency resolved (log→ph).
-Verified partial/deferred:
-- Organic: naming/classification only — reactions NOT_IMPLEMENTED.
-- Practical: PARTIAL (WAEC detail unverified).
-- Buffers proper, polymers, industrial chemistry, transition metals —
-  NOT_IMPLEMENTED (deferred, documented in CHEMISTRY_COVERAGE_MATRIX).
-Next task: organic-reactions batch (alkene/alkane reactions + functional
-group basics) using OpenStax Chemistry 2e ch.20 evidence + review.
-Completion criterion: organic family PARTIAL→COVERED, then buffers with
-kc.logarithms prerequisite (already built).
+## CHEMISTRY — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED (updated 2026-10-16, Phase 15)
+Counts: 21 KCs (12 foundational + 9 organic-reactions), 81 TMs.
 
+Phase 15 closed the organic-reactions gap (the only implementation gap in
+Chemistry's declared scope):
+- Batch 065 (`examples/chemistry_organic_reactions.py`,
+  `build_graph_v39`): kc.reactions_of_alkanes, kc.reactions_of_alkenes,
+  kc.isomerism, kc.alcohols, kc.ethers, kc.aldehydes_ketones,
+  kc.carboxylic_acids, kc.amines, kc.amides — each with a targeting TM,
+  Methods, Items, and ACCEPTED claims. Evidence: OpenStax Chemistry 2e
+  20-1–20-4 (verified). Prerequisites are Chemistry-internal; no new
+  cross-subject dependency claims were created (Phase 15 restriction).
+- CI-10 closed (see CLOSURE_REGISTERS.md).
+
+Remaining gaps:
+- Buffers proper — BLOCKED (Phase 15 scope constraint). Buffer pH
+  calculations require the Mathematics logarithms KC, and creating
+  that prerequisite edge would modify Mathematics-side records.
+  Re-evaluate only with owner authorization.
+- Polymers, industrial chemistry — DEFERRED (owner-documented deferral).
+- Electrolytic cells detail / transition metals — DEFERRED (owner-documented
+  deferral).
+- Practical: implementation complete; official verification outstanding
+  (CI-05). Board verification status remains BOARD_UNVERIFIED for all
+  three subjects.
+
+Next task: M-1 official-source verification plan (shared infrastructure
+for JAMB/WAEC/NERDC retrieval and content-check); no further
+implementation gap exists within Phase 15's authorized scope.
+Biology remains on hold (BIOLOGY_HOLD_RECORD.md).
 ## Recommended next phase
-Phase 14a: Physics completion wave (fibre/LASER/electronics + practical
-confirmation) — highest dependency-centrality after Math closure;
-then Chemistry organic reactions. Biology remains on hold (BIOLOGY_HOLD_RECORD).
+Phase 14a/14b: Physics completion wave — DONE (implemented in Phase 14).
+Phase 15: Chemistry organic-reactions wave — DONE (implemented in Phase 15).
+Next: Phase 16 — official-source verification (M-1) for Mathematics,
+Physics, and Chemistry; then Biology only after all three subjects are
+sufficiently closed and the owner authorizes it.
+Biology remains on hold (BIOLOGY_HOLD_RECORD.md).

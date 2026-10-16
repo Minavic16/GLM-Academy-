@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.physics_completion_b import build_graph_v38
+from examples.chemistry_organic_reactions import build_graph_v39
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -94,6 +94,15 @@ DOMAIN_OF = {
     "kc.fibre_optics": "Physics",
     "kc.laser_basics": "Physics",
     "kc.semiconductor_electronics": "Physics",
+    "kc.reactions_of_alkanes": "Chemistry",
+    "kc.reactions_of_alkenes": "Chemistry",
+    "kc.isomerism": "Chemistry",
+    "kc.alcohols": "Chemistry",
+    "kc.ethers": "Chemistry",
+    "kc.aldehydes_ketones": "Chemistry",
+    "kc.carboxylic_acids": "Chemistry",
+    "kc.amines": "Chemistry",
+    "kc.amides": "Chemistry",
 }
 
 BATCH_OF = {
@@ -148,6 +157,15 @@ BATCH_OF = {
     "kc.fibre_optics": "062",
     "kc.laser_basics": "063",
     "kc.semiconductor_electronics": "064",
+    "kc.reactions_of_alkanes": "065",
+    "kc.reactions_of_alkenes": "065",
+    "kc.isomerism": "065",
+    "kc.alcohols": "065",
+    "kc.ethers": "065",
+    "kc.aldehydes_ketones": "065",
+    "kc.carboxylic_acids": "065",
+    "kc.amines": "065",
+    "kc.amides": "065",
     "kc.parallel_perpendicular_lines": "024",
     "kc.ratio_proportion_rate": "025",
     "kc.direct_variation": "026",
@@ -181,7 +199,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v38()
+    s = build_graph_v39()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)
