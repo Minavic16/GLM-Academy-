@@ -1,0 +1,37 @@
+{
+  "id": "SRC.JAMB.UTME.MATH.2025",
+  "organization": "JAMB (Joint Admissions and Matriculation Board)",
+  "title": "UTME Syllabus — Mathematics (E-syllabus PDF distributed via the Integrated Brochure & Syllabus System, IBASS)",
+  "subject": "Mathematics",
+  "type": "EXAMINATION",
+  "authority": "OFFICIAL (JAMB)",
+  "primary": true,
+  "canonical_url": "https://ibass.jamb.gov.ng/e-syllabus",
+  "download_url": "https://ibass.jamb.gov.ng/static/media/Mathematics.c0621f4b8b674e75fd05.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "aff7a7c2cc46036902dda38db1d1567d10982de709305cfbfc90dc437329754f",
+  "file_size_bytes": 143244,
+  "pages": 6,
+  "pdf_metadata": {
+    "author": "Abeeb Ibrahim Adeyemi",
+    "creator": "Microsoft Word 2016",
+    "creation_date": "D:20250731121011+01'00'",
+    "mod_date": "D:20250731121011+01'00'",
+    "producer": "Microsoft Word 2016"
+  },
+  "http_provenance": {
+    "status": 200,
+    "content_type": "application/pdf",
+    "server": "Apache/2.4.63 (Ubuntu)",
+    "etag": "\"71fe3aed7298187f9150afd20c0e436890abe6e4\""
+  },
+  "publication_revision_date": "PDF metadata 2025-07-31 (creation + modification); no syllabus cycle year printed in the document",
+  "applicable_cycle": "UNRESOLVED (no cycle year printed; treated as the current official UTME syllabus as published by JAMB on its live IBASS portal at retrieval time)",
+  "authenticity_established": true,
+  "authenticity_basis": "Served from the official JAMB domain (ibass.jamb.gov.ng — 'Integrated Brochure & Syllabus System (IBASS)', JAMB's official e-brochure/e-syllabus system) as a hashed static asset of the official web application; document structure is a per-subject UTME syllabus (general objectives, detailed syllabus by sections, recommended texts); found by inspecting the official SPA bundle (main.221b9987.js), resolving the Phase 16/16B IBASS retrieval dead end. No cycle-year marker exists in the document; recorded as a limitation, not treated as verified for a specific UTME cycle.",
+  "limitations": "No explicit UTME cycle/session year is printed in the PDF. Local copy not committed (copyrighted board material) — hash and metadata recorded only. Topic-to-page locators in coverage documents refer to the extracted text pagination of this exact PDF revision (SHA-256 above).",
+  "notes": "Resolves the IBASS retrieval attempt recorded in SRC.JAMB.IBASS.ATTEMPT.2026-10-17.json. Used in Phase 18 to build JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md.",
+  "local_copy": "not committed (hash/metadata only); working copies under /tmp/phase18/ibass/ (jamb_mathematics.pdf, jamb_mathematics.txt)"
+}

@@ -25,21 +25,31 @@ Remaining gaps:
    NERDC Math documents; map syllabus rows to KC coverage; promote rows to
    BOARD_VERIFIED only on checked content. NERDC Math SSS 1/SSS 2 retrieved
    and content-checked (Phase 16): MATHEMATICS_SYLLABUS_COVERAGE.md maps
-   all official topics to CDG KCs. JAMB and WAEC official documents were NOT
-   obtained (IBASS SPA shell, WAEC 2017–2019 archive stub, e-learning =
-   past questions only) — BOARD_VERIFIED remains unreachable.
+   all official topics to CDG KCs. JAMB official E-syllabus retrieved and
+   content-checked (Phase 18): JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md maps
+   all 23 official JAMB topics; JAMB-side requirements confirmed (incl.
+   matrices II.6, sets I.4, progression II.4, mensuration III.2; correction:
+   modular arithmetic IS official JAMB I.1(c); new depth exposures recorded).
+   WAEC official documents NOT obtained (archive stub; e-learning = past
+   questions only) — BOARD_VERIFIED remains unreachable (WAEC outstanding).
 2. NOT_COVERED rows requiring owner scope decisions: Modular Arithmetic,
    Approximation, Surds, Bearings, Proofs of Some Basic Theorems,
-   Construction, Ogive (documented deferral). Matrices & determinants implemented
-   on secondary evidence only; official confirmation pending.
+   Construction, Ogive (documented deferral). Matrices & determinants
+   implemented on secondary evidence; the JAMB requirement is now officially
+   confirmed (Phase 18, JAMB II.6) — implementation evidence remains
+   secondary (Syllabus NG): disclosed, no implementation change.
 Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
-Next task: M-1 official-source verification (JAMB/WAEC retrieval attempts +
-NERDC SSS 3 attempt), then owner decisions on remaining NOT_COVERED rows
-(Modular Arithmetic, Approximation, Surds, Bearings, Proofs, Construction,
-Ogive). Biology remains on hold.
+Next task: M-1 official-source verification continues — JAMB DONE for Math
+(Phase 18); WAEC official documents and NERDC SSS 3 still outstanding. Then
+owner decisions on remaining NOT_COVERED rows (Modular Arithmetic,
+Approximation, Surds, Bearings, Proofs, Construction, Ogive) plus the
+Phase 18 depth exposures (Venn/cardinality; factor/remainder theorems;
+graphical/quadratic inequalities; GP sums; earth-as-sphere; bearings/graphs;
+limits; area under curve; grouped dispersion; data representation). Biology
+remains on hold.
 
-## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping 2026-10-17, Phase 16)
+## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping Phase 16; JAMB official mapping Phase 18)
 Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum
 depth (b060), energy sources/society (b061), fibre optics (b062), lasers
 (b063), electronics (b064); practical implementation acceptable with WAEC
@@ -63,6 +73,11 @@ These require owner scope decisions; they do not change the ratified
 IMPLEMENTATION_COMPLETE status within the declared scope.
 Next task: DONE in Phase 14 — Physics is IMPLEMENTATION_COMPLETE; next is
 board verification (M-1 plan) plus owner decisions on CI-17…CI-19.
+Phase 18: JAMB official E-syllabus retrieved and content-checked
+(JAMB_PHYSICS_OFFICIAL_COVERAGE.md maps all 40 official topics): Phase 14
+closures confirmed as official requirements (topics 6, 7, 27, 39, 40); new
+gaps recorded P-18 (vapours & humidity), P-19 (light energy); WAEC and NERDC
+SSS 3 still outstanding (CI-24 Open; BOARD_UNVERIFIED).
 
 ## CHEMISTRY — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED (updated 2026-10-16, Phase 15; syllabus mapping 2026-10-17, Phase 16)
 Counts: 21 KCs (12 foundational + 9 organic-reactions), 81 TMs.
@@ -99,6 +114,12 @@ IMPLEMENTATION_PARTIAL status.
 Next task: M-1 official-source verification (JAMB/WAEC retrieval attempts +
 NERDC SSS 3 attempt); owner decisions on CI-11…CI-16 (buffers, deferred
 families, newly mapped topics). Biology remains on hold.
+Phase 18: JAMB official E-syllabus retrieved and content-checked
+(JAMB_CHEMISTRY_OFFICIAL_COVERAGE.md maps all 18 official topics): buffers
+confirmed as an official JAMB requirement (topic 8 "Buffer solution") with
+the CI-11/CI-12 block unchanged; new gap C-15 astronomical chemistry
+recorded; WAEC and NERDC SSS 3 still outstanding (CI-24 Open;
+BOARD_UNVERIFIED).
 ## Recommended next phase
 Phase 14: Physics completion wave — DONE (implemented in Phase 14;
 Physics is IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED).
@@ -107,8 +128,16 @@ CI-10 closed).
 Phase 16: official-source verification (M-1) — DONE as retrieval
 (2026-10-17): NERDC SSS 1/SSS 2 Mathematics, Physics, Chemistry retrieved,
 extracted, authenticity established; JAMB IBASS and WAEC official documents
-not obtained; all three subjects remain BOARD_UNVERIFIED.
-Next: owner decisions on newly mapped gaps (CI-11…CI-23), renewed
-JAMB/WAEC retrieval attempts, NERDC SSS 3 attempt; then Biology only after
-all three subjects are sufficiently closed and the owner authorizes it.
+not obtained at that time; all three subjects remain BOARD_UNVERIFIED.
+Phase 16B: secondary-source comparison (Syllabus NG) — DONE; 45 proposed
+gaps registered (DEDUPLICATED_IMPLEMENTATION_GAP_REGISTER.md).
+Phase 17: Mathematics scope expansion — DONE (owner-authorized four
+families; batches 066–069; five new KCs).
+Phase 18: JAMB official E-syllabus retrieval + content check — DONE
+(Math/Phys/Chem; official matrices; corrections M-03/C-12; new gaps P-18,
+P-19, C-15; WAEC + NERDC SSS 3 outstanding; PHASE18_RETRIEVAL_REPORT.md).
+Next: WAEC official WASSCE syllabus retrieval; NERDC SSS 3 attempt; owner
+decisions on register gaps (M-*, P-*, C-* incl. Phase 18 exposures); then
+Biology only after all three subjects are sufficiently closed and the owner
+authorizes it.
 Biology remains on hold (BIOLOGY_HOLD_RECORD.md).

@@ -25,7 +25,7 @@
 | CI-21 | Math | Logic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.8 / SSS2 p.9 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
 | CI-22 | Math | Mensuration not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.11 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
 | CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | Open / Deferred | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Owner decision per row | Mathematics roadmap updated; existing deferrals stand |
-| CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB IBASS + WAEC not obtained; NERDC SSS1/SSS2 content-checked, SSS3 unretrieved | Retrieval Phase 16 actions; promote rows to BOARD_VERIFIED only on checked content | M-1 official-source verification plan |
+| CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB official UTME E-syllabus obtained + content-checked for Math/Phys/Chem (Phase 18 — IBASS static assets; see PHASE18_RETRIEVAL_REPORT.md); WAEC not obtained (downloads are CASS installers only); NERDC SSS1/SSS2 content-checked, SSS3 unretrieved (LMIS login-gated; nerdc.org.ng 500) | Continue retrieval: WAEC official WASSCE syllabus documents; NERDC SSS3; promote rows to BOARD_VERIFIED only on checked content; JAMB-side official matrices recorded (JAMB_*_OFFICIAL_COVERAGE.md) | M-1 official-source verification plan; Phase 18 retrieval report |
 | CI-25 | Chem | Practical chemistry — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | CI-05; kc.practical_chemistry implementation adequate | Obtain WAEC practical syllabus; map to practical KC methods/items | Same as CI-24 |
 | CI-26 | Phys | Practical physics — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | Phase 14 roadmap R16; kc.practical_measurement implementation adequate | Same as CI-24 | Same as CI-24 |
 
@@ -105,3 +105,19 @@ schema change; 13 entity types preserved; `indicates` remains PROPOSED;
 no cross-subject edges added; no Biology/English artifacts.
 Mathematics remains IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (expanded
 declared scope; board verification unchanged CI-24).
+
+Phase 18 (2026-10-17): official JAMB UTME E-syllabus retrieved for
+Mathematics, Physics, Chemistry from the official IBASS portal (hashed
+static assets discovered via SPA-bundle analysis; SHA-256 + page locators
+recorded in PHASE18_RETRIEVAL_REPORT.md and the three SRC.JAMB.UTME.*.2025
+source records). Official coverage matrices built
+(JAMB_{MATHEMATICS,PHYSICS,CHEMISTRY}_OFFICIAL_COVERAGE.md) — JAMB-side
+requirements content-checked. Two Phase 16B statements corrected: modular
+arithmetic IS an official JAMB requirement (Math I.1(c)); "Buffer solution"
+IS explicitly in official JAMB Chemistry topic 8. New requirement exposed:
+Chemistry topic 18 "Astronomical Chemistry" (no CDG coverage — new gap).
+WAEC official documents and NERDC SSS 3 remain unretrieved: CI-24 stays
+Open and all three subjects stay BOARD_UNVERIFIED. No schema/store change;
+no subject implementation status changed; secondary matrices remain
+retained as history (SECONDARY / BOARD_UNVERIFIED); no Biology/English
+artifacts.

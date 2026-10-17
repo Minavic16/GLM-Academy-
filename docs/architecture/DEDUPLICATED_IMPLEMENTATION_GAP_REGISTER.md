@@ -8,13 +8,23 @@ Gaps are deduplicated by topic family per subject. Each gap lists every source t
 
 Status vocabulary: Open | Blocked | Deferred (owner-documented).
 
+Phase 18 update (2026-10-17): the official JAMB UTME E-syllabus was
+retrieved and content-checked for Mathematics, Physics, Chemistry (official
+IBASS assets — PHASE18_RETRIEVAL_REPORT.md; matrices
+JAMB_{MATHEMATICS,PHYSICS,CHEMISTRY}_OFFICIAL_COVERAGE.md). JAMB-side
+requirement confirmations and two corrections to Phase 16B statements
+(M-03 modular arithmetic; C-12 buffers) are recorded inline and in the
+Phase 18 section at the end. WAEC official documents and NERDC SSS 3
+remain unretrieved; no gap is closed by this update, no subject status
+changes, and nothing is promoted to BOARD_VERIFIED.
+
 ## MATHEMATICS gaps
 
 | ID | Topic family | Sources evidencing gap | CDG entities affected | Gap class | Status | Rationale | Proposed resolution | Next action |
 |---|---|---|---|---|---|---|---|---|
 | M-01 | Sets | NERDC SSS1 p.7; JAMB SN4; WAEC topic 7 | kc.sets_operations | IMPLEMENTATION_GAP | Closed (implemented Phase 17 batch 066) | NERDC SSS1 p.7 lists sets; no CDG KC existed | Added kc.sets_operations + tm.set_operations + 2 methods + item; NERDC evidence | Owner decision: scope extension (now implemented) |
 | M-02 | Logical reasoning | NERDC SSS1 p.8; SSS2 p.9; WAEC topic 8 | kc.logical_reasoning | IMPLEMENTATION_GAP | Closed (implemented Phase 17 batch 066) | NERDC SSS1 p.8/SSS2 p.9 list logic; no CDG KC existed | Added kc.logical_reasoning + tm.logical_reasoning + 2 methods + item; NERDC evidence; prerequisite link to sets is curriculum-adjacency elaboration | Owner decision: scope extension (now implemented) |
-| M-03 | Modular arithmetic | WAEC topic 2 | — | IMPLEMENTATION_GAP | Open | WAEC lists modulo arithmetic; NERDC SSS1/SSS2 topic lists and JAMB do not show it explicitly | Add modular-arithmetic KC | Owner decision: scope extension |
+| M-03 | Modular arithmetic | WAEC topic 2; JAMB official E-syllabus topic I.1(c) (Phase 18) | — | IMPLEMENTATION_GAP | Open | WAEC lists modulo arithmetic; NERDC SSS1/SSS2 topic lists do not show it explicitly. The Phase 16B note that "JAMB do not show it explicitly" is CORRECTED in Phase 18: the official JAMB E-syllabus topic I.1(c) DOES include modular arithmetic | Add modular-arithmetic KC | Owner decision: scope extension (requirement officially confirmed Phase 18) |
 | M-04 | Number bases (conversion/fractional parts) | NERDC SSS1 p.1/p.5; JAMB SN1; WAEC topic 1 | kc.equations_in_indices | PARTIAL_GAP | Open | All three sources include number bases; CDG KC exists but base-conversion operations not explicitly evidenced | Add number-base methods to indices TM | Owner decision |
 | M-05 | Surds | NERDC SSS2 p.3; JAMB SN3; WAEC topic 10 | — | IMPLEMENTATION_GAP | Open | All three sources include surds; no CDG KC | Add surds KC | Owner decision: scope extension |
 | M-06 | Sequences & series | NERDC SSS2 p.1; JAMB SN4; WAEC topic 6 | kc.sequences_series | IMPLEMENTATION_GAP | Closed (implemented Phase 17 batch 067) | All three sources include sequences/series; no CDG KC existed | Added kc.sequences_series + tm.sequences_series + 2 methods + item; NERDC SSS2 p.1 evidence | Owner decision: scope extension (now implemented) |
@@ -53,6 +63,8 @@ Status vocabulary: Open | Blocked | Deferred (owner-documented).
 | P-15 | Force–time graph; Lami's theorem; moments | JAMB topic 3(g); JAMB topic 5 | kc.newtons_laws, kc.friction | PARTIAL_GAP | Open | JAMB lists equilibrium/momentum objectives; not explicitly evidenced | Add equilibrium/momentum methods | Owner decision |
 | P-16 | Energy-society applications (dams; nuclear; solar devices) | JAMB topic 6(b) | kc.work_energy_power, kc.energy_sources | PARTIAL_GAP | Open | JAMB lists energy-society; not explicitly evidenced | Add application methods | Owner decision |
 | P-17 | Specific heat capacity; latent heat; heat transfer | JAMB topics 13–19 | kc.heat_temperature | PARTIAL_GAP | Open | JAMB lists heat topics; not explicitly evidenced | Add heat-measurement methods | Owner decision |
+| P-18 | Vapours & humidity (S.V.P.; dew/fog; hygrometry) | JAMB official E-syllabus topic 17 (p.9, Phase 18) | — | IMPLEMENTATION_GAP | Open | Official JAMB lists vapours/humidity; no CDG KC | Add vapours KC | Owner decision: scope extension (recorded Phase 18) |
+| P-19 | Light energy: sources, propagation, shadows/eclipse, pinhole | JAMB official E-syllabus topic 23 (p.12, Phase 18) | — | IMPLEMENTATION_GAP | Open | Official JAMB lists light-energy basics; no CDG coverage evidenced | Add light-propagation methods/KC | Owner decision: scope extension (recorded Phase 18) |
 
 ## CHEMISTRY gaps
 
@@ -69,9 +81,10 @@ Status vocabulary: Open | Blocked | Deferred (owner-documented).
 | C-09 | Solubility | WAEC topic: Solubility of Substances | — | IMPLEMENTATION_GAP | Open | WAEC lists solubility; NERDC SSS1/SSS2 topic lists do not show it | Add solubility KC | Owner decision: scope extension |
 | C-10 | Separation techniques & purity criteria (methods) | NERDC SSS1 p.4; JAMB SN1; WAEC Standard Separation Techniques | kc.matter_classification, kc.practical_chemistry | PARTIAL_GAP | Open | All three sources list separation; CDG practical KC covers titration/qualitative tests only | Add separation-technique methods | Owner decision |
 | C-11 | Salt preparation & hydrolysis | JAMB SN9; WAEC Acids Bases & Salts | kc.acids_bases_salts | PARTIAL_GAP | Open | All three sources list salts; hydrolysis/preparation detail not evidenced | Add salt-methods | Owner decision |
-| C-12 | Buffers proper | Phase 15 scope constraint; no NERDC/JAMB/WAEC topic lists "buffer" explicitly | kc.ph_scale | IMPLEMENTATION_GAP | Blocked | Buffer pH needs Mathematics kc.logarithms; new cross-subject dependency would modify Mathematics records | Owner-authorized scoped Mathematics extension; then Chemistry buffer KCs/TM | Recorded (CI-11/CI-12); blocked |
+| C-12 | Buffers proper | Phase 15 scope constraint; official JAMB E-syllabus topic 8 includes "Buffer solution" (Phase 18 — corrects the Phase 16B "no topic list shows buffer explicitly" claim); NERDC SSS1/SSS2 and WAEC lists still silent | kc.ph_scale | IMPLEMENTATION_GAP | Blocked | Buffer pH needs Mathematics kc.logarithms; new cross-subject dependency would modify Mathematics records; block unchanged by official confirmation | Owner-authorized scoped Mathematics extension; then Chemistry buffer KCs/TM | Recorded (CI-11/CI-12); blocked; requirement officially confirmed Phase 18 |
 | C-13 | Titration systems & standard solutions (WAEC practical) | WAEC Quantitative Analysis (acid-base; redox systems: MnO4–/Fe2+; MnO4–/C2O42–; I2/S2O32-) | kc.practical_chemistry | PARTIAL_GAP | Open | WAEC practical paper lists specific systems; CDG covers titration generally | Add WAEC titration-system methods | Owner decision |
 | C-14 | Qualitative-analysis detail (WAEC practical) | WAEC Qualitative Analysis (cations; anions; gases; functional-group tests) | kc.practical_chemistry | PARTIAL_GAP | Open | WAEC lists specific confirmatory/gas/organic tests | Add qualitative-test methods | Owner decision |
+| C-15 | Astronomical chemistry (solar system; earth composition) | JAMB official E-syllabus topic 18 (p.15, Phase 18) | — | IMPLEMENTATION_GAP | Open | Official JAMB lists astronomical chemistry (new topic); no CDG KC; absent from Phase 16B secondary lists | Owner decision: scope extension | Recorded (Phase 18) |
 
 ## Cross-subject gaps
 
@@ -85,3 +98,68 @@ All topics above marked BOARD_UNVERIFIED. In particular:
 - Topics present in JAMB/WAEC secondary sources but absent from NERDC SSS1/SSS2 topic lists (M-03 modular arithmetic; M-07 matrices; M-09 loci/construction; M-17 vectors; M-18 transformations; P-03 simple machines; P-04 elasticity; C-02 air; C-04 metals; C-06 polymers; C-07 industry; C-08 pollution; C-09 solubility) require confirmation against NERDC SSS3 (unretrieved) and against official JAMB/WAEC documents before any scope decision.
 - Topics present in NERDC but not yet evidenced at method level in the CDG (all PARTIAL_GAP rows) require evidence mapping before the CDG can claim COVERED.
 - No topic may be promoted to COVERED-at-official level until official JAMB/WAEC/NERDC documents are obtained and content-checked (CI-24).
+
+## Phase 18 — official JAMB E-syllabus confirmation (2026-10-17)
+
+The official JAMB UTME E-syllabus was obtained and content-checked for
+Mathematics, Physics, Chemistry (official IBASS assets; SHA-256 and page
+locators in PHASE18_RETRIEVAL_REPORT.md and the official matrices
+JAMB_{MATHEMATICS,PHYSICS,CHEMISTRY}_OFFICIAL_COVERAGE.md). Confirmations
+below upgrade the JAMB evidence basis only: no gap is closed, no subject
+status changes, and nothing is promoted to BOARD_VERIFIED (WAEC official
+documents and NERDC SSS 3 remain unretrieved).
+
+Confirmed official JAMB requirements (locators in official matrices):
+
+| Gap ID | Official JAMB locator | Effect |
+|---|---|---|
+| M-01 | Math I.4 (p.2) | Closed (P17); requirement officially confirmed |
+| M-02 | not in official JAMB topic list | NERDC-based requirement (unchanged) |
+| M-03 | Math I.1(c) (p.2) | Phase 16B statement corrected; requirement officially confirmed |
+| M-04 | Math I.1(a–b) (p.2) | Officially confirmed |
+| M-05 | Math I.3(h) (p.2) | Officially confirmed |
+| M-06 | Math II.4 (p.3) | Closed (P17); official depth adds AP/GP sums + sum to infinity |
+| M-07 | Math II.6 (p.3) | Requirement officially confirmed; CDG implementation evidence remains secondary (Syllabus NG) — no implementation change |
+| M-08 | Math III.2 (p.4) | Officially confirmed; new sub-objective exposed: earth as a sphere (longitudes/latitudes) |
+| M-09 | Math III.3 (p.4); III.1(d) construction (p.3) | Officially confirmed |
+| M-10 | Math II.5 (p.3) | Officially confirmed |
+| M-11 | Math V.4 (p.5) | Officially confirmed |
+| M-12 | Math III.4 (p.4) | Officially confirmed |
+| M-13 | Math III.5 (pp.4–5) | Officially confirmed |
+| M-14 | Math IV.1/IV.3 (p.5) | Officially confirmed |
+| M-15 | Math V.1–V.2 (p.5) | Officially confirmed |
+| M-16 | Math V.5 (p.5) | Officially confirmed |
+| M-19 | Math I.2(e–h) (p.2) | Officially confirmed |
+| M-17, M-18 | not in official JAMB list | Remain WAEC-secondary-only; WAEC official still required |
+| P-01…P-17 | Phys topics 3, 6–9, 13–19, 28–32, 35–36, 38 (various pages) | All officially confirmed. Locator corrections: P-14 is topic 6 (p.5 — viscosity/terminal velocity/Stokes), not topic 7; P-16 is topic 7 (pp.5–6 — dams/nuclear/solar), not topic 6(b) |
+| C-01 | Chem topic 14 (p.9 — water under non-metals) | Officially confirmed (within topic 14) |
+| C-02 | Chem topic 7(a) (p.4 — air constituents) | Officially confirmed |
+| C-03 | Chem topic 14 (pp.9–11) | Officially confirmed |
+| C-04 | Chem topic 15 (pp.11–13) | Officially confirmed |
+| C-05 | Chem topic 16 (pp.13–15) | Officially confirmed (alkynes p.13; benzene p.13; carbohydrates p.14; proteins p.15; fats/oils/soap p.14); "enzymes" not visible in the official text — depth question |
+| C-06 | Chem topic 16 (polymers) | Officially confirmed (deferral stands) |
+| C-07 | Chem topic 17 (p.15) | Officially confirmed (deferral stands) |
+| C-08 | Chem topic 7 (pp.4–5) | Officially confirmed |
+| C-09 | Chem topic 6 (p.4) | Officially confirmed |
+| C-10 | Chem topic 1 (p.1) | Officially confirmed |
+| C-11 | Chem topic 8 (pp.5–6) | Officially confirmed |
+| C-12 | Chem topic 8 (p.6, "Buffer solution") | Phase 16B statement corrected; requirement officially confirmed; block unchanged |
+| C-13 | Chem topic 8(d) (p.6, acid/base titrations) | JAMB-side confirmed; WAEC practical systems still secondary |
+| C-14 | not in official JAMB list | WAEC-practical-based (secondary); WAEC official still required |
+
+Newly exposed official requirements (rows added above): P-18 vapours &
+humidity; P-19 light energy (sources/propagation/shadows/pinhole);
+C-15 astronomical chemistry.
+
+Partial-depth exposures recorded in the official matrices but not yet rowed
+here (owner scoping required): Physics topics 10–11 (pressure instruments;
+upthrust/Archimedes/floatation), 16 (physics-side gas-law scope), 18
+(kinetic theory of matter), 20–22 (wave equation; sound echoes;
+harmonics/resonance), 25–27 (prism refraction; optical instruments;
+dispersion/colours), 33–34 (magnetic fields; force on conductors/motor), 37
+(gas discharge); Mathematics depth gaps (I.4 Venn/cardinality; II.1
+factor/remainder theorems; II.3 graphical/quadratic inequalities; II.4 GP
+sums; III.2 earth-as-sphere; III.5 bearings/graphs/triangle area; IV.1
+limits; IV.3 area under curve; V.3 grouped dispersion); Chemistry depth gaps
+(topic 2 proportion laws; topic 4 quantum-number detail; topic 11
+entropy/ΔG).

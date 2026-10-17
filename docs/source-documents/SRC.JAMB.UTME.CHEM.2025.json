@@ -1,0 +1,37 @@
+{
+  "id": "SRC.JAMB.UTME.CHEM.2025",
+  "organization": "JAMB (Joint Admissions and Matriculation Board)",
+  "title": "UTME Syllabus — Chemistry (E-syllabus PDF distributed via the Integrated Brochure & Syllabus System, IBASS)",
+  "subject": "Chemistry",
+  "type": "EXAMINATION",
+  "authority": "OFFICIAL (JAMB)",
+  "primary": true,
+  "canonical_url": "https://ibass.jamb.gov.ng/e-syllabus",
+  "download_url": "https://ibass.jamb.gov.ng/static/media/Chemistry.9efd0b98043d56922aaa.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "a3c15bfee3beac0f4106a32b0091e2a2c51eaec8baa62fafa44afcad72193738",
+  "file_size_bytes": 226932,
+  "pages": 16,
+  "pdf_metadata": {
+    "author": "Abeeb Ibrahim Adeyemi",
+    "creator": "Microsoft Word 2016",
+    "creation_date": "D:20250730151633+01'00'",
+    "mod_date": "D:20250730151633+01'00'",
+    "producer": "Microsoft Word 2016"
+  },
+  "http_provenance": {
+    "status": 200,
+    "content_type": "application/pdf",
+    "server": "Apache/2.4.63 (Ubuntu)",
+    "etag": "\"418c26a3d41fa233df1d1f14709d06b485fbe17b\""
+  },
+  "publication_revision_date": "PDF metadata 2025-07-30 (creation + modification); no syllabus cycle year printed in the document",
+  "applicable_cycle": "UNRESOLVED (no cycle year printed; treated as the current official UTME syllabus as published by JAMB on its live IBASS portal at retrieval time)",
+  "authenticity_established": true,
+  "authenticity_basis": "Served from the official JAMB domain (ibass.jamb.gov.ng) as a hashed static asset of the official IBASS web application; document structure is a per-subject UTME syllabus (general objectives, detailed syllabus with 18 numbered topics incl. the recent 'Astronomical Chemistry' topic, recommended texts); found by inspecting the official SPA bundle (main.221b9987.js), resolving the Phase 16/16B IBASS retrieval dead end. No cycle-year marker exists in the document; recorded as a limitation.",
+  "limitations": "No explicit UTME cycle/session year is printed in the PDF. Local copy not committed (copyrighted board material) — hash and metadata recorded only. Topic-to-page locators in coverage documents refer to the extracted text pagination of this exact PDF revision (SHA-256 above).",
+  "notes": "Resolves the IBASS retrieval attempt recorded in SRC.JAMB.IBASS.ATTEMPT.2026-10-17.json. Used in Phase 18 to build JAMB_CHEMISTRY_OFFICIAL_COVERAGE.md. Chemistry topics list includes topic 18 'Astronomical Chemistry' (solar system/composition of earth) — newly exposed official requirement.",
+  "local_copy": "not committed (hash/metadata only); working copies under /tmp/phase18/ibass/ (jamb_chemistry.pdf, jamb_chemistry.txt)"
+}

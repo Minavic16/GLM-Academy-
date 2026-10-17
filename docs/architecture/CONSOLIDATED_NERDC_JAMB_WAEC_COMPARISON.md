@@ -10,6 +10,15 @@ Status vocabulary: COVERED | PARTIALLY_COVERED | NOT_COVERED | NOT_APPLICABLE | 
 All JAMB/WAEC rows are explicitly source_type = SECONDARY and cannot promote any subject to BOARD_VERIFIED.
 Official-verification status for all three subjects remains BOARD_UNVERIFIED (JAMB/WAEC official documents not obtained; NERDC SSS3 unretrieved).
 
+Phase 18 note (2026-10-17): JAMB official UTME E-syllabus documents WERE
+obtained and content-checked for Mathematics, Physics, Chemistry — see
+PHASE18_RETRIEVAL_REPORT.md and
+JAMB_{MATHEMATICS,PHYSICS,CHEMISTRY}_OFFICIAL_COVERAGE.md, which supersede
+this document's JAMB rows for official-verification purposes. Everything
+below remains the Phase 16B secondary-source record; WAEC rows remain
+SECONDARY, WAEC official documents remain unretrieved, and no subject is
+BOARD_VERIFIED.
+
 ## MATHEMATICS
 
 CDG: 39 KCs (IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared OpenStax-based scope).

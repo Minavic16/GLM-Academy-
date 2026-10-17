@@ -1,0 +1,37 @@
+{
+  "id": "SRC.JAMB.UTME.PHYS.2025",
+  "organization": "JAMB (Joint Admissions and Matriculation Board)",
+  "title": "UTME Syllabus — Physics (E-syllabus PDF distributed via the Integrated Brochure & Syllabus System, IBASS)",
+  "subject": "Physics",
+  "type": "EXAMINATION",
+  "authority": "OFFICIAL (JAMB)",
+  "primary": true,
+  "canonical_url": "https://ibass.jamb.gov.ng/e-syllabus",
+  "download_url": "https://ibass.jamb.gov.ng/static/media/Physics.16527a294cb7e7a87a35.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "62f5ac84592735cd5829296cb52da5bc8b582ee0f2227999cca73b58dcabfee5",
+  "file_size_bytes": 300452,
+  "pages": 20,
+  "pdf_metadata": {
+    "author": "Abeeb Ibrahim Adeyemi",
+    "creator": "Microsoft Word 2016",
+    "creation_date": "D:20250731113434+01'00'",
+    "mod_date": "D:20250731113434+01'00'",
+    "producer": "Microsoft Word 2016"
+  },
+  "http_provenance": {
+    "status": 200,
+    "content_type": "application/pdf",
+    "server": "Apache/2.4.63 (Ubuntu)",
+    "etag": "\"446eac11d0fa98b3fcee3da0b21349bcb3af232a\""
+  },
+  "publication_revision_date": "PDF metadata 2025-07-31 (creation + modification); no syllabus cycle year printed in the document; page headers carry printed page numbers from a larger JAMB document (e.g. 'Physics 172')",
+  "applicable_cycle": "UNRESOLVED (no cycle year printed; treated as the current official UTME syllabus as published by JAMB on its live IBASS portal at retrieval time)",
+  "authenticity_established": true,
+  "authenticity_basis": "Served from the official JAMB domain (ibass.jamb.gov.ng) as a hashed static asset of the official IBASS web application; document structure is a per-subject UTME syllabus (general objectives, detailed syllabus with 40 numbered topics, recommended texts excerpted from the JAMB brochure pagination); found by inspecting the official SPA bundle (main.221b9987.js), resolving the Phase 16/16B IBASS retrieval dead end. No cycle-year marker exists in the document; recorded as a limitation.",
+  "limitations": "No explicit UTME cycle/session year is printed in the PDF. Local copy not committed (copyrighted board material) — hash and metadata recorded only. Topic-to-page locators in coverage documents refer to the extracted text pagination of this exact PDF revision (SHA-256 above).",
+  "notes": "Resolves the IBASS retrieval attempt recorded in SRC.JAMB.IBASS.ATTEMPT.2026-10-17.json. Used in Phase 18 to build JAMB_PHYSICS_OFFICIAL_COVERAGE.md.",
+  "local_copy": "not committed (hash/metadata only); working copies under /tmp/phase18/ibass/ (jamb_physics.pdf, jamb_physics.txt)"
+}
