@@ -1,0 +1,21 @@
+{
+  "id": "SRC.SYLLABUSNG.JAMB.MATH",
+  "organization": "Syllabus NG (secondary aggregator)",
+  "title": "JAMB UTME Mathematics Syllabus",
+  "subject": "Mathematics",
+  "type": "EXAMINATION (secondary mirror)",
+  "authority": "SECONDARY — NOT authoritative",
+  "primary": false,
+  "canonical_url": "https://syllabus.ng/jamb/math/",
+  "download_url": "none found on page",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": null,
+  "publication_revision_date": "page metadata 2024-03-30; syllabus year not explicitly displayed",
+  "applicable_cycle": "UNRESOLVED (page described as 2025/2026 in project guidance; not confirmed)",
+  "authenticity_established": false,
+  "limitations": "Direct access returns HTTP 403 JavaScript challenge; content extracted via reader proxy (r.jina.ai). No downloadable PDF. Treated as secondary evidence only — never used to claim official JAMB alignment.",
+  "notes": "Used solely for Phase 17 matrices/determinants family (disclosed as secondary evidence) and Phase 16B coverage comparison.",
+  "local_copy": "/tmp/phase16b/rj_b48de73c225c4b518fa4ac099effcccc.txt (not committed)"
+}

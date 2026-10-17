@@ -90,3 +90,18 @@ cross-subject gap register (CROSS_SUBJECT_GAP_REGISTER.md), including
 cross-subject Chemistry buffers (CI-11/CI-12) and NERDC-mapped
 implementation gaps (CI-16…CI-23). No subject implementation status
 changed; no schema change; no Biology artifacts.
+
+Phase 17 (2026-10-17): Mathematics scope expansion (owner-authorized four
+families). CI register Mathematics rows M-01 (Sets), M-02 (Logic),
+M-06 (Sequences & series), M-07 (Matrices & determinants), M-08 (Mensuration)
+CLOSED as implemented in Phase 17 batches 066-069
+(`examples/math_scope_expansion.py`, `build_graph_v40`). Five new Mathematics
+KCs (43→44: +sets, +logic, +sequences/series, +matrices/determinants,
++mensuration), each ACCEPTED with HUMAN review, TM, Methods, Items and
+evidence. Sets/logic/sequences/mensuration evidenced by NERDC Math SSS1/SSS2
+(official); matrices/determinants evidenced by JAMB/WAEC via Syllabus NG
+(secondary, disclosed — not in NERDC SSS1/SSS2; SSS3 unretrieved). No
+schema change; 13 entity types preserved; `indicates` remains PROPOSED;
+no cross-subject edges added; no Biology/English artifacts.
+Mathematics remains IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (expanded
+declared scope; board verification unchanged CI-24).

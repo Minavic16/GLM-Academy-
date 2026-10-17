@@ -20,13 +20,15 @@ All Mathematics KC/TM/Method/Item records are ACCEPTED and human-reviewed.
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Logarithms | Use ICT to enhance mathematical learning | kc.logarithms | COVERED | NERDC p.4; CDG kc.logarithms (b055) | — | — |
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Number Base System (2) | — | kc.equations_in_indices | PARTIALLY_COVERED | NERDC p.5 | Second number-base topic not explicitly evidenced | Extend indices KC evidence or mark partial |
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Modular Arithmetic | — | — | NOT_COVERED | NERDC p.6 | No modular-arithmetic KC in CDG | Owner decision: scope extension |
-| NERDC | Mathematics | Mathematics SSS 1 (2025) | Sets | Basic knowledge of mathematical principles in daily interactions | — | NOT_COVERED | NERDC p.7 | No sets KC in CDG | Owner decision: scope extension |
-| NERDC | Mathematics | Mathematics SSS 1 (2025) | Logic | Critical thinking and logical reasoning | — | NOT_COVERED | NERDC p.8 | No logic KC in CDG | Owner decision: scope extension |
+| NERDC | Mathematics | Mathematics SSS 1 (2025) | Sets | Set meaning; notations (roster/rule/set-builder); types (empty, subset, infinite, universal); set operations (union, intersection, complement); daily-life application | kc.sets_operations | COVERED | NERDC Math SSS1 p.7; CDG kc.sets_operations (batch 066) with TM, methods, item | Introductory coverage; deeper set-theory objectives not evidenced | Evidence mapping |
+| NERDC | Mathematics | Mathematics SSS 1 (2025) | Logic | Simple/compound statements; logical operators; truth values; negations, conjunctions, disjunctions, conditional, bi-conditional | kc.logical_reasoning | COVERED | NERDC Math SSS1 p.8 / SSS2 p.9; CDG kc.logical_reasoning (batch 066) | Truth-table depth not explicitly evidenced | Evidence mapping |
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Simple Equations and Variations | Express statements as algebraic expressions | kc.linear_equations_one_var | PARTIALLY_COVERED | NERDC p.9; CDG linear-equations KC | Variation objectives not covered | Add variation objectives |
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Quadratic Equations | — | kc.quadratic_roots, kc.quadratic_by_factorisation, kc.quadratic_formula | COVERED | NERDC p.10; CDG quadratic KCs (batches 001/005) | — | — |
-| NERDC | Mathematics | Mathematics SSS 1 (2025) | Mensuration | — | — | NOT_COVERED | NERDC p.11 | No mensuration KC in CDG | Owner decision: scope extension |
+| NERDC | Mathematics | Mathematics SSS 1 (2025) | Mensuration | Arc length; sector/segment perimeter and area; sector area vs cone surface area; surface area/volume of solids (cube, cuboid, cylinder, cone, prism, pyramid); frustum; compound shapes | kc.mensuration | COVERED | NERDC Math SSS1 p.11; CDG kc.mensuration (batch 069) with TM, methods, item | Composite-solid depth not explicitly evidenced | Evidence mapping |
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Data Presentation | Logical reasoning for decision-making in data management | kc.mean_ungrouped_data | PARTIALLY_COVERED | NERDC p.12; CDG statistics KC | Data-presentation objectives partially evidenced | Add presentation objectives |
-| NERDC | Mathematics | Mathematics SSS 2 (2025) | Sequence and Series | Display basic analytic skills | — | NOT_COVERED | NERDC Math SSS2 p.1 | No sequence/series KC | Owner decision: scope extension |
+| NERDC | Mathematics | Mathematics SSS 2 (2025) | Sequence and Series | Types of sequences/series; A.P. (first term, common difference, nth term, arithmetic mean); G.P. (first term, common ratio, nth term, geometric mean); real-life A.P./G.P. problems | kc.sequences_series | COVERED | NERDC Math SSS2 p.1; CDG kc.sequences_series (batch 067) | Sequence-type breadth not explicitly evidenced | Evidence mapping |
+| NERDC | Mathematics | Mathematics SSS 2 (2025) | Approximation | Compute quantitative tasks with speed and accuracy | — | NOT_COVERED | NERDC SSS2 p.2 | No approximation/rounding KC | Owner decision |
+| Syllabus NG (secondary) | Mathematics | JAMB SN6 / WAEC topic 11 | Matrices and determinants | Matrix notation/dimensions/equality; matrix operations; determinants (≤3×3); inverses (2×2); solving simultaneous equations via matrices | kc.matrix_algebra | PARTIALLY_COVERED | JAMB SN6 / WAEC topic 11 via Syllabus NG (secondary, not NERDC SSS1/SSS2); CDG kc.matrix_algebra (batch 068) | NOT in NERDC SSS1/SSS2 topic lists (SSS3 unretrieved); secondary evidence only | Owner decision; disclose secondary evidence |
 | NERDC | Mathematics | Mathematics SSS 2 (2025) | Approximation | Compute quantitative tasks with speed and accuracy | — | NOT_COVERED | NERDC SSS2 p.2 | No approximation/rounding KC | Owner decision |
 | NERDC | Mathematics | Mathematics SSS 2 (2025) | Surds | Operations with irrational numbers | — | NOT_COVERED | NERDC SSS2 p.3 | No surds KC | Owner decision |
 | NERDC | Mathematics | Mathematics SSS 2 (2025) | Logarithms | 21st-century quantitative skills | kc.logarithms | COVERED | NERDC SSS2 p.4; CDG kc.logarithms | — | — |
@@ -49,13 +51,14 @@ All Mathematics KC/TM/Method/Item records are ACCEPTED and human-reviewed.
 ## Mathematics-specific gap analysis
 
 Relative to the NERDC official curriculum (SSS 1–SSS 2 checked; SSS 3
-unreachable), NOT_COVERED topics include: Modular Arithmetic, Sets,
-Logic, Mensuration, Sequence and Series, Approximation, Surds, Bearings,
-Proofs of Some Basic Theorems, Construction, Cumulative Frequency Graph
-(Ogive). Several are documented scope deferrals in the Mathematics
-roadmap (mode/mean-grouped/ogive); Sets, Logic, Mensuration, etc. are
-newly exposed by the official-curriculum comparison and require owner
-scope decisions before any implementation.
+unreachable), NOT_COVERED topics now include: Modular Arithmetic,
+Approximation, Surds, Bearings, Proofs of Some Basic Theorems, Construction,
+Cumulative Frequency Graph (Ogive). Sets, Logic, Mensuration and Sequence &
+Series were implemented in Phase 17 (batches 066-069) and are COVERED at
+introductory level. Matrices and determinants are PARTIALLY_COVERED via
+secondary JAMB/WAEC evidence (batch 068) — not in NERDC SSS1/SSS2 topic
+lists; official verification remains pending. Several NOT_COVERED rows are
+documented scope deferrals in the Mathematics roadmap (ogive).
 
 Mathematics is also the dependency root for Chemistry buffers
 (kc.logarithms → kc.ph_scale, cl.pre56.log_ph) — see the cross-subject
@@ -63,3 +66,5 @@ gap register.
 
 Official-board verification status: BOARD_UNVERIFIED (JAMB and WAEC
 official documents were not obtained — see PHASE16_RETRIEVAL_REPORT.md).
+Phase 17 implementation does not change board-verification status.
+

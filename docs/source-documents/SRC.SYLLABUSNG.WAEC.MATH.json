@@ -1,0 +1,21 @@
+{
+  "id": "SRC.SYLLABUSNG.WAEC.MATH",
+  "organization": "Syllabus NG (secondary aggregator)",
+  "title": "WAEC WASSCE Mathematics Syllabus",
+  "subject": "Mathematics",
+  "type": "EXAMINATION (secondary mirror)",
+  "authority": "SECONDARY — NOT authoritative",
+  "primary": false,
+  "canonical_url": "https://syllabus.ng/waec/math/",
+  "download_url": "none found on page",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": null,
+  "publication_revision_date": "page metadata 2024-04-28; syllabus year not explicitly displayed",
+  "applicable_cycle": "UNRESOLVED",
+  "authenticity_established": false,
+  "limitations": "Direct access returns HTTP 403 JavaScript challenge; content extracted via reader proxy (r.jina.ai). No downloadable PDF. Treated as secondary evidence only — never used to claim official WAEC alignment.",
+  "notes": "Used solely for Phase 17 matrices/determinants family (disclosed as secondary evidence) and Phase 16B coverage comparison.",
+  "local_copy": "/tmp/phase16b/rj_6050f38da1597e5664957404d15131f7.txt (not committed)"
+}

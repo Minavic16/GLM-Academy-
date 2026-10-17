@@ -2,28 +2,42 @@
 
 Statuses under ratified model (OD-01/OD-04):
 
-## MATHEMATICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED
-Completed: 39 KCs, full-chains validated, CI-01/CI-02 closed (median +
-dispersion with preserved legacy ids), kc.logarithms (b055) enables
-Chemistry pH; log→pH edge cl.pre56.log_ph ACCEPTED and intact.
+## MATHEMATICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (scope expanded Phase 17)
+Completed: 44 KCs (39 baseline + 5 in Phase 17 batches 066-069), full-chains
+validated, CI-01/CI-02 closed (median + dispersion with preserved legacy ids),
+kc.logarithms (b055) enables Chemistry pH; log→pH edge cl.pre56.log_ph
+ACCEPTED and intact.
+
+Phase 17 scope expansion (owner-authorized four families):
+- Batch 066 Sets & logic: kc.sets_operations, kc.logical_reasoning (NERDC Math
+  SSS1 pp. 7–8).
+- Batch 067 Sequences & series: kc.sequences_series (NERDC Math SSS2 p.1).
+- Batch 068 Matrices & determinants: kc.matrix_algebra (secondary JAMB/WAEC
+  evidence via Syllabus NG; NOT in NERDC SSS1/SSS2 topic lists — disclosed).
+- Batch 069 Mensuration: kc.mensuration (NERDC Math SSS1 p.11).
+All new KCs ACCEPTED with HUMAN review, each with TM, Methods, Items and
+evidence. Prerequisites are curriculum-adjacency elaborations (logic→sets,
+sequences→integer arithmetic, matrices→linear equations, mensuration→circle
+theorems); no schema change, no cross-subject edges added.
+
 Remaining gaps:
 1. Official-board verification (M-1): retrieval + content-check of JAMB/WAEC/
    NERDC Math documents; map syllabus rows to KC coverage; promote rows to
    BOARD_VERIFIED only on checked content. NERDC Math SSS 1/SSS 2 retrieved
    and content-checked (Phase 16): MATHEMATICS_SYLLABUS_COVERAGE.md maps
-   all official topics to CDG KCs; NOT_COVERED rows include Sets, Logic,
-   Mensuration, Sequence and Series, Approximation, Surds, Bearings,
-   Proofs of Some Basic Theorems, Construction, Ogive (documented deferral).
-   JAMB and WAEC official documents were NOT obtained (IBASS SPA shell,
-   WAEC 2017–2019 archive stub, e-learning = past questions only) —
-   BOARD_VERIFIED remains unreachable.
-2. Scope items marked deferred (mode/mean-grouped/ogive) stay out unless
-   owner extends declared scope.
+   all official topics to CDG KCs. JAMB and WAEC official documents were NOT
+   obtained (IBASS SPA shell, WAEC 2017–2019 archive stub, e-learning =
+   past questions only) — BOARD_VERIFIED remains unreachable.
+2. NOT_COVERED rows requiring owner scope decisions: Modular Arithmetic,
+   Approximation, Surds, Bearings, Proofs of Some Basic Theorems,
+   Construction, Ogive (documented deferral). Matrices & determinants implemented
+   on secondary evidence only; official confirmation pending.
 Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
 Next task: M-1 official-source verification (JAMB/WAEC retrieval attempts +
-NERDC SSS 3 attempt), then owner decisions on CI-20…CI-23 scope
-extensions. Biology remains on hold.
+NERDC SSS 3 attempt), then owner decisions on remaining NOT_COVERED rows
+(Modular Arithmetic, Approximation, Surds, Bearings, Proofs, Construction,
+Ogive). Biology remains on hold.
 
 ## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping 2026-10-17, Phase 16)
 Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum

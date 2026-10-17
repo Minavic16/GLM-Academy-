@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 85
-- TaskModels: 81
-- Methods: 119
-- Items: 51
+- Knowledge Components: 90
+- TaskModels: 86
+- Methods: 129
+- Items: 56
 - Misconceptions: 1
-- Claims: 554
-- Evidence records: 276
-- Sources: 83
-- Activities: 192
+- Claims: 583
+- Evidence records: 288
+- Sources: 85
+- Activities: 204
 - Agents: 2
-- Exported nodes: 340
-- Exported edges: 554
-- Accepted Claims: 552; PROPOSED Claims: 2
+- Exported nodes: 365
+- Exported edges: 583
+- Accepted Claims: 581; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -68,7 +68,9 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
 | `kc.linear_momentum` | Linear momentum and its conservation | Physics | ACCEPTED | tm.momentum_problems |
 | `kc.logarithms` | Logarithms and their laws | Number & Numeration | ACCEPTED | tm.logarithm_problems |
+| `kc.logical_reasoning` | Logical statements and truth values | Mathematics | ACCEPTED | tm.logical_reasoning |
 | `kc.mass_and_weight` | Mass, weight and inertia | Physics | ACCEPTED | tm.apply_newtons_second_law |
+| `kc.matrix_algebra` | Matrices and determinants | Mathematics | ACCEPTED | tm.matrix_algebra |
 | `kc.matter_classification` | Elements, compounds, mixtures and separation | Chemistry | ACCEPTED | tm.classify_matter |
 | `kc.maxima_minima` | Maxima and minima of a function | Calculus | ACCEPTED | tm.find_maxima_minima |
 | `kc.mean_ungrouped_data` | Mean of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_mean |
@@ -76,6 +78,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.measurement_units_dimensions` | Physical quantities, SI units and dimensions | Physics | ACCEPTED | tm.convert_and_check_units |
 | `kc.measures_of_dispersion` | Measures of dispersion | Statistics & Probability | ACCEPTED | tm.compute_dispersion |
 | `kc.median_ungrouped` | Median of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_median |
+| `kc.mensuration` | Mensuration: arcs, sectors, solids and compound shapes | Mathematics | ACCEPTED | tm.mensuration |
 | `kc.mole_stoichiometry` | Mole concept and stoichiometry | Chemistry | ACCEPTED | tm.stoichiometry_problems |
 | `kc.motion_equations_constant_acceleration` | Equations of motion (constant acceleration) | Physics | ACCEPTED | tm.solve_constant_acceleration |
 | `kc.motion_graph_interpretation` | Interpretation of motion graphs | Physics | ACCEPTED | tm.interpret_motion_graph |
@@ -99,6 +102,8 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.redox_electrochemistry` | Redox reactions and electrolysis | Chemistry | ACCEPTED | tm.redox_problems |
 | `kc.scalar_vector_quantities` | Scalars, vectors and vector resolution | Physics | ACCEPTED | tm.resolve_vectors |
 | `kc.semiconductor_electronics` | Semiconductor devices and logic basics | Physics | ACCEPTED | tm.electronics_problems |
+| `kc.sequences_series` | Arithmetic and geometric progressions | Mathematics | ACCEPTED | tm.sequences_series |
+| `kc.sets_operations` | Set theory: definitions, notation and operations | Mathematics | ACCEPTED | tm.set_operations |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
 | `kc.sine_rule` | Sine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
@@ -113,6 +118,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 | Prerequisite | → | Dependent | Purpose | Scope | Origin |
 |---|---|---|---|---|---|
+| `kc.sets_operations` | → | `kc.logical_reasoning` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.integer_arithmetic` | → | `kc.sequences_series` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.linear_equations_one_var` | → | `kc.matrix_algebra` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.circle_angle_theorems` | → | `kc.mensuration` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.algebraic_expressions` | → | `kc.factorisation_quadratic_trinomial` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.function_concept` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.quadratic_formula` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
@@ -557,10 +566,28 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.apply_log_laws, m.convert_exp_log
 - Status: ACCEPTED
 
+### `tm.logical_reasoning` — Evaluate simple and compound logical statements
+
+- Targets: kc.logical_reasoning
+- Methods: m.logic_statements, m.logic_truth_values
+- Status: ACCEPTED
+
 ### `tm.make_subject` — Make a specified variable the subject
 
 - Targets: kc.change_of_subject
 - Methods: m.collect_factor_subject, m.inverse_operations
+- Status: ACCEPTED
+
+### `tm.matrix_algebra` — Work with matrices and determinants
+
+- Targets: kc.matrix_algebra
+- Methods: m.determinants_inverses, m.matrix_operations
+- Status: ACCEPTED
+
+### `tm.mensuration` — Solve mensuration problems on circles and solids
+
+- Targets: kc.mensuration
+- Methods: m.circle_mensuration, m.solid_mensuration
 - Status: ACCEPTED
 
 ### `tm.modern_physics_problems` — Solve photoelectric/nuclear problems
@@ -633,6 +660,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.scalar_vector_quantities
 - Methods: m.classify_quantities, m.resolve_components
+- Status: ACCEPTED
+
+### `tm.sequences_series` — Solve sequence and series problems
+
+- Targets: kc.sequences_series
+- Methods: m.ap_gp_nth_term, m.ap_gp_problems
+- Status: ACCEPTED
+
+### `tm.set_operations` — Work with sets and set operations
+
+- Targets: kc.sets_operations
+- Methods: m.set_notation, m.set_operations
 - Status: ACCEPTED
 
 ### `tm.signed_number_arithmetic` — Perform signed-number arithmetic
@@ -961,10 +1000,25 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.apply_log_laws`** requires: kc.algebraic_expressions, kc.equations_in_indices
 - **`m.convert_exp_log`** requires: kc.algebraic_expressions, kc.equations_in_indices
 
+### `tm.logical_reasoning`
+
+- **`m.logic_statements`** requires: kc.logical_reasoning
+- **`m.logic_truth_values`** requires: kc.logical_reasoning
+
 ### `tm.make_subject`
 
 - **`m.collect_factor_subject`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.inverse_operations`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
+
+### `tm.matrix_algebra`
+
+- **`m.determinants_inverses`** requires: kc.matrix_algebra
+- **`m.matrix_operations`** requires: kc.matrix_algebra
+
+### `tm.mensuration`
+
+- **`m.circle_mensuration`** requires: kc.mensuration
+- **`m.solid_mensuration`** requires: kc.mensuration
 
 ### `tm.modern_physics_problems`
 
@@ -1019,6 +1073,16 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.classify_quantities`** requires: kc.measurement_units_dimensions
 - **`m.resolve_components`** requires: kc.algebraic_expressions, kc.trig_ratios_acute
+
+### `tm.sequences_series`
+
+- **`m.ap_gp_nth_term`** requires: kc.sequences_series
+- **`m.ap_gp_problems`** requires: kc.sequences_series
+
+### `tm.set_operations`
+
+- **`m.set_notation`** requires: kc.sets_operations
+- **`m.set_operations`** requires: kc.sets_operations
 
 ### `tm.signed_number_arithmetic`
 
@@ -1176,3 +1240,7 @@ See [`docs/batch_records/`](../batch_records/).
 | 063 | kc.laser_basics |
 | 064 | kc.semiconductor_electronics |
 | 065 | kc.alcohols, kc.aldehydes_ketones, kc.amides, kc.amines, kc.carboxylic_acids, kc.ethers, kc.isomerism, kc.reactions_of_alkanes, kc.reactions_of_alkenes |
+| 066 | kc.logical_reasoning, kc.sets_operations |
+| 067 | kc.sequences_series |
+| 068 | kc.matrix_algebra |
+| 069 | kc.mensuration |
