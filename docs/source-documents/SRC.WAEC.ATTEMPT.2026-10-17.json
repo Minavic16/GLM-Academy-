@@ -1,0 +1,21 @@
+{
+  "id": "SRC.WAEC.ATTEMPT.2026-10-17",
+  "organization": "WAEC (West African Examinations Council, Nigeria)",
+  "title": "WASSCE syllabuses — official Nigeria portal and e-learning subject portals",
+  "subject": "Mathematics, Physics, Chemistry",
+  "type": "EXAMINATION",
+  "authority": "OFFICIAL (claimed)",
+  "primary": true,
+  "canonical_url": "https://www.waecnigeria.org/",
+  "download_url": "https://www.waecnigeria.org/article/wassce-syllabuses-2017-2019 ; https://www.waeconline.org.ng/e-learning/{Mathematics,Chemistry,Physics}/...main.html",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": false,
+  "content_extracted": false,
+  "sha256": null,
+  "publication_revision_date": "not established",
+  "applicable_cycle": "not established",
+  "authenticity_established": false,
+  "limitations": "waecnigeria.org is reachable (HTTP 200) but the wassce-syllabuses-2017-2019 article page contains no downloadable syllabus PDFs for Mathematics/Physics/Chemistry (news-sidebar only). The 2017–2019 archive must not be assumed current. waeconline.org.ng e-learning subject pages contain past WASSCE questions only (no 'syllabus' mention; no syllabus PDF links). waec.org/w aecdirect.org/waeconline.org.ng were not found to expose current syllabus PDFs in this attempt.",
+  "notes": "No current-cycle WAEC syllabus document obtained. Next action: check waecnigeria.org article index / publications page and linked attachments; consider official request to WAEC Nigeria.",
+  "local_copy": "none"
+}

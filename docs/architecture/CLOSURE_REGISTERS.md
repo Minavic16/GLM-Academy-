@@ -12,6 +12,22 @@
 | CI-08 | Physics | Fibre/LASER/electronics; EM-spectrum depth | IMPLEMENTATION_GAP | **CLOSED 2026-10-15 (Phase 14)**: kc.fibre_optics, kc.laser_basics, kc.semiconductor_electronics, kc.em_spectrum accepted with evidence | Closed |
 | CI-09 | Chem | Buffers proper, polymers, industrial, transition metals | IMPLEMENTATION_GAP (deferrals stand) | Documented in matrix; buffers proper specifically BLOCKED by Phase 15 scope constraint (needs new cross-subject dependency from Mathematics log KC) — see PHASE15_GAP_AUDIT.md | Open |
 | CI-10 | Chem | Organic reactions NOT_IMPLEMENTED | IMPLEMENTATION_GAP | **CLOSED 2026-10-16 (Phase 15)**: nine KCs accepted (b065) with TMs/Methods/Items, CHEM2E 20.1–20.4 evidence, HUMAN review; prerequisites Chemistry-internal | Closed |
+| CI-11 | Math → Chem | Chemistry buffers need pH calculations; logarithms KC is in Mathematics; new prerequisite edge would modify Mathematics records | IMPLEMENTATION_GAP (cross-subject) | Blocked (Phase 15/16 scope constraint) | NERDC Chem SSS1 p.15 / SSS2 acids-and-salts; CDG kc.ph_scale + cl.pre56.log_ph scoped to tm.ph_problems | Owner-authorized scoped Mathematics extension, then Chemistry buffer KCs/TM | Open — owner decision on scoped Math change |
+| CI-12 | Chem | Buffers proper not implemented | IMPLEMENTATION_GAP | Open | CI-09; NERDC SSS1/SSS2 topic lists do not list "buffer"; SSS3 unreachable | Implement after CI-11 unblocked | Re-evaluate after CI-11 + SSS3 retrieval |
+| CI-13 | Chem | Polymers not implemented | IMPLEMENTATION_GAP | Deferred (owner-documented) | NERDC SSS1/SSS2 topic lists: no polymers topic | Owner decision to reopen | Revisit with owner authorization |
+| CI-14 | Chem | Industrial chemistry not implemented | IMPLEMENTATION_GAP | Deferred (owner-documented) | NERDC "Chemical industry" SSS1 p.2 (NOT_COVERED); "Chemistry and industry" SSS2 p.30 | Owner decision | Revisit with owner authorization |
+| CI-15 | Chem | Transition metals / electrolytic cells detail | IMPLEMENTATION_GAP | Deferred (owner-documented) | NERDC SSS1/SSS2: no transition-metals topic; electrolysis COVERED via kc.redox_electrochemistry | Owner decision | Revisit with owner authorization |
+| CI-16 | Chem | Water topic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Chem SSS1 p.17 and SSS2 p.10 (NOT_COVERED) | Owner decision: add water KC or out of scope | Recorded in CHEMISTRY_SYLLABUS_COVERAGE.md |
+| CI-17 | Phys | Projectile Motion not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Phy SSS2 p.7 (NOT_COVERED); Math quadratic dependencies exist | Implement projectile KC using existing Math→Physics edges | Recorded in PHYSICS_SYLLABUS_COVERAGE.md |
+| CI-18 | Phys | Simple Harmonic Motion not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Phy SSS2 p.8 (NOT_COVERED) | Owner decision | Recorded in PHYSICS_SYLLABUS_COVERAGE.md |
+| CI-19 | Phys | Introduction to Internet and Intranet not in CDG (newly mapped) | IMPLEMENTATION_GAP | Open / likely NOT_APPLICABLE to core physics | NERDC Phy SSS2 p.46 (NOT_COVERED) | Owner decision; likely outside CDG physics scope | Recorded in PHYSICS_SYLLABUS_COVERAGE.md |
+| CI-20 | Math | Sets not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.7 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
+| CI-21 | Math | Logic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.8 / SSS2 p.9 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
+| CI-22 | Math | Mensuration not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.11 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
+| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | Open / Deferred | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Owner decision per row | Mathematics roadmap updated; existing deferrals stand |
+| CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB IBASS + WAEC not obtained; NERDC SSS1/SSS2 content-checked, SSS3 unretrieved | Retrieval Phase 16 actions; promote rows to BOARD_VERIFIED only on checked content | M-1 official-source verification plan |
+| CI-25 | Chem | Practical chemistry — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | CI-05; kc.practical_chemistry implementation adequate | Obtain WAEC practical syllabus; map to practical KC methods/items | Same as CI-24 |
+| CI-26 | Phys | Practical physics — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | Phase 14 roadmap R16; kc.practical_measurement implementation adequate | Same as CI-24 | Same as CI-24 |
 
 # Owner Decision Register (Phase 13.5)
 
@@ -61,6 +77,16 @@ reviewed with OpenStax Chemistry 2e 20-1–20-4 evidence. All new
 prerequisites are Chemistry-internal (no new cross-subject dependency
 claims), per the Phase 15 scope restriction.
 Chemistry implementation remains IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED
-because of the blocked buffers gap (CI-09) and the deferred families
-(polymers / industrial chemistry / transition metals).
-Official-board verification is unchanged (CI-05).
+because of the blocked buffers gap (CI-09/CI-11/CI-12) and the deferred
+families (polymers / industrial chemistry / transition metals).
+Official-board verification is unchanged (CI-05/CI-24).
+
+Phase 16 (2026-10-17): official-source retrieval completed for NERDC
+SSS 1/SSS 2 Mathematics, Physics, Chemistry (all retrieved, extracted,
+authenticity established — see PHASE16_RETRIEVAL_REPORT.md). JAMB IBASS
+and WAEC official documents were not obtained; all three subjects remain
+BOARD_UNVERIFIED (CI-24). New issues CI-11…CI-26 recorded in the
+cross-subject gap register (CROSS_SUBJECT_GAP_REGISTER.md), including
+cross-subject Chemistry buffers (CI-11/CI-12) and NERDC-mapped
+implementation gaps (CI-16…CI-23). No subject implementation status
+changed; no schema change; no Biology artifacts.

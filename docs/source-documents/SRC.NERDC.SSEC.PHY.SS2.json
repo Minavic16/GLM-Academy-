@@ -1,0 +1,23 @@
+{
+  "id": "SRC.NERDC.SSEC.PHY.SS2",
+  "organization": "NERDC",
+  "title": "New Revised Senior Secondary School Curriculum — Physics SSS 2",
+  "subject": "Physics",
+  "type": "CURRICULUM",
+  "authority": "OFFICIAL",
+  "primary": true,
+  "canonical_url": "https://www.nerdc.gov.ng/content_manager/new_senior_curriculum_home.html",
+  "download_url": "https://lmis.nerdcportals.com.ng/sss_2/necurrdc/8.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "88dd5df94a0e3fc66f3516739a3ad4a5f577416dac1fdeef23e75fa19e298236",
+  "size_bytes": 872601,
+  "pages": 62,
+  "publication_revision_date": "October 2025 (document footer); issuing body Federal Ministry of Education / NERDC",
+  "applicable_cycle": "Senior Secondary School 2, 2025 revised curriculum",
+  "authenticity_established": true,
+  "limitations": "Same portal limitations as SSS 1.",
+  "notes": "Copyrighted official document; PDF bytes not committed.",
+  "local_copy": "/tmp/phase16/nerdc_pdfs/phys_sss2.pdf (not committed)"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "SRC.FEDMOE.CURRICULUM.OFFERINGS.2025",
+  "organization": "NERDC / Federal Ministry of Education",
+  "title": "Basic and Senior Secondary Education Curriculum Offerings",
+  "subject": "Cross-subject",
+  "type": "CURRICULUM policy",
+  "authority": "OFFICIAL",
+  "primary": true,
+  "canonical_url": "https://www.nerdc.gov.ng/",
+  "download_url": "https://www.nerdc.gov.ng/content_manager/Basic%20and%20Senior%20Secondary%20Education%20Curriculum%20Offerings.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "not computed",
+  "size_bytes": 85097,
+  "pages": 3,
+  "publication_revision_date": "D:20250908144227+01'00 (PDF metadata, 2025-09-08)",
+  "applicable_cycle": "Senior Secondary School, 2025 curriculum structure",
+  "authenticity_established": true,
+  "limitations": "Subject offering list only (confirms Chemistry, Physics, General Mathematics in the Science field of study); no per-topic content.",
+  "notes": "Corroborates that Chemistry, Physics and Mathematics are senior-secondary science/core subjects under the 2025 revised structure.",
+  "local_copy": "/tmp/phase16/nerdofferings.pdf (not committed)"
+}

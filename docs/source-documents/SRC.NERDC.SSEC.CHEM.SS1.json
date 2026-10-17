@@ -1,0 +1,23 @@
+{
+  "id": "SRC.NERDC.SSEC.CHEM.SS1",
+  "organization": "NERDC (Nigerian Educational Research and Development Council)",
+  "title": "New Revised Senior Secondary School Curriculum — Chemistry SSS 1",
+  "subject": "Chemistry",
+  "type": "CURRICULUM",
+  "authority": "OFFICIAL",
+  "primary": true,
+  "canonical_url": "https://www.nerdc.gov.ng/content_manager/new_senior_curriculum_home.html",
+  "download_url": "https://lmis.nerdcportals.com.ng/sss_1/necurrdc/7.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "e0f9b02325c5224574b1d9caec98b388c8a6d48e5a37e5f7cd6aeea47ca1a26c",
+  "size_bytes": 1559875,
+  "pages": 31,
+  "publication_revision_date": "October 2025 (document footer); issuing body Federal Ministry of Education / NERDC",
+  "applicable_cycle": "Senior Secondary School 1, 2025 revised curriculum (NESRI / Renewed Hope curriculum reform)",
+  "authenticity_established": true,
+  "limitations": "Retrieved via NERDC LMIS viewer portal (lmis.nerdcportals.com.ng); main nerdc.gov.ng eCurriculum portal returned HTTP 500; PDF served as application/pdf and text extracted successfully with pypdf.",
+  "notes": "Copyrighted official document; PDF bytes not committed to the repository per Phase 16 provenance rules. Metadata, hash, and permitted extracted topic evidence retained instead.",
+  "local_copy": "/tmp/phase16/nerdc_pdfs/chem_sss1.pdf (not committed)"
+}

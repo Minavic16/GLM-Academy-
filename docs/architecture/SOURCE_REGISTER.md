@@ -24,3 +24,17 @@ PEDAGOGICAL vs TEXTBOOK reference.
 - Nothing in this register is used to auto-accept any graph claim.
 
 Phase 12B additions (all OpenStax, TEXTBOOK/reference, URLs verified HTTP 200 2026-10-10): SRC.OSX.UP1.2.2/7.1/7.3/8.1/9.1/13.1/14.1/15.1/16.1, SRC.OSX.UP2.1.1/9.4/10.3/13.1/15.2/16.5, SRC.OSX.UP3.2.1/6.2/10.1. Official JAMB/WAEC/NERDC Physics PDFs: still pending (see PHYSICS_SOURCE_RESEARCH.md).
+
+## Phase 16 additions (official-source retrieval, 2026-10-17)
+
+| ID | Organization | Title | Subject | Type | Year/Note | Location | Authority | Primary? | Notes/Completeness |
+|---|---|---|---|---|---|---|---|---|---|
+| SRC.NERDC.SSEC.MATH.SS1 | NERDC / Fed. Ministry of Education | New Revised Senior Secondary School Curriculum — Mathematics SSS 1 | Mathematics | CURRICULUM | October 2025 | lmis.nerdcportals.com.ng/sss_1/necurrdc/2.pdf | CURRICULUM | Yes | Retrieved + extracted; SHA-256 a2f618…11c; docs/source-documents/ |
+| SRC.NERDC.SSEC.MATH.SS2 | NERDC / Fed. Ministry of Education | New Revised Senior Secondary School Curriculum — Mathematics SSS 2 | Mathematics | CURRICULUM | October 2025 | lmis.nerdcportals.com.ng/sss_2/necurrdc/2.pdf | CURRICULUM | Yes | Retrieved + extracted; SHA-256 f79d3f…f1cd; docs/source-documents/ |
+| SRC.NERDC.SSEC.CHEM.SS1 | NERDC / Fed. Ministry of Education | New Revised Senior Secondary School Curriculum — Chemistry SSS 1 | Chemistry | CURRICULUM | October 2025 | lmis.nerdcportals.com.ng/sss_1/necurrdc/7.pdf | CURRICULUM | Yes | Retrieved + extracted; SHA-256 e0f9b0…26c; docs/source-documents/ |
+| SRC.NERDC.SSEC.CHEM.SS2 | NERDC / Fed. Ministry of Education | New Revised Senior Secondary School Curriculum — Chemistry SSS 2 | Chemistry | CURRICULUM | October 2025 | lmis.nerdcportals.com.ng/sss_2/necurrdc/7.pdf | CURRICULUM | Yes | Retrieved + extracted; SHA-256 5e1473…efd; docs/source-documents/ |
+| SRC.NERDC.SSEC.PHY.SS1 | NERDC / Fed. Ministry of Education | New Revised Senior Secondary School Curriculum — Physics SSS 1 | Physics | CURRICULUM | October 2025 | lmis.nerdcportals.com.ng/sss_1/necurrdc/8.pdf | CURRICULUM | Yes | Retrieved + extracted; SHA-256 fc0648…5ee; docs/source-documents/ |
+| SRC.NERDC.SSEC.PHY.SS2 | NERDC / Fed. Ministry of Education | New Revised Senior Secondary School Curriculum — Physics SSS 2 | Physics | CURRICULUM | October 2025 | lmis.nerdcportals.com.ng/sss_2/necurrdc/8.pdf | CURRICULUM | Yes | Retrieved + extracted; SHA-256 88dd5d…236; docs/source-documents/ |
+| SRC.JAMB.IBASS.ATTEMPT.2026-10-17 | JAMB | IBASS e-syllabus + per-subject PDFs | Math/Phys/Chem | EXAMINATION | not established | ibass.jamb.gov.ng/e-syllabus (SPA shell only) | EXAMINATION | Yes | Not retrieved: SPA returns index.html for all routes; API endpoints error; no PDF bytes |
+| SRC.WAEC.ATTEMPT.2026-10-17 | WAEC Nigeria | WASSCE syllabuses | Math/Phys/Chem | EXAMINATION | not established | waecnigeria.org; waeconline.org.ng e-learning | EXAMINATION | Yes | Not retrieved: 2017–2019 archive stub; e-learning = past questions only |
+| SRC.FEDMOE.CURRICULUM.OFFERINGS.2025 | NERDC / Fed. Ministry of Education | Basic and Senior Secondary Education Curriculum Offerings | Cross-subject | CURRICULUM policy | PDF metadata 2025-09-08 | nerdc.gov.ng content_manager/…Offerings.pdf | POLICY | Yes | Confirms Chemistry/Physics/Mathematics in senior-secondary Science/Core fields |

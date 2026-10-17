@@ -9,14 +9,23 @@ Chemistry pH; log→pH edge cl.pre56.log_ph ACCEPTED and intact.
 Remaining gaps:
 1. Official-board verification (M-1): retrieval + content-check of JAMB/WAEC/
    NERDC Math documents; map syllabus rows to KC coverage; promote rows to
-   BOARD_VERIFIED only on checked content.
+   BOARD_VERIFIED only on checked content. NERDC Math SSS 1/SSS 2 retrieved
+   and content-checked (Phase 16): MATHEMATICS_SYLLABUS_COVERAGE.md maps
+   all official topics to CDG KCs; NOT_COVERED rows include Sets, Logic,
+   Mensuration, Sequence and Series, Approximation, Surds, Bearings,
+   Proofs of Some Basic Theorems, Construction, Ogive (documented deferral).
+   JAMB and WAEC official documents were NOT obtained (IBASS SPA shell,
+   WAEC 2017–2019 archive stub, e-learning = past questions only) —
+   BOARD_VERIFIED remains unreachable.
 2. Scope items marked deferred (mode/mean-grouped/ogive) stay out unless
    owner extends declared scope.
 Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
-Next task: M-1 official-source verification plan (shared infra for 3 subjects).
+Next task: M-1 official-source verification (JAMB/WAEC retrieval attempts +
+NERDC SSS 3 attempt), then owner decisions on CI-20…CI-23 scope
+extensions. Biology remains on hold.
 
-## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14)
+## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping 2026-10-17, Phase 16)
 Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum
 depth (b060), energy sources/society (b061), fibre optics (b062), lasers
 (b063), electronics (b064); practical implementation acceptable with WAEC
@@ -30,10 +39,18 @@ Verified partial/deferred:
 - Friction/machines, EM spectrum depth, energy-society — PARTIAL via parent
   KCs (R06/R18/R19).
 - Practicals — PARTIAL; WAEC practical detail SOURCE_UNVERIFIED (R16).
-Next task: DONE in Phase 14 — Physics is IMPLEMENTATION_COMPLETE; next is board
-verification (M-1 plan) or Chemistry organic-reactions batch.
+NERDC syllabus mapping (Phase 16): PHYSICS_SYLLABUS_COVERAGE.md maps all
+official NERDC Physics SSS 1/SSS 2 topics to CDG KCs. NEWLY MAPPED
+implementation gaps vs the official curriculum: Projectile Motion (NOT_COVERED,
+NERDC p.7), Simple Harmonic Motion (NOT_COVERED, p.8), Introduction to
+Internet and Intranet (NOT_COVERED, p.46); many other topics PARTIALLY_COVERED
+(KCs exist but performance objectives not evidenced as methods/items).
+These require owner scope decisions; they do not change the ratified
+IMPLEMENTATION_COMPLETE status within the declared scope.
+Next task: DONE in Phase 14 — Physics is IMPLEMENTATION_COMPLETE; next is
+board verification (M-1 plan) plus owner decisions on CI-17…CI-19.
 
-## CHEMISTRY — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED (updated 2026-10-16, Phase 15)
+## CHEMISTRY — IMPLEMENTATION_PARTIAL / BOARD_UNVERIFIED (updated 2026-10-16, Phase 15; syllabus mapping 2026-10-17, Phase 16)
 Counts: 21 KCs (12 foundational + 9 organic-reactions), 81 TMs.
 
 Phase 15 closed the organic-reactions gap (the only implementation gap in
@@ -48,25 +65,36 @@ Chemistry's declared scope):
 - CI-10 closed (see CLOSURE_REGISTERS.md).
 
 Remaining gaps:
-- Buffers proper — BLOCKED (Phase 15 scope constraint). Buffer pH
-  calculations require the Mathematics logarithms KC, and creating
+- Buffers proper — BLOCKED (Phase 15 scope constraint, CI-11/CI-12).
+  Buffer pH calculations require the Mathematics logarithms KC, and creating
   that prerequisite edge would modify Mathematics-side records.
   Re-evaluate only with owner authorization.
-- Polymers, industrial chemistry — DEFERRED (owner-documented deferral).
+- Polymers, industrial chemistry — DEFERRED (owner-documented deferral, CI-13/CI-14).
 - Electrolytic cells detail / transition metals — DEFERRED (owner-documented
-  deferral).
+  deferral, CI-15).
 - Practical: implementation complete; official verification outstanding
-  (CI-05). Board verification status remains BOARD_UNVERIFIED for all
-  three subjects.
-
-Next task: M-1 official-source verification plan (shared infrastructure
-for JAMB/WAEC/NERDC retrieval and content-check); no further
-implementation gap exists within Phase 15's authorized scope.
-Biology remains on hold (BIOLOGY_HOLD_RECORD.md).
+  (CI-25). Board verification status remains BOARD_UNVERIFIED.
+NERDC syllabus mapping (Phase 16): CHEMISTRY_SYLLABUS_COVERAGE.md maps all
+official NERDC Chemistry SSS 1/SSS 2 topics to CDG KCs. Organic topics
+(Carbon and its compounds, Hydrocarbons, Alkanols, Electrolysis) are now
+COVERED via batch 065. NEWLY MAPPED NOT_COVERED topics include Water
+(CI-16), Air, Hydrogen, Oxygen, Halogens, Nitrogen, Sulphur, Chemical
+industry, Branches of Chemistry, Chemical hazards, Entrepreneurship — all
+requiring owner scope decisions; none change the ratified
+IMPLEMENTATION_PARTIAL status.
+Next task: M-1 official-source verification (JAMB/WAEC retrieval attempts +
+NERDC SSS 3 attempt); owner decisions on CI-11…CI-16 (buffers, deferred
+families, newly mapped topics). Biology remains on hold.
 ## Recommended next phase
-Phase 14a/14b: Physics completion wave — DONE (implemented in Phase 14).
-Phase 15: Chemistry organic-reactions wave — DONE (implemented in Phase 15).
-Next: Phase 16 — official-source verification (M-1) for Mathematics,
-Physics, and Chemistry; then Biology only after all three subjects are
-sufficiently closed and the owner authorizes it.
+Phase 14: Physics completion wave — DONE (implemented in Phase 14;
+Physics is IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED).
+Phase 15: Chemistry organic-reactions wave — DONE (implemented in Phase 15;
+CI-10 closed).
+Phase 16: official-source verification (M-1) — DONE as retrieval
+(2026-10-17): NERDC SSS 1/SSS 2 Mathematics, Physics, Chemistry retrieved,
+extracted, authenticity established; JAMB IBASS and WAEC official documents
+not obtained; all three subjects remain BOARD_UNVERIFIED.
+Next: owner decisions on newly mapped gaps (CI-11…CI-23), renewed
+JAMB/WAEC retrieval attempts, NERDC SSS 3 attempt; then Biology only after
+all three subjects are sufficiently closed and the owner authorizes it.
 Biology remains on hold (BIOLOGY_HOLD_RECORD.md).

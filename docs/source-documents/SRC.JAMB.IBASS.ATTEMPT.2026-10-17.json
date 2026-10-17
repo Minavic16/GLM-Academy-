@@ -1,0 +1,21 @@
+{
+  "id": "SRC.JAMB.IBASS.ATTEMPT.2026-10-17",
+  "organization": "JAMB (Joint Admissions and Matriculation Board)",
+  "title": "Integrated Brochure & Syllabus System (IBASS) — e-syllabus index and per-subject syllabus PDFs",
+  "subject": "Mathematics, Physics, Chemistry",
+  "type": "EXAMINATION",
+  "authority": "OFFICIAL (claimed)",
+  "primary": true,
+  "canonical_url": "https://ibass.jamb.gov.ng/e-syllabus",
+  "download_url": "https://ibass.jamb.gov.ng/assets/uploads/Mathematics.pdf (and Physics.pdf, Chemistry.pdf analogues)",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": false,
+  "content_extracted": false,
+  "sha256": null,
+  "publication_revision_date": "not established",
+  "applicable_cycle": "not established",
+  "authenticity_established": false,
+  "limitations": "IBASS is a JavaScript SPA: every route (including /assets/uploads/Mathematics.pdf, Physics.pdf, Chemistry.pdf) returns the index.html shell (HTTP 200, text/html, 1257 bytes) — not PDF bytes. The discovered API (ibass-api.jamb.gov.ng/api, React-axios base) returns {\"error\":true,...} on GET for /api/e-syllabus, /api/brochure-courses, /api/materials without a documented request body; no per-subject syllabus PDF bytes obtained. A URL returning HTTP 200 is not proof of document retrieval.",
+  "notes": "Historical observations (2026-10-10, 2026-10-14) consistent: hashed asset URLs, no per-subject PDF found. Next action: identify the API request contract (e.g., from the SPA bundle) or obtain documents via another official channel.",
+  "local_copy": "none"
+}

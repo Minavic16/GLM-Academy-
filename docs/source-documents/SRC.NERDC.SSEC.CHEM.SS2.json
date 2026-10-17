@@ -1,0 +1,23 @@
+{
+  "id": "SRC.NERDC.SSEC.CHEM.SS2",
+  "organization": "NERDC",
+  "title": "New Revised Senior Secondary School Curriculum — Chemistry SSS 2",
+  "subject": "Chemistry",
+  "type": "CURRICULUM",
+  "authority": "OFFICIAL",
+  "primary": true,
+  "canonical_url": "https://www.nerdc.gov.ng/content_manager/new_senior_curriculum_home.html",
+  "download_url": "https://lmis.nerdcportals.com.ng/sss_2/necurrdc/7.pdf",
+  "retrieved_at": "2026-10-17",
+  "bytes_retrieved": true,
+  "content_extracted": true,
+  "sha256": "5e147371be014992c886e30d44db22d88cfb9c448df3f96e5ef60c8c5a0deefd",
+  "size_bytes": 1388445,
+  "pages": 45,
+  "publication_revision_date": "October 2025 (document footer); issuing body Federal Ministry of Education / NERDC",
+  "applicable_cycle": "Senior Secondary School 2, 2025 revised curriculum",
+  "authenticity_established": true,
+  "limitations": "Same portal limitations as SSS 1; text extracted successfully.",
+  "notes": "Copyrighted official document; PDF bytes not committed. Metadata, hash, and extracted topic evidence retained.",
+  "local_copy": "/tmp/phase16/nerdc_pdfs/chem_sss2.pdf (not committed)"
+}
