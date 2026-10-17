@@ -12,6 +12,14 @@ CDG baseline at this phase: build_graph_v39 — Mathematics 39 KCs
 (IMPLEMENTATION_COMPLETE within the declared scope, Phases 11–13.6).
 All Mathematics KC/TM/Method/Item records are ACCEPTED and human-reviewed.
 
+Evidence dimensions (Phase 19, 2026-10-17): this matrix records the NERDC
+official dimension only. The JAMB official dimension was reconciled
+separately — JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md and
+JAMB_MATHEMATICS_RECONCILIATION.md (23 topics; COVERED 2 /
+PARTIALLY_COVERED 17 / NOT_COVERED 4). Syllabus NG rows remain SECONDARY
+and never authoritative. WAEC official documents and NERDC SSS 3 remain
+unretrieved (CI-24); no dimension promotes Mathematics to BOARD_VERIFIED.
+
 | authority | subject | document_version | official_topic | official_subtopic_or_objective | cdg_entity_ids | coverage_status | evidence_reference | gap_description | next_action |
 |---|---|---|---|---|---|---|---|---|---|
 | NERDC | Mathematics | Mathematics SSS 1 (2025) | Number Base System (1) | Express mathematical statements into usable laws | kc.equations_in_indices | PARTIALLY_COVERED | NERDC Math SSS1 p.1; CDG indices KC | Number-base conversion objectives not explicitly evidenced | Add number-base objectives |
@@ -57,14 +65,21 @@ Cumulative Frequency Graph (Ogive). Sets, Logic, Mensuration and Sequence &
 Series were implemented in Phase 17 (batches 066-069) and are COVERED at
 introductory level. Matrices and determinants are PARTIALLY_COVERED via
 secondary JAMB/WAEC evidence (batch 068) — not in NERDC SSS1/SSS2 topic
-lists; official verification remains pending. Several NOT_COVERED rows are
+lists; the JAMB requirement is now officially confirmed (Phase 18, JAMB
+II.6, reconciled Phase 19) while the CDG implementation evidence remains
+secondary (Syllabus NG, disclosed); WAEC official remains pending and
+NERDC SSS 3 unretrieved. Several NOT_COVERED rows are
 documented scope deferrals in the Mathematics roadmap (ogive).
 
 Mathematics is also the dependency root for Chemistry buffers
 (kc.logarithms → kc.ph_scale, cl.pre56.log_ph) — see the cross-subject
 gap register.
 
-Official-board verification status: BOARD_UNVERIFIED (JAMB and WAEC
-official documents were not obtained — see PHASE16_RETRIEVAL_REPORT.md).
-Phase 17 implementation does not change board-verification status.
+Official-board verification status: BOARD_UNVERIFIED — the JAMB official
+UTME E-syllabus was obtained and mapped (Phase 18, reconciled Phase 19 in
+JAMB_MATHEMATICS_RECONCILIATION.md), but WAEC official documents were not
+obtained (see PHASE18_RETRIEVAL_REPORT.md) and NERDC SSS 3 remains
+unavailable; a subject is not BOARD_VERIFIED until the required official
+board documents are checked (CI-24). Phase 17 implementation did not change
+board-verification status.
 

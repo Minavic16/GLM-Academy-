@@ -163,3 +163,24 @@ sums; III.2 earth-as-sphere; III.5 bearings/graphs/triangle area; IV.1
 limits; IV.3 area under curve; V.3 grouped dispersion); Chemistry depth gaps
 (topic 2 proportion laws; topic 4 quantum-number detail; topic 11
 entropy/ΔG).
+
+## Phase 19 — Mathematics gap triage (2026-10-17)
+
+Phase 19 reconciled all 23 official JAMB Mathematics topics record-by-record
+against build_graph_v40 and produced the dedicated deduplicated register
+`MATHEMATICS_GAP_REGISTER.md` (M-01…M-29), which supersedes the Mathematics
+rows above for disposition and priority detail; the rows above remain as the
+historical record. Key changes recorded there and in
+`JAMB_MATHEMATICS_RECONCILIATION.md`: I.1 corrected to NOT_COVERED (adjacency
+is not coverage; official counts now COVERED 2 / PARTIALLY_COVERED 17 /
+NOT_COVERED 4); Phase 17 five-KC audit completed (sets/sequences/mensuration
+depth gaps M-22/M-26/M-28; logic not a JAMB topic; matrices scope-confirmed
+with secondary implementation evidence preserved); modular arithmetic final
+classification NOT_COVERED (requirement officially confirmed); new depth
+exposures itemized (midpoint, standard form, log change-of-base,
+polygon/cyclic/chord objectives, chord lengths, plane-figure areas, spheres,
+experimental probability). Owner decisions are grouped in
+`OWNER_DECISION_BRIEF_PHASE19.md` (only genuine blocker: next implementation
+wave authorization; Wave A — Section I completion — recommended). No
+implementation was performed; no row above was deleted; WAEC official and
+NERDC SSS 3 remain unretrieved (CI-24); nothing promoted to BOARD_VERIFIED.

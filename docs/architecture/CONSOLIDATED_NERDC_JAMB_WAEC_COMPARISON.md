@@ -19,6 +19,13 @@ below remains the Phase 16B secondary-source record; WAEC rows remain
 SECONDARY, WAEC official documents remain unretrieved, and no subject is
 BOARD_VERIFIED.
 
+Phase 19 note (2026-10-17): the Mathematics JAMB dimension was reconciled
+record-by-record in JAMB_MATHEMATICS_RECONCILIATION.md (I.1 corrected to
+NOT_COVERED; additional depth exposures itemized; deduplicated register
+MATHEMATICS_GAP_REGISTER.md; owner brief OWNER_DECISION_BRIEF_PHASE19.md).
+The Mathematics rows below remain the Phase 16B secondary record; no row
+was overwritten and no subject status changed.
+
 ## MATHEMATICS
 
 CDG: 39 KCs (IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared OpenStax-based scope).

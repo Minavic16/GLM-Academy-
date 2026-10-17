@@ -21,10 +21,10 @@
 | CI-17 | Phys | Projectile Motion not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Phy SSS2 p.7 (NOT_COVERED); Math quadratic dependencies exist | Implement projectile KC using existing Math→Physics edges | Recorded in PHYSICS_SYLLABUS_COVERAGE.md |
 | CI-18 | Phys | Simple Harmonic Motion not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Phy SSS2 p.8 (NOT_COVERED) | Owner decision | Recorded in PHYSICS_SYLLABUS_COVERAGE.md |
 | CI-19 | Phys | Introduction to Internet and Intranet not in CDG (newly mapped) | IMPLEMENTATION_GAP | Open / likely NOT_APPLICABLE to core physics | NERDC Phy SSS2 p.46 (NOT_COVERED) | Owner decision; likely outside CDG physics scope | Recorded in PHYSICS_SYLLABUS_COVERAGE.md |
-| CI-20 | Math | Sets not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.7 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
-| CI-21 | Math | Logic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.8 / SSS2 p.9 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
-| CI-22 | Math | Mensuration not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | Open | NERDC Math SSS1 p.11 (NOT_COVERED) | Owner decision | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md |
-| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | Open / Deferred | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Owner decision per row | Mathematics roadmap updated; existing deferrals stand |
+| CI-20 | Math | Sets not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 066)**: kc.sets_operations + TM + methods + item, NERDC SSS1 p.7 evidence; residual depth (cardinality, Venn ≤3 sets) triaged Phase 19 (M-22) | NERDC Math SSS1 p.7 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md |
+| CI-21 | Math | Logic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 066)**: kc.logical_reasoning + TM + methods + item, NERDC SSS1 p.8 evidence; not an official JAMB topic (Phase 19) | NERDC Math SSS1 p.8 / SSS2 p.9 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md (M-02) |
+| CI-22 | Math | Mensuration not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 069)**: kc.mensuration + TM + methods + item, NERDC SSS1 p.11 evidence; residual depth (chords, plane figures, spheres, earth-as-sphere) triaged Phase 19 (M-28) | NERDC Math SSS1 p.11 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md |
+| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | **Partially closed**: sequence & series implemented (Phase 17 batch 067); remaining items (modular, number bases, approximation, surds, bearings, proofs, construction, ogive) deduplicated and triaged Phase 19 — see MATHEMATICS_GAP_REGISTER.md | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Owner decisions grouped in OWNER_DECISION_BRIEF_PHASE19.md | Existing deferrals stand; no implementation authorized |
 | CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB official UTME E-syllabus obtained + content-checked for Math/Phys/Chem (Phase 18 — IBASS static assets; see PHASE18_RETRIEVAL_REPORT.md); WAEC not obtained (downloads are CASS installers only); NERDC SSS1/SSS2 content-checked, SSS3 unretrieved (LMIS login-gated; nerdc.org.ng 500) | Continue retrieval: WAEC official WASSCE syllabus documents; NERDC SSS3; promote rows to BOARD_VERIFIED only on checked content; JAMB-side official matrices recorded (JAMB_*_OFFICIAL_COVERAGE.md) | M-1 official-source verification plan; Phase 18 retrieval report |
 | CI-25 | Chem | Practical chemistry — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | CI-05; kc.practical_chemistry implementation adequate | Obtain WAEC practical syllabus; map to practical KC methods/items | Same as CI-24 |
 | CI-26 | Phys | Practical physics — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | Phase 14 roadmap R16; kc.practical_measurement implementation adequate | Same as CI-24 | Same as CI-24 |
@@ -121,3 +121,27 @@ Open and all three subjects stay BOARD_UNVERIFIED. No schema/store change;
 no subject implementation status changed; secondary matrices remain
 retained as history (SECONDARY / BOARD_UNVERIFIED); no Biology/English
 artifacts.
+
+Phase 19 (2026-10-17): Mathematics-only official JAMB evidence
+reconciliation and gap triage (documentation-only; no canonical changes).
+All 23 official JAMB Mathematics topics reconciled record-by-record against
+build_graph_v40 (`JAMB_MATHEMATICS_RECONCILIATION.md`): COVERED 2 /
+PARTIALLY_COVERED 17 / NOT_COVERED 4 — I.1 (number bases/modular
+arithmetic) corrected from PARTIALLY_COVERED to NOT_COVERED because the
+previously mapped KCs are adjacency, not scope support. Phase 17 five-KC
+audit: sets, sequences, mensuration = topic confirmed + depth gaps
+(M-22/M-26/M-28); logic = not a JAMB topic (NERDC-based, closed); matrices
+= topic + scope confirmed, implementation evidence remains secondary
+(Syllabus NG, Phase 17 provenance preserved), no implementation change.
+Modular arithmetic: officially confirmed (I.1(c)), zero CDG records — final
+classification NOT_COVERED (M-03). New depth exposures itemized (midpoint;
+standard form; log change-of-base; polygon/cyclic/chord objectives; chord
+lengths; plane-figure areas; spheres; experimental probability). Updates:
+CI-20/CI-21/CI-22 closed at implementation level; CI-23 partially closed
+(sequence & series implemented; remainder triaged); deduplicated register
+`MATHEMATICS_GAP_REGISTER.md` (M-01…M-29); owner decisions
+`OWNER_DECISION_BRIEF_PHASE19.md` (next implementation wave authorization —
+Wave A recommended); documentation correction: v40 activity count is 204
+(Phase 17/18 reports printed the stale v39 figure 192). No promotion to
+BOARD_VERIFIED; WAEC official and NERDC SSS 3 still outstanding (CI-24
+Open); no schema/store change; no Biology/English artifacts.

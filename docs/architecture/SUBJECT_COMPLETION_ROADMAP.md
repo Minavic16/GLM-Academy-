@@ -32,22 +32,29 @@ Remaining gaps:
    modular arithmetic IS official JAMB I.1(c); new depth exposures recorded).
    WAEC official documents NOT obtained (archive stub; e-learning = past
    questions only) — BOARD_VERIFIED remains unreachable (WAEC outstanding).
-2. NOT_COVERED rows requiring owner scope decisions: Modular Arithmetic,
-   Approximation, Surds, Bearings, Proofs of Some Basic Theorems,
-   Construction, Ogive (documented deferral). Matrices & determinants
-   implemented on secondary evidence; the JAMB requirement is now officially
-   confirmed (Phase 18, JAMB II.6) — implementation evidence remains
-   secondary (Syllabus NG): disclosed, no implementation change.
+2. NOT_COVERED rows requiring owner scope decisions: Phase 19 triage
+   complete — see `MATHEMATICS_GAP_REGISTER.md` (M-01…M-29) and
+   `OWNER_DECISION_BRIEF_PHASE19.md`. Official JAMB confirmation corrected
+   the picture: I.1 number bases/modular arithmetic = NOT_COVERED (was
+   optimistically PARTIALLY_COVERED; disclosed official counts now COVERED 2
+   / PARTIALLY_COVERED 17 / NOT_COVERED 4: I.1, II.5, III.3, V.1).
+   Deduplicated open implementation items: 8×P1 (officially confirmed,
+   zero-implementation: modular arithmetic, number bases, surds,
+   approximation/errors, standard form + log change-of-base, financial
+   mathematics, loci/construction, binary operations) and 13×P2
+   (officially confirmed depth extensions: sets depth, polynomials depth,
+   variation, inequalities, progression sums, perm/comb, coordinate
+   geometry, trig applications, geometry depth, mensuration depth, statistics
+   depth, probability depth, calculus depth). Ogive deferral documented and
+   stands. Matrices & determinants: requirement + scope officially confirmed
+   (JAMB II.6); implementation evidence remains secondary (Syllabus NG,
+   Phase 17 provenance preserved) — disclosed, no implementation change;
+   assessment-depth note recorded.
 Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
-Next task: M-1 official-source verification continues — JAMB DONE for Math
-(Phase 18); WAEC official documents and NERDC SSS 3 still outstanding. Then
-owner decisions on remaining NOT_COVERED rows (Modular Arithmetic,
-Approximation, Surds, Bearings, Proofs, Construction, Ogive) plus the
-Phase 18 depth exposures (Venn/cardinality; factor/remainder theorems;
-graphical/quadratic inequalities; GP sums; earth-as-sphere; bearings/graphs;
-limits; area under curve; grouped dispersion; data representation). Biology
-remains on hold.
+Next task: owner decision on the next Mathematics implementation wave
+(Wave A — Section I completion — recommended); WAEC official documents and
+NERDC SSS 3 still outstanding (CI-24). Biology remains on hold.
 
 ## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping Phase 16; JAMB official mapping Phase 18)
 Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum
@@ -136,8 +143,19 @@ families; batches 066–069; five new KCs).
 Phase 18: JAMB official E-syllabus retrieval + content check — DONE
 (Math/Phys/Chem; official matrices; corrections M-03/C-12; new gaps P-18,
 P-19, C-15; WAEC + NERDC SSS 3 outstanding; PHASE18_RETRIEVAL_REPORT.md).
-Next: WAEC official WASSCE syllabus retrieval; NERDC SSS 3 attempt; owner
-decisions on register gaps (M-*, P-*, C-* incl. Phase 18 exposures); then
-Biology only after all three subjects are sufficiently closed and the owner
+Phase 19: Mathematics JAMB-evidence reconciliation + gap triage — DONE
+(2026-10-17): all 23 official JAMB Mathematics topics reconciled
+record-by-record (JAMB_MATHEMATICS_RECONCILIATION.md); I.1 corrected to
+NOT_COVERED (official counts 2/17/4); deduplicated register
+MATHEMATICS_GAP_REGISTER.md (M-01…M-29); owner brief
+OWNER_DECISION_BRIEF_PHASE19.md (Wave A — Section I completion —
+recommended); documentation corrections applied (CI-20/21/22 closed,
+CI-23 partial, activity count 204); no canonical changes; no status
+promotions.
+Next: owner decision on the next Mathematics implementation wave (Wave A
+recommended); WAEC official WASSCE syllabus retrieval; NERDC SSS 3 attempt;
+then owner decisions on register gaps (M-*/P-*/C-* incl. Phase 18/19
+exposures); Physics/Chemistry gap triage available as a follow-on; Biology
+only after all three subjects are sufficiently closed and the owner
 authorizes it.
 Biology remains on hold (BIOLOGY_HOLD_RECORD.md).
