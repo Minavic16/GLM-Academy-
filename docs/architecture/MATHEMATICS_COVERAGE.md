@@ -8,13 +8,13 @@ REVIEW_REQUIRED (needs owner/reviewer decision), BLOCKED.
 
 | Domain | Subdomain | Status | KCs | TaskModels | Evidence | Open Issues |
 |---|---|---|---|---|---|---|
-| Mathematics | general | REPRESENTED | 5 | 5 | 337 | — |
-| Physics | general | REPRESENTED | 25 | 22 | 337 | — |
-| Algebra | general | REPRESENTED | 13 | 13 | 337 | — |
-| Number & Numeration | general | REPRESENTED | 15 | 15 | 337 | — |
-| Geometry | general | REPRESENTED | 3 | 3 | 337 | — |
-| Coordinate Geometry | general | REPRESENTED | 4 | 4 | 337 | — |
-| Trigonometry | general | REPRESENTED | 4 | 3 | 337 | — |
-| Calculus | general | REPRESENTED | 4 | 4 | 337 | — |
-| Statistics & Probability | general | REPRESENTED | 5 | 5 | 337 | — |
-| Functions | general | REPRESENTED | 1 | 1 | 337 | — |
+| Mathematics | general | REPRESENTED | 5 | 5 | 359 | — |
+| Physics | general | REPRESENTED | 25 | 22 | 359 | — |
+| Algebra | general | REPRESENTED | 14 | 14 | 359 | — |
+| Number & Numeration | general | REPRESENTED | 15 | 15 | 359 | — |
+| Geometry | general | REPRESENTED | 4 | 4 | 359 | — |
+| Coordinate Geometry | general | REPRESENTED | 4 | 4 | 359 | — |
+| Trigonometry | general | REPRESENTED | 4 | 3 | 359 | — |
+| Calculus | general | REPRESENTED | 4 | 4 | 359 | — |
+| Statistics & Probability | general | REPRESENTED | 6 | 6 | 359 | — |
+| Functions | general | REPRESENTED | 1 | 1 | 359 | — |

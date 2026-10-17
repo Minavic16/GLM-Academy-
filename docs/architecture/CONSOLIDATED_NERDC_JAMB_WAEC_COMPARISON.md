@@ -37,6 +37,17 @@ the Phase 16B secondary record (secondary JAMB/WAEC rows never promote a
 subject); no row was overwritten, no subject status changed, WAEC official
 documents remain unretrieved, and nothing is BOARD_VERIFIED.
 
+Phase 22 note (2026-10-17): the owner authorized the P1 closure wave
+(batches 080–082, build_graph_v42): binary operations (JAMB II.5), loci &
+construction (III.3 + III.1(d) construction procedures) and representation
+of data (V.1) are now implemented. The Mathematics JAMB counts are now
+COVERED 8 / PARTIALLY_COVERED 15 / NOT_COVERED 0
+(JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md); the P2 depth residuals remain
+documented in MATHEMATICS_GAP_REGISTER.md. The Mathematics rows below
+remain the Phase 16B secondary record (secondary JAMB/WAEC rows never
+promote a subject); no row was overwritten, no subject status changed,
+WAEC official documents remain unretrieved, and nothing is BOARD_VERIFIED.
+
 ## MATHEMATICS
 
 CDG: 39 KCs (IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared OpenStax-based scope).

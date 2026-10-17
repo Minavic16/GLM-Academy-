@@ -208,3 +208,24 @@ Official JAMB coverage counts: COVERED 5 / PARTIALLY_COVERED 15 /
 NOT_COVERED 3. M-17/M-18 (WAEC-secondary-only rows) are unaffected: WAEC
 official documents and NERDC SSS 3 remain unretrieved (CI-24); nothing
 promoted to BOARD_VERIFIED.
+
+## Phase 22 — Mathematics P1 closure (2026-10-17)
+
+The owner authorized the P1 closure wave; batches 080–082 implemented it in
+build_graph_v42 (`examples/math_p1_closure_phase22.py`). The rows above
+remain the historical record; the disposition detail lives in
+`MATHEMATICS_GAP_REGISTER.md` and the full record in
+`docs/PHASE22_REPORT.md`. Status changes:
+
+| Gap ID | Effect |
+|---|---|
+| M-09 | Closed at implementation level (batch 081: loci III.3 + construction procedures III.1(d) objective iv) |
+| M-10 | Closed at implementation level (batch 080: binary operations II.5) |
+| M-15 | Data-representation component implemented (batch 082: frequency distribution; histogram, bar chart, pie chart — audit-level split M-15a); residuals M-15b remain (mode, grouped data, cumulative frequency/ogive deferral, grouped dispersion) |
+
+Official JAMB coverage counts: COVERED 8 / PARTIALLY_COVERED 15 /
+NOT_COVERED 0. M-17/M-18 (WAEC-secondary-only rows) are unaffected: WAEC
+official documents and NERDC SSS 3 remain unretrieved (CI-24; the bounded
+Phase 22 sprint re-attempted: WAEC Math syllabus still not located; NERDC
+SSS 3 still 404/login-gated; JAMB applicable cycle UNRESOLVED); nothing
+promoted to BOARD_VERIFIED.

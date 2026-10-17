@@ -2,13 +2,16 @@
 
 Statuses under ratified model (OD-01/OD-04):
 
-## MATHEMATICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (scope expanded Phase 17; implementation wave Phase 20)
-Completed: 54 KCs (39 baseline + 5 in Phase 17 batches 066-069 + 10 in
-Phase 20 batches 070-079), full chains validated, CI-01/CI-02 closed
+## MATHEMATICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (scope expanded Phase 17; implementation waves Phase 20 + Phase 22)
+Completed: 57 KCs (39 baseline + 5 in Phase 17 batches 066-069 + 10 in
+Phase 20 batches 070-079 + 3 in Phase 22 batches 080-082), full chains
+validated, CI-01/CI-02 closed
 (median + dispersion with preserved legacy ids), kc.logarithms (b055)
 enables Chemistry pH; log→pH edge cl.pre56.log_ph ACCEPTED and intact.
 Phase 20 (2026-10-17) implemented the owner-authorized ten-topic wave —
 see docs/PHASE20_REPORT.md.
+Phase 22 (2026-10-17) implemented the owner-authorized P1 closure —
+see docs/PHASE22_REPORT.md.
 
 Phase 17 scope expansion (owner-authorized four families):
 - Batch 066 Sets & logic: kc.sets_operations, kc.logical_reasoning (NERDC Math
@@ -47,21 +50,55 @@ Remaining gaps:
    factorisation common-factor/difference-of-squares (M-23 partially
    extended). Official JAMB counts now COVERED 5 / PARTIALLY_COVERED 15 /
    NOT_COVERED 3 (II.5 binary operations, III.3 loci, V.1 representation of
-   data). Remaining implementation items: 2×P1 (loci/construction M-09;
-   binary operations M-10) and 13×P2 (officially confirmed depth extensions:
-   sets depth, polynomials depth, variation, inequalities, progression sums,
-   perm/comb, coordinate geometry, trig applications, geometry depth,
-   mensuration depth, statistics depth, probability depth, calculus depth).
+   data). Phase 22 (2026-10-17) implemented the P1 closure (batches 080–082):
+   binary operations, loci & construction, representation of data — official
+   counts now COVERED 8 / PARTIALLY_COVERED 15 / NOT_COVERED 0. Remaining
+   implementation items: 0×P1 and 13×P2 (officially confirmed depth
+   extensions: sets depth, polynomials depth, variation, inequalities,
+   progression sums, perm/comb, coordinate geometry, trig applications,
+   geometry depth, mensuration depth, statistics depth, probability depth,
+   calculus depth); the M-15 data-representation component is implemented
+   (batch 082).
    Ogive deferral documented and stands. Matrices & determinants:
    requirement + scope officially confirmed (JAMB II.6); implementation
    evidence remains secondary (Syllabus NG, Phase 17 provenance preserved) —
    disclosed, no implementation change; assessment-depth note recorded.
 Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
-Next task: owner decision on further Mathematics implementation waves
-(Waves B–E of OWNER_DECISION_BRIEF_PHASE19.md remain unauthorized; the
-Phase 20 Wave A variant is executed); WAEC official documents and NERDC
-SSS 3 still outstanding (CI-24). Biology remains on hold.
+Next task: owner decision on the P2 prioritization (the Phase 21 brief D2
+documented-residuals policy is applied; P2 rows remain unauthorized as a
+wave); WAEC official documents and NERDC SSS 3 outstanding (CI-24,
+re-attempted in Phase 22 without result). Biology remains on hold.
+
+Phase 21 (2026-10-17; audit only — see docs/PHASE21_REPORT.md): live audit
+re-verified the Phase 20 baseline (424/678/337/86/234; validation clean;
+199 tests; no discrepancy vs PHASE20_REPORT.md). Coverage stands
+COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3. Audit classification:
+P1 = M-09 loci & construction, M-10 binary operations, plus the V.1
+representation component split from M-15 as M-15a (audit-level split; the
+register was not rewritten); P2 = 13 depth rows; WAEC-secondary-only =
+M-17/M-18; NERDC-only = M-29; ogive deferral stands. PROPOSED (NOT
+ratified; owner decisions D1–D4 in OWNER_DECISION_BRIEF_PHASE21.md):
+next package "Wave B — P1 closure" (binary operations; loci &
+construction; representation of data) plus a bounded retrieval sprint for
+WAEC official / NERDC SSS3 / JAMB cycle; P2 rows proposed as documented
+residuals pending a prioritization brief; closure criteria (brief §6)
+Proposed closure criteria (brief §6)
+proposed for ratification, including a proposed declared-scope extension —
+none of this is in force.
+
+Phase 22 (2026-10-17; see docs/PHASE22_REPORT.md): owner-authorized P1
+closure executed — batches 080–082 (binary operations II.5; loci &
+construction III.3 + III.1d; representation of data V.1) in
+examples/math_p1_closure_phase22.py (build_graph_v42); three new KCs (57
+total). Official JAMB counts: COVERED 8 / PARTIALLY_COVERED 15 /
+NOT_COVERED 0. M-09/M-10 closed at implementation level; M-15
+data-representation component implemented (residual M-15b: mode, grouped
+data, cumulative frequency/ogive deferral, grouped dispersion). Bounded
+retrieval sprint executed: WAEC Math syllabus not located; NERDC SSS3
+still unavailable (404/login-gated); JAMB applicable cycle UNRESOLVED. P2
+residuals documented and unauthorized; ogive deferral stands; board
+verification unchanged (CI-24 Open; no BOARD_VERIFIED promotion).
 
 ## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping Phase 16; JAMB official mapping Phase 18)
 Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum
@@ -165,9 +202,19 @@ examples/math_wave_a_phase20.py (build_graph_v41); ten new KCs (54 total);
 official JAMB source SRC.JAMB.UTME.MATH.2025 registered; M-03/04/05/19/
 20/21 closed at implementation level; M-23 partially extended; official
 counts now 5/15/3; no status promotions (PHASE20_REPORT.md).
-Next: owner decision on further Mathematics waves (Waves B–E of the Phase
-19 brief remain unauthorized); WAEC official WASSCE syllabus retrieval;
-NERDC SSS 3 attempt; then further register gaps (M-*/P-*/C-*); Physics/
-Chemistry gap triage available as a follow-on; Biology only after all
-three subjects are sufficiently closed and the owner authorizes it.
+Phase 21: Mathematics closure-strategy audit — DONE (2026-10-17; audit
+only): all M-01…M-29 rows classified with dispositions + owner decision
+brief (OWNER_DECISION_BRIEF_PHASE21.md, D1–D4); no canonical changes
+(PHASE21_REPORT.md).
+Phase 22: Mathematics P1 closure + retrieval sprint — DONE (2026-10-17;
+owner-authorized): batches 080–082 in
+examples/math_p1_closure_phase22.py (build_graph_v42); three new KCs (57
+total); coverage now 8/15/0; M-09/M-10 closed at implementation level;
+M-15 data-representation component implemented; bounded retrieval sprint
+executed (WAEC Math syllabus not located; NERDC SSS3 still unavailable;
+JAMB cycle UNRESOLVED); no status promotions (PHASE22_REPORT.md).
+Next: owner decision on P2 prioritization; continue WAEC official /
+NERDC SSS 3 retrieval attempts (CI-24); Physics/Chemistry gap triage
+available as a follow-on; Biology only after all three subjects are
+sufficiently closed and the owner authorizes it.
 Biology remains on hold (BIOLOGY_HOLD_RECORD.md).

@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.math_wave_a_phase20 import build_graph_v41
+from examples.math_p1_closure_phase22 import build_graph_v42
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -118,6 +118,9 @@ DOMAIN_OF = {
     "kc.profit_and_loss": "Number & Numeration",
     "kc.shares_and_vat": "Number & Numeration",
     "kc.factorisation_patterns": "Algebra",
+    "kc.binary_operations": "Algebra",
+    "kc.loci_and_construction": "Geometry",
+    "kc.data_representation": "Statistics & Probability",
 }
 
 BATCH_OF = {
@@ -196,6 +199,9 @@ BATCH_OF = {
     "kc.profit_and_loss": "077",
     "kc.shares_and_vat": "077",
     "kc.factorisation_patterns": "079",
+    "kc.binary_operations": "080",
+    "kc.loci_and_construction": "081",
+    "kc.data_representation": "082",
     "kc.parallel_perpendicular_lines": "024",
     "kc.ratio_proportion_rate": "025",
     "kc.direct_variation": "026",
@@ -229,7 +235,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v41()
+    s = build_graph_v42()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

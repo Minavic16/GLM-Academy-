@@ -1,4 +1,4 @@
-# JAMB Mathematics — Official Coverage Matrix (Phase 18; refined Phase 19; refreshed Phase 20)
+# JAMB Mathematics — Official Coverage Matrix (Phase 18; refined Phase 19; refreshed Phase 20; refreshed Phase 22)
 
 Authority: JAMB (Joint Admissions and Matriculation Board), "UTME Syllabus —
 Mathematics", E-syllabus PDF as published on the official Integrated
@@ -37,6 +37,15 @@ refreshed against build_graph_v41(); implementation provenance is the
 official JAMB source (SRC.JAMB.UTME.MATH.2025) registered in the canonical
 store. See `docs/PHASE20_REPORT.md`. No subject status is promoted.
 
+Phase 22 note (2026-10-17): the owner authorized the P1 closure wave
+(batches 080–082, build_graph_v42) — binary operations (II.5), loci &
+construction (III.3 + III.1(d) construction procedures) and representation of
+data (V.1) are now COVERED. Coverage counts: COVERED 8 /
+PARTIALLY_COVERED 15 / NOT_COVERED 0. The rows below are refreshed against
+build_graph_v42(); implementation provenance is the official JAMB source
+(SRC.JAMB.UTME.MATH.2025). See `docs/PHASE22_REPORT.md`. No subject status
+is promoted.
+
 Phase 19 traceability: the cdg_entity_ids column records the actual
 implementation chain per requirement (KC → TM → methods → items), verified
 against build_graph_v40(); the full record-level analysis, gaps and
@@ -47,9 +56,9 @@ Coverage categories: COVERED | PARTIALLY_COVERED | NOT_COVERED |
 NOT_APPLICABLE | UNRESOLVED.
 Coverage rule: a topic is COVERED only if the CDG supports the relevant scope
 and depth of the listed topic/objective (matching names is insufficient).
-CDG baseline: build_graph_v41 — Mathematics 54 KCs (44 baseline + 10 Phase 20;
-IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared scope expanded
-Phase 17; implementation wave Phase 20).
+CDG baseline: build_graph_v42 — Mathematics 57 KCs (44 baseline + 10 Phase 20
++ 3 Phase 22; IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared scope
+expanded Phase 17; implementation waves Phase 20 + Phase 22).
 
 | authority | subject | document_version | official_topic | official_subtopic_or_objective | cdg_entity_ids | coverage_status | evidence_reference | gap_description | next_action |
 |---|---|---|---|---|---|---|---|---|---|
@@ -61,17 +70,17 @@ Phase 17; implementation wave Phase 20).
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.2 Variation | Direct; inverse; joint; partial; percentage increase and decrease | kc.direct_variation → tm.direct_variation_problems {m.find_constant} + it.mcq.direct | PARTIALLY_COVERED | JAMB Math p.3 (official) | Implemented: direct variation. Not evidenced: inverse/joint/partial variation; variation percentage increase/decrease | M-24 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.3 Inequalities | Analytical and graphical linear inequalities; quadratic inequalities with integral roots | kc.linear_inequalities_analytic → tm.solve_linear_inequality {m.balance_inverse, m.test_graph} + it.mcq.linear_ineq | PARTIALLY_COVERED | JAMB Math p.3 (official) | Implemented: analytical linear inequalities incl. number-line representation. Not evidenced: graphical (region) solutions; quadratic inequalities | M-25 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.4 Progression | Nth term of a progression; sum of AP and GP; sum to infinity of a G.P. | kc.sequences_series → tm.sequences_series {m.ap_gp_nth_term, m.ap_gp_problems} + it.math.ap_gp | PARTIALLY_COVERED | JAMB Math p.3 (official); CDG kc.sequences_series (b067) | Implemented: nth term of AP/GP; AP/GP problems incl. real-life. Not evidenced: sum of AP and GP; sum to infinity of a G.P. | M-26 owner decision: extend sequences TM |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.5 Binary Operations | Closure, commutativity, associativity, distributivity; identity and inverse elements | — | NOT_COVERED | JAMB Math p.3 (official) | No binary-operations KC/method/item (Phase 19 search: 0 hits) | M-10 owner decision (officially confirmed) |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.5 Binary Operations | Closure, commutativity, associativity, distributivity; identity and inverse elements | kc.binary_operations → tm.binary_operations_problems {m.evaluate_binary_operation, m.binary_operation_properties, m.identity_inverse_elements} + it.math.binary_operation, it.math.binary_identity (Phase 22 batch 080) | COVERED | JAMB Math p.3 (official); Phase 22 implementation evidence: SRC.JAMB.UTME.MATH.2025 (II.5a–b) | Covered (Phase 22): evaluation under a defined rule/table; closure, commutativity, associativity, distributivity; identity and inverse elements (simple cases). Boundary: UTME treatment only — no abstract-algebra expansion | — |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.6 Matrices and Determinants | Algebra of matrices ≤3×3; determinants ≤3×3; inverses of 2×2 matrices | kc.matrix_algebra → tm.matrix_algebra {m.matrix_operations, m.determinants_inverses} + it.math.matrix | COVERED | JAMB Math p.3 (official); CDG kc.matrix_algebra (b068) | Covered: KC/method-level scope and depth align with the official requirement (≤3×3 operations; ≤3×3 determinants; 2×2 inverses; simultaneous via matrices). CDG implementation evidence remains secondary (Syllabus NG, b068) — Phase 17 provenance preserved; official confirmation recorded in this matrix only. Assessment depth thin: the item exercises a 2×2 determinant only | No implementation change; evidence-upgrade note (Phase 19) |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.1 Euclidean Geometry | Properties of angles and lines; polygons; circles (angle properties, cyclic quadrilaterals, intersecting chords); construction | kc.parallel_line_angles → tm.identify_parallel_line_angles {m.corresponding_alternate}; kc.triangle_angle_properties → tm.triangle_angle_problems {m.triangle_angle_sum, m.exterior_angle} + it.mcq.triangle_angle; kc.circle_angle_theorems → tm.circle_angle_problems {m.centre_vs_circumference} + it.mcq.circle | PARTIALLY_COVERED | JAMB Math p.3 (official) | Implemented: parallel-line angle facts; triangle angle properties; circle angle theorems (same segment, centre–circumference, semicircle). Not evidenced: quadrilateral/general-polygon objectives; cyclic quadrilaterals; intersecting chords; construction procedures (30°–90°) | M-09/M-27 owner decisions |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.1 Euclidean Geometry | Properties of angles and lines; polygons; circles (angle properties, cyclic quadrilaterals, intersecting chords); construction | kc.parallel_line_angles → tm.identify_parallel_line_angles {m.corresponding_alternate}; kc.triangle_angle_properties → tm.triangle_angle_problems {m.triangle_angle_sum, m.exterior_angle} + it.mcq.triangle_angle; kc.circle_angle_theorems → tm.circle_angle_problems {m.centre_vs_circumference} + it.mcq.circle; construction procedures: kc.loci_and_construction → tm.loci_construction_problems {m.construct_special_angles} + it.math.special_angle_construction (Phase 22 batch 081) | PARTIALLY_COVERED | JAMB Math p.3 (official); Phase 22 construction evidence: SRC.JAMB.UTME.MATH.2025 (III.1d objective iv) | Implemented: parallel-line angle facts; triangle angle properties; circle angle theorems (same segment, centre–circumference, semicircle); construction procedures for special angles 30°–90° (Phase 22 batch 081). Not evidenced: quadrilateral/general-polygon objectives; cyclic quadrilaterals; intersecting chords | M-09 closed Phase 22 (construction procedures); M-27 owner decision (remaining geometry depth) |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.2 Mensuration | Plane-figure lengths/areas; arcs and chords; sectors and segments; surface areas and volumes; earth as a sphere (longitudes/latitudes) | kc.mensuration → tm.mensuration {m.circle_mensuration, m.solid_mensuration} + it.math.mensuration | PARTIALLY_COVERED | JAMB Math p.4 (official); CDG kc.mensuration (b069) | Implemented: arcs; sectors/segments; surface areas/volumes (cube, cuboid, cylinder, cone, prism, pyramid, frustums, composites). Not evidenced: chord lengths; plane-figure perimeters/areas (triangles, quadrilaterals, composite figures); spheres; earth-as-sphere | M-28 owner decision: extend mensuration |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.3 Loci | Locus in 2D: parallel lines, perpendicular bisectors, angle bisectors, circles | — | NOT_COVERED | JAMB Math p.4 (official) | No loci KC/method/item (Phase 19 search: 0 hits) | M-09 owner decision (officially confirmed) |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.3 Loci | Locus in 2D: parallel lines, perpendicular bisectors, angle bisectors, circles | kc.loci_and_construction → tm.loci_construction_problems {m.describe_locus, m.construct_perpendicular_bisector, m.construct_angle_bisector, m.apply_loci_intersections} + it.math.loci, it.math.loci_construction (Phase 22 batch 081) | COVERED | JAMB Math p.4 (official); Phase 22 implementation evidence: SRC.JAMB.UTME.MATH.2025 (III.3) | Covered (Phase 22): loci relating to parallel lines, perpendicular bisectors, angle bisectors and circles; bisector construction and interpretation; intersection-of-loci construction problems | — |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.4 Coordinate Geometry | Midpoint and gradient; distance; parallel/perpendicular conditions; line equations (two-point, point-slope, slope-intercept, general form) | kc.distance_formula → tm.compute_distance {m.distance_formula} + it.mcq.distance; kc.gradient → tm.compute_gradient {m.gradient_from_two_points} + it.mcq.gradient; kc.equation_of_line → tm.find_line_equation {m.point_gradient} + it.mcq.line_eq; kc.parallel_perpendicular_lines → tm.classify_line_relationships {m.compare_gradients} + it.mcq.parperp | PARTIALLY_COVERED | JAMB Math p.4 (official) | Implemented: distance; gradient; point-gradient line equations; parallel/perpendicular conditions. Not evidenced: midpoint (Phase 19 exposure); two-point form; general form (slope-intercept via point-gradient rearrangement only) | M-12 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section III.5 Trigonometry | Trig ratios (incl. −360°≤θ≤360°); special angles; elevation/depression; bearings; triangle areas; sine/cosine graphs; sine/cosine formulae | kc.trig_ratios_acute → tm.trig_ratio_problems {m.label_sides_match_ratio} + it.mcq.trig_ratio; kc.special_angle_values → tm.recall_special_values {m.from_special_triangles} + it.mcq.special_angle; kc.sine_rule + kc.cosine_rule → tm.solve_oblique_triangle {m.sine_rule, m.cosine_rule} + it.mcq.sine_rule | PARTIALLY_COVERED | JAMB Math pp.4–5 (official) | Implemented: acute-angle ratios; exact values 30°/45°/60°/90°; sine/cosine rules. Not evidenced: angles −360°…360°, special values 75°/105°/135°, elevation/depression, bearings, triangle-area formulae, sine/cosine graphs | M-13 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section IV.1 Differentiation | Limit of a function; differentiation of explicit algebraic and simple trig functions (sin, cos, tan) | kc.differentiation_algebraic → tm.differentiate_explicit {m.power_rule} + it.mcq.diff | PARTIALLY_COVERED | JAMB Math p.5 (official) | Implemented: differentiation of explicit algebraic functions (power rule). Not evidenced: limits; derivatives of sin, cos, tan | M-14 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section IV.2 Application of Differentiation | Rate of change; maxima and minima | kc.rate_of_change → tm.compute_rate_of_change {m.derivative_at_point} + it.mcq.rate; kc.maxima_minima → tm.find_maxima_minima {m.first_derivative} + it.mcq.extremum | COVERED | JAMB Math p.5 (official) | — | — |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section IV.3 Integration | Integration of explicit algebraic and simple trig functions; area under the curve | kc.integration_algebraic → tm.integrate_polynomial {m.reverse_power_rule} + it.mcq.integral | PARTIALLY_COVERED | JAMB Math p.5 (official) | Implemented: integration of explicit algebraic functions (reverse power rule). Not evidenced: trig integration; area under the curve | M-14 owner decision |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section V.1 Representation of Data | Frequency distribution; histogram; bar chart; pie chart | — | NOT_COVERED | JAMB Math p.5 (official) | No data-representation KC/method/item (Phase 19 search: 0 implementation hits; statistics KCs cover location/dispersion only) | M-15 owner decision: statistics-representation scope |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section V.1 Representation of Data | Frequency distribution; histogram; bar chart; pie chart | kc.data_representation → tm.data_representation_problems {m.frequency_distribution_table, m.construct_bar_chart, m.construct_histogram, m.construct_pie_chart} + it.math.frequency_table, it.math.pie_chart, it.math.data_representation_choice (Phase 22 batch 082) | COVERED | JAMB Math p.5 (official); Phase 22 implementation evidence: SRC.JAMB.UTME.MATH.2025 (V.1a–b) | Covered (Phase 22): frequency distribution tables; bar charts; histograms; pie charts; representation choice. Ogive/cumulative frequency excluded (standing owner deferral — see V.2 row); location/dispersion KCs remain separate | — |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section V.2 Measures of Location | Mean/mode/median of ungrouped and grouped data; cumulative frequency; ogive (median, quartiles, percentiles) | kc.mean_ungrouped_data → tm.compute_mean {m.sum_divide_count} + it.mcq.mean; kc.median_ungrouped → tm.compute_median {m.median_ordered, m.quartile_from_ordered} + it.mcq.median | PARTIALLY_COVERED | JAMB Math p.5 (official) | Implemented: mean and median of ungrouped data; quartiles/IQR from ordered data. Not evidenced: mode (Phase 19 search: 0 hits); grouped-data location; cumulative frequency; ogive — documented deferral stands | M-15 owner decision (ogive deferral stands) |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section V.3 Measures of Dispersion | Range; mean deviation; variance; standard deviation (ungrouped and grouped data) | kc.measures_of_dispersion → tm.compute_dispersion {m.range, m.variance_sd} + it.mcq.sd | PARTIALLY_COVERED | JAMB Math p.5 (official) | Implemented: range, mean deviation, variance, SD (ungrouped). Not evidenced: grouped-data dispersion | M-15 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section V.4 Permutation and Combination | Linear and circular arrangements; arrangements with repeated objects | kc.counting_principle → tm.count_outcomes {m.multiply_choices} + it.mcq.count | PARTIALLY_COVERED | JAMB Math p.5 (official) | Implemented: multiplication counting principle. Not evidenced: permutations/combinations; circular arrangements; repeated-object arrangements | M-11 owner decision |
@@ -79,12 +88,12 @@ Phase 17; implementation wave Phase 20).
 
 ## Summary
 
-- COVERED against the official JAMB Mathematics syllabus: 5 of 23 topics
+- COVERED against the official JAMB Mathematics syllabus: 8 of 23 topics
   (I.1 Number bases/Modular Arithmetic; I.2 Fractions, Decimals,
   Approximations and Percentages; I.3 Indices, Logarithms and Surds;
-  II.6 Matrices and Determinants; IV.2 Application of Differentiation).
-- PARTIALLY_COVERED: 15 topics. NOT_COVERED: 3 topics (II.5 Binary
-  Operations; III.3 Loci; V.1 Representation of Data).
+  II.5 Binary Operations; II.6 Matrices and Determinants; III.3 Loci;
+  IV.2 Application of Differentiation; V.1 Representation of Data).
+- PARTIALLY_COVERED: 15 topics. NOT_COVERED: 0 topics.
 - Phase 20 implementation (batches 070–079, build_graph_v41): the ten
   owner-authorized topics are implemented — modular arithmetic; number
   bases; surds; approximation/errors; standard form + log change-of-base;
@@ -93,6 +102,13 @@ Phase 17; implementation wave Phase 20).
   (common factors, difference of two squares). I.1/I.2/I.3 moved from
   NOT_COVERED/PARTIALLY_COVERED to COVERED; II.1 depth extended. Coverage
   counts before Phase 20: COVERED 2 / PARTIALLY_COVERED 17 / NOT_COVERED 4.
+- Phase 22 implementation (batches 080–082, build_graph_v42): the three P1
+  closure topics are implemented — binary operations (II.5); loci &
+  construction (III.3 + III.1(d) special-angle construction procedures);
+  representation of data (V.1). Coverage counts after Phase 22: COVERED 8 /
+  PARTIALLY_COVERED 15 / NOT_COVERED 0 (counts before Phase 22: 5/15/3).
+  The remaining 15 PARTIALLY_COVERED rows are the P2 depth residuals
+  (`MATHEMATICS_GAP_REGISTER.md`); the ogive deferral stands.
 - Official confirmation: Phase 17-batch-066…069 families (sets, sequences &
   series, matrices & determinants, mensuration) are all present in the
   official JAMB syllabus; the secondary-source basis of M-07 is now

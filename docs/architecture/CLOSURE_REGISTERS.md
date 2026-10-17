@@ -24,8 +24,8 @@
 | CI-20 | Math | Sets not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 066)**: kc.sets_operations + TM + methods + item, NERDC SSS1 p.7 evidence; residual depth (cardinality, Venn ≤3 sets) triaged Phase 19 (M-22) | NERDC Math SSS1 p.7 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md |
 | CI-21 | Math | Logic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 066)**: kc.logical_reasoning + TM + methods + item, NERDC SSS1 p.8 evidence; not an official JAMB topic (Phase 19) | NERDC Math SSS1 p.8 / SSS2 p.9 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md (M-02) |
 | CI-22 | Math | Mensuration not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 069)**: kc.mensuration + TM + methods + item, NERDC SSS1 p.11 evidence; residual depth (chords, plane figures, spheres, earth-as-sphere) triaged Phase 19 (M-28) | NERDC Math SSS1 p.11 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md |
-| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | **Partially closed**: sequence & series implemented (Phase 17 batch 067); modular arithmetic, number bases, approximation/errors and surds implemented (Phase 20 batches 070/071/073/074). Remaining items: bearings, proofs, construction, ogive (unchanged; triaged Phase 19) | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Phase 20 wave authorization executed (PHASE20_REPORT.md); remaining items still require owner authorization | Bearings/proofs/construction/ogive deferrals stand |
-| CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB official UTME E-syllabus obtained + content-checked for Math/Phys/Chem (Phase 18 — IBASS static assets; see PHASE18_RETRIEVAL_REPORT.md); WAEC not obtained (downloads are CASS installers only); NERDC SSS1/SSS2 content-checked, SSS3 unretrieved (LMIS login-gated; nerdc.org.ng 500) | Continue retrieval: WAEC official WASSCE syllabus documents; NERDC SSS3; promote rows to BOARD_VERIFIED only on checked content; JAMB-side official matrices recorded (JAMB_*_OFFICIAL_COVERAGE.md) | M-1 official-source verification plan; Phase 18 retrieval report |
+| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | **Partially closed**: sequence & series implemented (Phase 17 batch 067); modular arithmetic, number bases, approximation/errors and surds implemented (Phase 20 batches 070/071/073/074); construction implemented (Phase 22 batch 081 — construction procedures of special angles 30°–90°, NERDC matrix p.14 row). Remaining items: bearings, proofs, ogive (triaged Phase 19) | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Phase 20 wave and Phase 22 P1 closure authorizations executed (PHASE20_REPORT.md; PHASE22_REPORT.md); remaining items still require owner authorization | Bearings/proofs/ogive deferrals stand |
+| CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB official UTME E-syllabus obtained + content-checked for Math/Phys/Chem (Phase 18 — IBASS static assets; see PHASE18_RETRIEVAL_REPORT.md); WAEC not obtained (downloads are CASS installers only); NERDC SSS1/SSS2 content-checked, SSS3 unretrieved (LMIS login-gated; nerdc.org.ng 500); Phase 22 bounded sprint (2026-10-17): WAEC Math syllabus still not located (site search: Bookkeeping syllabus article only); NERDC SSS3 still 404/login-gated; JAMB applicable cycle UNRESOLVED (PHASE22_REPORT.md) | Continue retrieval: WAEC official WASSCE syllabus documents; NERDC SSS3; promote rows to BOARD_VERIFIED only on checked content; JAMB-side official matrices recorded (JAMB_*_OFFICIAL_COVERAGE.md) | M-1 official-source verification plan; Phase 18 retrieval report |
 | CI-25 | Chem | Practical chemistry — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | CI-05; kc.practical_chemistry implementation adequate | Obtain WAEC practical syllabus; map to practical KC methods/items | Same as CI-24 |
 | CI-26 | Phys | Practical physics — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | Phase 14 roadmap R16; kc.practical_measurement implementation adequate | Same as CI-24 | Same as CI-24 |
 
@@ -163,3 +163,40 @@ cross-subject edges added; no schema change; 13 entity types; `indicates`
 remains PROPOSED; no Biology/English artifacts. WAEC official and NERDC
 SSS 3 remain unretrieved: CI-24 stays Open; no promotion to
 BOARD_VERIFIED.
+
+Phase 21 (2026-10-17; audit only): Mathematics closure-strategy audit and
+owner decision brief. Live baseline re-verified (head `63f4567`; store
+424/678/337/86/234; validation clean; 199 tests; matrix 5/15/3; no
+discrepancy vs the Phase 20 record). All M-01…M-29 rows classified with
+dispositions (P1: M-09/M-10 plus the V.1 representation component split as
+M-15a; 13 P2 residuals; M-17/M-18 evidence-gated; M-29 scope call; ogive
+deferred). CI-24 status refresh from bounded official-channel probes:
+waecnigeria.org publishes per-subject syllabus documents as article
+attachments (confirmed instance: Bookkeeping & Office Practice 2022–2025)
+— no Mathematics syllabus article/attachment found (site index, news
+pagination, targeted searches); NERDC LMIS `sss_3` still 404 (portal root
+= login gate); nerdc.org.ng HTTP 500; JAMB E-syllabus cycle year still
+unprinted (UNRESOLVED). CI-24 remains Open; nothing was obtained; no
+third-party substitution; no promotions. Proposals (Wave B P1 closure;
+bounded retrieval sprint; closure criteria) are NOT ratified — see
+OWNER_DECISION_BRIEF_PHASE21.md (D1–D4) and docs/PHASE21_REPORT.md. No
+canonical/store change.
+
+Phase 22 (2026-10-17): Mathematics P1 closure implemented (owner-authorized;
+batches 080–082; `examples/math_p1_closure_phase22.py`, build_graph_v42):
+binary operations (II.5), loci & construction (III.3 + III.1(d) special-angle
+construction procedures) and representation of data (V.1) — three new KCs
+(54→57), each ACCEPTED with HUMAN review, TM, methods, items and evidence.
+All new claims (47) and evidence (22) cite the official JAMB source
+(SRC.JAMB.UTME.MATH.2025) with II.5 / III.3 / III.1d / V.1 locators.
+Official JAMB counts now COVERED 8 / PARTIALLY_COVERED 15 / NOT_COVERED 0;
+M-09/M-10 closed at implementation level; the M-15 data-representation
+component (audit split M-15a) implemented — P2 residuals and the ogive
+deferral stand. CI-23 updated (remaining: bearings, proofs, ogive). Bounded
+retrieval sprint: WAEC Math syllabus not located (site search shows only the
+Bookkeeping syllabus article); NERDC SSS3 still unavailable (404 /
+login-gated; nerdc.org.ng 500); JAMB applicable cycle remains UNRESOLVED
+(no cycle marker in the PDF or the official SPA; metadata date
+insufficient). No cross-subject edges added; no schema change; 13 entity
+types; `indicates` remains PROPOSED; no Biology/English artifacts; no
+promotion to BOARD_VERIFIED — CI-24 stays Open.

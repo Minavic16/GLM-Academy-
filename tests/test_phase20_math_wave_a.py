@@ -385,7 +385,11 @@ def test_v41_serialization_and_export():
 
 @pytest.mark.phase20
 def test_v41_canonical_json_export_matches():
-    s = build_graph_v41()
+    # The canonical export tracks the latest builder; since Phase 22 that is
+    # build_graph_v42 (the Phase 20 builder output itself is unchanged — see
+    # the other v41 guards in this file).
+    from examples.math_p1_closure_phase22 import build_graph_v42
+    s = build_graph_v42()
     cur = open(ROOT / "examples" / "math_cdg_v2.json").read()
     assert cur == dumps_store(s)
 
@@ -415,9 +419,11 @@ def test_v41_coverage_dispositions_recorded():
 def test_v41_official_matrix_and_report_updated():
     matrix = (ROOT / "docs" / "architecture"
               / "JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md").read_text()
-    assert "5 of 23" in matrix
+    # Official JAMB counts as recorded after Phase 20 are superseded by the
+    # Phase 22 P1 closure (the matrix carries both records): now 8/15/0.
+    assert "8 of 23" in matrix
     assert "PARTIALLY_COVERED: 15" in matrix
-    assert "NOT_COVERED: 3" in matrix
+    assert "NOT_COVERED: 0" in matrix
     report = (ROOT / "docs" / "PHASE20_REPORT.md").read_text()
     assert "build_graph_v41" in report
     assert "BOARD_UNVERIFIED" in report  # no promotion to BOARD_VERIFIED

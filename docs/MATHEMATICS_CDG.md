@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 100
-- TaskModels: 96
-- Methods: 150
-- Items: 74
+- Knowledge Components: 103
+- TaskModels: 99
+- Methods: 162
+- Items: 82
 - Misconceptions: 1
-- Claims: 678
-- Evidence records: 337
+- Claims: 725
+- Evidence records: 359
 - Sources: 86
-- Activities: 234
+- Activities: 243
 - Agents: 2
-- Exported nodes: 424
-- Exported edges: 678
-- Accepted Claims: 676; PROPOSED Claims: 2
+- Exported nodes: 450
+- Exported edges: 725
+- Accepted Claims: 723; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -32,6 +32,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.approximation_errors` | Approximation: significant figures, decimal places and percentage error | Number & Numeration | ACCEPTED | tm.approximation_problems |
 | `kc.atomic_nuclear_physics` | Atomic structure, photoelectric effect and nuclei | Physics | ACCEPTED | tm.modern_physics_problems |
 | `kc.atomic_structure_periodicity` | Atomic structure and the periodic table | Chemistry | ACCEPTED | tm.atomic_model_problems |
+| `kc.binary_operations` | Binary operations: properties, identity and inverse elements | Algebra | ACCEPTED | tm.binary_operations_problems |
 | `kc.carboxylic_acids` | Carboxylic acids and esters | Chemistry | ACCEPTED | tm.carboxylic_acid_reactions |
 | `kc.change_of_subject` | Change of subject of a formula/relation | Algebra | ACCEPTED | tm.make_subject |
 | `kc.chemical_bonding` | Ionic and covalent bonding | Chemistry | ACCEPTED | tm.bonding_problems |
@@ -40,6 +41,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.completing_the_square` | Completing the square | Algebra | ACCEPTED | tm.complete_square |
 | `kc.cosine_rule` | Cosine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
 | `kc.counting_principle` | Fundamental (multiplication) counting principle | Statistics & Probability | ACCEPTED | tm.count_outcomes |
+| `kc.data_representation` | Representation of data: frequency distribution and charts | Statistics & Probability | ACCEPTED | tm.data_representation_problems |
 | `kc.differentiation_algebraic` | Differentiation of explicit algebraic functions | Calculus | ACCEPTED | tm.differentiate_explicit |
 | `kc.direct_variation` | Direct variation | Algebra | ACCEPTED | tm.direct_variation_problems |
 | `kc.displacement_velocity` | Displacement, velocity and acceleration | Physics | ACCEPTED | tm.interpret_motion_graph |
@@ -70,6 +72,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.linear_equations_one_var` | Linear equations in one variable | Algebra | ACCEPTED | tm.solve_linear_equations_one_var |
 | `kc.linear_inequalities_analytic` | Linear inequalities: analytical solution | Algebra | ACCEPTED | tm.solve_linear_inequality |
 | `kc.linear_momentum` | Linear momentum and its conservation | Physics | ACCEPTED | tm.momentum_problems |
+| `kc.loci_and_construction` | Loci and constructions in two dimensions | Geometry | ACCEPTED | tm.loci_construction_problems |
 | `kc.logarithms` | Logarithms and their laws | Number & Numeration | ACCEPTED | tm.logarithm_problems |
 | `kc.logical_reasoning` | Logical statements and truth values | Mathematics | ACCEPTED | tm.logical_reasoning |
 | `kc.mass_and_weight` | Mass, weight and inertia | Physics | ACCEPTED | tm.apply_newtons_second_law |
@@ -149,6 +152,13 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.percentage_concept` | → | `kc.simple_interest` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.factorisation_patterns` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.integer_arithmetic` | → | `kc.factorisation_patterns` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.binary_operations` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.binary_operations` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.mensuration` | → | `kc.loci_and_construction` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.triangle_angle_properties` | → | `kc.loci_and_construction` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.parallel_line_angles` | → | `kc.loci_and_construction` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.integer_arithmetic` | → | `kc.data_representation` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.data_representation` | EXECUTE | SPECIFIC_METHOD | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.factorisation_quadratic_trinomial` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.function_concept` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.quadratic_formula` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
@@ -347,6 +357,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.electron_arrangement, m.trend_prediction
 - Status: ACCEPTED
 
+### `tm.binary_operations_problems` — Evaluate and analyse binary operations
+
+- Targets: kc.binary_operations
+- Methods: m.binary_operation_properties, m.evaluate_binary_operation, m.identity_inverse_elements
+- Status: ACCEPTED
+
 ### `tm.bonding_problems` — Classify bonds and write formulae
 
 - Targets: kc.chemical_bonding
@@ -447,6 +463,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.counting_principle
 - Methods: m.multiply_choices
+- Status: ACCEPTED
+
+### `tm.data_representation_problems` — Organise data and construct statistical charts
+
+- Targets: kc.data_representation
+- Methods: m.construct_bar_chart, m.construct_histogram, m.construct_pie_chart, m.frequency_distribution_table
 - Status: ACCEPTED
 
 ### `tm.differentiate_explicit` — Differentiate an explicit algebraic function
@@ -603,6 +625,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - Targets: kc.laser_basics
 - Methods: m.stimulated_emission
+- Status: ACCEPTED
+
+### `tm.loci_construction_problems` — Interpret loci and perform geometric constructions
+
+- Targets: kc.loci_and_construction
+- Methods: m.apply_loci_intersections, m.construct_angle_bisector, m.construct_perpendicular_bisector, m.construct_special_angles, m.describe_locus
 - Status: ACCEPTED
 
 ### `tm.logarithm_problems` — Evaluate and manipulate logarithms
@@ -910,6 +938,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.electron_arrangement`** requires: kc.integer_arithmetic, kc.matter_classification
 - **`m.trend_prediction`** requires: kc.matter_classification
 
+### `tm.binary_operations_problems`
+
+- **`m.binary_operation_properties`** requires: kc.algebraic_expressions, kc.binary_operations, kc.integer_arithmetic
+- **`m.evaluate_binary_operation`** requires: kc.binary_operations, kc.integer_arithmetic
+- **`m.identity_inverse_elements`** requires: kc.binary_operations, kc.integer_arithmetic
+
 ### `tm.bonding_problems`
 
 - **`m.formula_from_valency`** requires: kc.atomic_structure_periodicity, kc.integer_arithmetic
@@ -983,6 +1017,13 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.count_outcomes`
 
 - **`m.multiply_choices`** requires: kc.integer_arithmetic, kc.ratio_proportion_rate
+
+### `tm.data_representation_problems`
+
+- **`m.construct_bar_chart`** requires: kc.data_representation, kc.integer_arithmetic
+- **`m.construct_histogram`** requires: kc.data_representation, kc.integer_arithmetic
+- **`m.construct_pie_chart`** requires: kc.data_representation, kc.ratio_proportion_rate
+- **`m.frequency_distribution_table`** requires: kc.data_representation, kc.integer_arithmetic
 
 ### `tm.differentiate_explicit`
 
@@ -1096,6 +1137,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.laser_problems`
 
 - **`m.stimulated_emission`** requires: kc.atomic_structure_periodicity, kc.em_spectrum
+
+### `tm.loci_construction_problems`
+
+- **`m.apply_loci_intersections`** requires: kc.loci_and_construction, kc.mensuration
+- **`m.construct_angle_bisector`** requires: kc.loci_and_construction, kc.triangle_angle_properties
+- **`m.construct_perpendicular_bisector`** requires: kc.loci_and_construction, kc.mensuration
+- **`m.construct_special_angles`** requires: kc.loci_and_construction, kc.triangle_angle_properties
+- **`m.describe_locus`** requires: kc.loci_and_construction, kc.mensuration
 
 ### `tm.logarithm_problems`
 
@@ -1390,3 +1439,6 @@ See [`docs/batch_records/`](../batch_records/).
 | 075 | kc.standard_form |
 | 077 | kc.profit_and_loss, kc.shares_and_vat, kc.simple_interest |
 | 079 | kc.factorisation_patterns |
+| 080 | kc.binary_operations |
+| 081 | kc.loci_and_construction |
+| 082 | kc.data_representation |

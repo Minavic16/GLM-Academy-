@@ -113,8 +113,10 @@ def test_phase19_matrix_refinements_and_traceability():
             if f"| {s} |" in r:
                 statuses.append(s)
                 break
-    assert statuses.count("COVERED") == 5    # I.1, I.2, I.3, II.6, IV.2
-    assert statuses.count("NOT_COVERED") == 3  # II.5, III.3, V.1
+    # counts as of Phase 20 were 5/15/3; the Phase 22 P1 closure implemented
+    # II.5, III.3 and V.1 -> now 8/15/0 (see docs/PHASE22_REPORT.md)
+    assert statuses.count("COVERED") == 8    # + II.5, III.3, V.1 (Phase 22)
+    assert statuses.count("NOT_COVERED") == 0
     assert statuses.count("PARTIALLY_COVERED") == 15
     flat = _flat(MATRIX)
     assert "I.1 was corrected to NOT_COVERED" in flat  # Phase 19 record retained
@@ -149,7 +151,9 @@ def test_phase19_gap_register_rows_and_vocabulary():
     assert "NO_ACTION_COVERED" in m07 and "Syllabus NG" in m07
     m09 = [l for l in REGISTER.read_text(encoding="utf-8").splitlines()
            if l.startswith("| M-09 |")][0]
-    assert "NOT_COVERED" in m09 and "OWNER_SCOPE_DECISION" in m09
+    # Phase 22 implemented the component (batch 081); the row records closure
+    assert "COVERED (Phase 22 batch 081)" in m09
+    assert "NO_ACTION_COVERED" in m09
     assert "Owner authorization (Phase 20) covered only the ten-topic wave" in flat
 
 

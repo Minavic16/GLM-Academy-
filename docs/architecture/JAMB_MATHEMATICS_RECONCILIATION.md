@@ -334,3 +334,34 @@ untouched; Phase 20 added methods/claims/evidence only. WAEC official and
 NERDC SSS 3 remain unretrieved (CI-24); nothing promoted to BOARD_VERIFIED;
 the JAMB applicable cycle remains UNRESOLVED (no cycle year printed in the
 retrieved revision).
+
+## 13. Phase 22 P1 closure + retrieval sprint (2026-10-17)
+
+Owner-authorized P1 closure (batches 080–082, `build_graph_v42`; full record
+in `docs/PHASE22_REPORT.md`). Dispositions of the three former NOT_COVERED
+rows and of the III.1(d) construction component:
+
+| Row | Phase 21 state | Phase 22 effect |
+|---|---|---|
+| II.5 binary operations | NOT_COVERED | COVERED — kc.binary_operations + tm.binary_operations_problems + 3 methods (evaluation by rule/table; properties; identity/inverse) + 2 items (batch 080); boundary: UTME treatment only, no abstract-algebra expansion |
+| III.3 loci (+ III.1(d) construction) | NOT_COVERED (loci); construction not evidenced | COVERED — kc.loci_and_construction + tm.loci_construction_problems + 5 methods (describe locus; perpendicular bisector; angle bisector; special angles 30°–90°; intersection of loci) + 3 items (batch 081); the III.1 row retains its polygon/cyclic/chord depth gaps under M-27 |
+| V.1 representation of data | NOT_COVERED | COVERED — kc.data_representation + tm.data_representation_problems + 4 methods (frequency distribution; bar chart; histogram; pie chart) + 3 items (batch 082); ogive/cumulative frequency remain excluded (standing owner deferral); the location/dispersion KCs are untouched |
+
+Updated official counts (JAMB dimension): COVERED 8 / PARTIALLY_COVERED 15 /
+NOT_COVERED 0 (`JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md`). The 15 remaining
+PARTIALLY_COVERED rows are the documented P2 depth residuals
+(`MATHEMATICS_GAP_REGISTER.md`); no P2 work was performed in this phase.
+
+Retrieval sprint (bounded; official channels only; nothing obtained, nothing
+substituted):
+
+| Blocker | Probes (this phase) | Outcome |
+|---|---|---|
+| WAEC official WASSCE Mathematics syllabus | waecnigeria.org sitemap.xml (404); site search "mathematics syllabus" and "syllabus" (Drupal search) — only the Bookkeeping & Office Practice 2022–2025 syllabus article, selected-texts lists and FAQ pages surface; no Mathematics syllabus article/attachment | NOT OBTAINED — channel confirmed (per-subject syllabus articles with attachments) but no Mathematics document exists there; follow-up: official WAEC enquiry for the "Regulations & Syllabuses" publication and periodic recheck |
+| NERDC SSS3 Mathematics curriculum | lmis.nerdcportals.com.ng/sss_3/ recheck (404, unchanged); lmis.nerdcportals.com.ng root (login gate: "Please log in to continue" + registration); nerdc.org.ng recheck (HTTP 500, unchanged) | NOT OBTAINED — no alternative official SSS3 publication found; follow-up: registered-institution access route or official NERDC contact; periodic recheck; reconstruction from SSS1/SSS2 or third-party sources is not permitted |
+| JAMB applicable cycle for the official PDF | PDF metadata re-inspected (CreationDate = ModDate = 2025-07-31; author/creator fields; no cycle); extracted text re-grepped (no year/cycle marker); official IBASS SPA bundle (main.js) re-grepped (no cycle strings); jamb.gov.ng context check (2026 cycle active at retrieval; no statement tying the e-syllabus revision to a cycle) | UNRESOLVED — a PDF metadata date alone is insufficient; evidence needed: an official JAMB statement tying the IBASS e-syllabus revision to a UTME cycle (or a versioned syllabus listing). Treated as the current official syllabus as published on the live portal at retrieval time |
+
+Evidence discipline: every Phase 22 claim is evidenced by the official JAMB
+source (SRC.JAMB.UTME.MATH.2025) with precise locators (II.5; III.3 +
+III.1d; V.1a–b); no secondhand aggregator was used; nothing is promoted to BOARD_VERIFIED;
+WAEC official and NERDC SSS3 remain outstanding (CI-24 Open).
