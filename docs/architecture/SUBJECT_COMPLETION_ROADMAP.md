@@ -2,11 +2,13 @@
 
 Statuses under ratified model (OD-01/OD-04):
 
-## MATHEMATICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (scope expanded Phase 17)
-Completed: 44 KCs (39 baseline + 5 in Phase 17 batches 066-069), full-chains
-validated, CI-01/CI-02 closed (median + dispersion with preserved legacy ids),
-kc.logarithms (b055) enables Chemistry pH; log→pH edge cl.pre56.log_ph
-ACCEPTED and intact.
+## MATHEMATICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (scope expanded Phase 17; implementation wave Phase 20)
+Completed: 54 KCs (39 baseline + 5 in Phase 17 batches 066-069 + 10 in
+Phase 20 batches 070-079), full chains validated, CI-01/CI-02 closed
+(median + dispersion with preserved legacy ids), kc.logarithms (b055)
+enables Chemistry pH; log→pH edge cl.pre56.log_ph ACCEPTED and intact.
+Phase 20 (2026-10-17) implemented the owner-authorized ten-topic wave —
+see docs/PHASE20_REPORT.md.
 
 Phase 17 scope expansion (owner-authorized four families):
 - Batch 066 Sets & logic: kc.sets_operations, kc.logical_reasoning (NERDC Math
@@ -35,26 +37,31 @@ Remaining gaps:
 2. NOT_COVERED rows requiring owner scope decisions: Phase 19 triage
    complete — see `MATHEMATICS_GAP_REGISTER.md` (M-01…M-29) and
    `OWNER_DECISION_BRIEF_PHASE19.md`. Official JAMB confirmation corrected
-   the picture: I.1 number bases/modular arithmetic = NOT_COVERED (was
-   optimistically PARTIALLY_COVERED; disclosed official counts now COVERED 2
-   / PARTIALLY_COVERED 17 / NOT_COVERED 4: I.1, II.5, III.3, V.1).
-   Deduplicated open implementation items: 8×P1 (officially confirmed,
-   zero-implementation: modular arithmetic, number bases, surds,
-   approximation/errors, standard form + log change-of-base, financial
-   mathematics, loci/construction, binary operations) and 13×P2
-   (officially confirmed depth extensions: sets depth, polynomials depth,
-   variation, inequalities, progression sums, perm/comb, coordinate
-   geometry, trig applications, geometry depth, mensuration depth, statistics
-   depth, probability depth, calculus depth). Ogive deferral documented and
-   stands. Matrices & determinants: requirement + scope officially confirmed
-   (JAMB II.6); implementation evidence remains secondary (Syllabus NG,
-   Phase 17 provenance preserved) — disclosed, no implementation change;
-   assessment-depth note recorded.
+   the picture: I.1 number bases/modular arithmetic was NOT_COVERED (Phase 19
+   counts: COVERED 2 / PARTIALLY_COVERED 17 / NOT_COVERED 4: I.1, II.5,
+   III.3, V.1). Phase 20 (2026-10-17) implemented the owner-authorized
+   ten-topic wave (batches 070–079): modular arithmetic, number bases,
+   surds, approximation/errors, standard form + log change-of-base,
+   financial mathematics (M-03/04/05/19/20/21 closed at implementation
+   level), plus indices laws, change-of-subject powers/roots depth and
+   factorisation common-factor/difference-of-squares (M-23 partially
+   extended). Official JAMB counts now COVERED 5 / PARTIALLY_COVERED 15 /
+   NOT_COVERED 3 (II.5 binary operations, III.3 loci, V.1 representation of
+   data). Remaining implementation items: 2×P1 (loci/construction M-09;
+   binary operations M-10) and 13×P2 (officially confirmed depth extensions:
+   sets depth, polynomials depth, variation, inequalities, progression sums,
+   perm/comb, coordinate geometry, trig applications, geometry depth,
+   mensuration depth, statistics depth, probability depth, calculus depth).
+   Ogive deferral documented and stands. Matrices & determinants:
+   requirement + scope officially confirmed (JAMB II.6); implementation
+   evidence remains secondary (Syllabus NG, Phase 17 provenance preserved) —
+   disclosed, no implementation change; assessment-depth note recorded.
 Tests for closure: full suite ≥ current, store `[]`, coverage matrix rows
 all COVERED-or-excluded with evidence refs.
-Next task: owner decision on the next Mathematics implementation wave
-(Wave A — Section I completion — recommended); WAEC official documents and
-NERDC SSS 3 still outstanding (CI-24). Biology remains on hold.
+Next task: owner decision on further Mathematics implementation waves
+(Waves B–E of OWNER_DECISION_BRIEF_PHASE19.md remain unauthorized; the
+Phase 20 Wave A variant is executed); WAEC official documents and NERDC
+SSS 3 still outstanding (CI-24). Biology remains on hold.
 
 ## PHYSICS — IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED (updated 2026-10-15, Phase 14; syllabus mapping Phase 16; JAMB official mapping Phase 18)
 Phase 14 closed all seven audit targets: friction/machines (b059), EM spectrum
@@ -152,10 +159,15 @@ OWNER_DECISION_BRIEF_PHASE19.md (Wave A — Section I completion —
 recommended); documentation corrections applied (CI-20/21/22 closed,
 CI-23 partial, activity count 204); no canonical changes; no status
 promotions.
-Next: owner decision on the next Mathematics implementation wave (Wave A
-recommended); WAEC official WASSCE syllabus retrieval; NERDC SSS 3 attempt;
-then owner decisions on register gaps (M-*/P-*/C-* incl. Phase 18/19
-exposures); Physics/Chemistry gap triage available as a follow-on; Biology
-only after all three subjects are sufficiently closed and the owner
-authorizes it.
+Phase 20: Mathematics Wave A implementation — DONE (2026-10-17;
+owner-authorized ten topics): batches 070–079 in
+examples/math_wave_a_phase20.py (build_graph_v41); ten new KCs (54 total);
+official JAMB source SRC.JAMB.UTME.MATH.2025 registered; M-03/04/05/19/
+20/21 closed at implementation level; M-23 partially extended; official
+counts now 5/15/3; no status promotions (PHASE20_REPORT.md).
+Next: owner decision on further Mathematics waves (Waves B–E of the Phase
+19 brief remain unauthorized); WAEC official WASSCE syllabus retrieval;
+NERDC SSS 3 attempt; then further register gaps (M-*/P-*/C-*); Physics/
+Chemistry gap triage available as a follow-on; Biology only after all
+three subjects are sufficiently closed and the owner authorizes it.
 Biology remains on hold (BIOLOGY_HOLD_RECORD.md).

@@ -101,10 +101,10 @@ def test_phase19_matrix_refinements_and_traceability():
     lines = MATRIX.read_text(encoding="utf-8").splitlines()
     rows = [l for l in lines if l.startswith("| JAMB |")]
     assert len(rows) == 23, "official Mathematics matrix must keep 23 topic rows"
-    # I.1 corrected to NOT_COVERED
+    # I.1 was corrected to NOT_COVERED in Phase 19 (recorded in the note) and
+    # implemented in Phase 20 — the row now reads COVERED with a Phase 20 note.
     i1 = [r for r in rows if "Number bases/Modular Arithmetic" in r]
-    assert len(i1) == 1 and "NOT_COVERED" in i1[0]
-    assert "corrected" in i1[0]
+    assert len(i1) == 1 and "| COVERED |" in i1[0] and "Phase 20" in i1[0]
     # no other topic rows changed to NOT_APPLICABLE etc. silently
     statuses = []
     for r in rows:
@@ -113,15 +113,17 @@ def test_phase19_matrix_refinements_and_traceability():
             if f"| {s} |" in r:
                 statuses.append(s)
                 break
-    assert statuses.count("COVERED") == 2    # II.6, IV.2
-    assert statuses.count("NOT_COVERED") == 4  # I.1, II.5, III.3, V.1
-    assert statuses.count("PARTIALLY_COVERED") == 17
+    assert statuses.count("COVERED") == 5    # I.1, I.2, I.3, II.6, IV.2
+    assert statuses.count("NOT_COVERED") == 3  # II.5, III.3, V.1
+    assert statuses.count("PARTIALLY_COVERED") == 15
     flat = _flat(MATRIX)
+    assert "I.1 was corrected to NOT_COVERED" in flat  # Phase 19 record retained
     assert "Phase 19 traceability" in flat
     for chain in ("tm.matrix_algebra", "m.determinants_inverses",
                   "tm.sequences_series", "m.quartile_from_ordered"):
         assert chain in flat, f"matrix missing traceability chain: {chain!r}"
     assert "COVERED 2 / PARTIALLY_COVERED 17 / NOT_COVERED 4" in flat
+    assert "COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3" in flat
     low = flat.lower()
     for token in ("midpoint", "standard form", "change of base",
                   "chord lengths", "experimental probability",
@@ -141,14 +143,14 @@ def test_phase19_gap_register_rows_and_vocabulary():
     # key rows
     m03 = [l for l in REGISTER.read_text(encoding="utf-8").splitlines()
            if l.startswith("| M-03 |")][0]
-    assert "NOT_COVERED" in m03 and "OFFICIAL CONFIRMED" in m03
+    assert "COVERED (Phase 20 batch 071)" in m03 and "OFFICIAL CONFIRMED" in m03
     m07 = [l for l in REGISTER.read_text(encoding="utf-8").splitlines()
            if l.startswith("| M-07 |")][0]
     assert "NO_ACTION_COVERED" in m07 and "Syllabus NG" in m07
     m09 = [l for l in REGISTER.read_text(encoding="utf-8").splitlines()
            if l.startswith("| M-09 |")][0]
     assert "NOT_COVERED" in m09 and "OWNER_SCOPE_DECISION" in m09
-    assert "No gap in this register is authorized for implementation" in flat
+    assert "Owner authorization (Phase 20) covered only the ten-topic wave" in flat
 
 
 @pytest.mark.phase19

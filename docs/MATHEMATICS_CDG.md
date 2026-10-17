@@ -5,19 +5,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 ## Current Graph Statistics
 
-- Knowledge Components: 90
-- TaskModels: 86
-- Methods: 129
-- Items: 56
+- Knowledge Components: 100
+- TaskModels: 96
+- Methods: 150
+- Items: 74
 - Misconceptions: 1
-- Claims: 583
-- Evidence records: 288
-- Sources: 85
-- Activities: 204
+- Claims: 678
+- Evidence records: 337
+- Sources: 86
+- Activities: 234
 - Agents: 2
-- Exported nodes: 365
-- Exported edges: 583
-- Accepted Claims: 581; PROPOSED Claims: 2
+- Exported nodes: 424
+- Exported edges: 678
+- Accepted Claims: 676; PROPOSED Claims: 2
 
 ## KC Index
 
@@ -29,6 +29,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.algebraic_expressions` | Algebraic expressions: terms, coefficients, like terms, substitution | Algebra | ACCEPTED | tm.handle_algebraic_expressions |
 | `kc.amides` | Amides | Chemistry | ACCEPTED | tm.amide_reactions |
 | `kc.amines` | Amines | Chemistry | ACCEPTED | tm.amine_properties |
+| `kc.approximation_errors` | Approximation: significant figures, decimal places and percentage error | Number & Numeration | ACCEPTED | tm.approximation_problems |
 | `kc.atomic_nuclear_physics` | Atomic structure, photoelectric effect and nuclei | Physics | ACCEPTED | tm.modern_physics_problems |
 | `kc.atomic_structure_periodicity` | Atomic structure and the periodic table | Chemistry | ACCEPTED | tm.atomic_model_problems |
 | `kc.carboxylic_acids` | Carboxylic acids and esters | Chemistry | ACCEPTED | tm.carboxylic_acid_reactions |
@@ -50,6 +51,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.equation_of_line` | Equation of a straight line (all forms) | Coordinate Geometry | ACCEPTED | tm.find_line_equation |
 | `kc.equations_in_indices` | Equations involving indices | Number & Numeration | ACCEPTED | tm.solve_index_equation |
 | `kc.ethers` | Ethers | Chemistry | ACCEPTED | tm.ether_properties |
+| `kc.factorisation_patterns` | Factorisation: common factors and difference of two squares | Algebra | ACCEPTED | tm.factorise_common_patterns |
 | `kc.factorisation_quadratic_trinomial` | Factorisation of quadratic trinomials | Algebra | ACCEPTED | tm.factorise_quadratic_trinomial |
 | `kc.fibre_optics` | Optical fibres and total internal reflection | Physics | ACCEPTED | tm.fibre_optics_problems |
 | `kc.fraction_decimal_operations` | Operations on fractions and decimals | Number & Numeration | ACCEPTED | tm.fraction_decimal_operations |
@@ -60,6 +62,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.gradient` | Gradient of a line segment | Coordinate Geometry | ACCEPTED | tm.compute_gradient |
 | `kc.gravitation` | Gravitation and gravitational field | Physics | ACCEPTED | tm.gravitation_problems |
 | `kc.heat_temperature` | Heat, temperature and thermal behaviour | Physics | ACCEPTED | tm.thermal_problems |
+| `kc.indices_laws` | Laws of indices: simplification and evaluation | Number & Numeration | ACCEPTED | tm.index_law_simplification |
 | `kc.integer_arithmetic` | Signed-number (integer) arithmetic | Number & Numeration | ACCEPTED | tm.signed_number_arithmetic |
 | `kc.integration_algebraic` | Elementary integration of algebraic functions | Calculus | ACCEPTED | tm.integrate_polynomial |
 | `kc.isomerism` | Structural and geometric isomers | Chemistry | ACCEPTED | tm.isomer_identification |
@@ -79,10 +82,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.measures_of_dispersion` | Measures of dispersion | Statistics & Probability | ACCEPTED | tm.compute_dispersion |
 | `kc.median_ungrouped` | Median of ungrouped data | Statistics & Probability | ACCEPTED | tm.compute_median |
 | `kc.mensuration` | Mensuration: arcs, sectors, solids and compound shapes | Mathematics | ACCEPTED | tm.mensuration |
+| `kc.modular_arithmetic` | Modular arithmetic: residues and operations | Number & Numeration | ACCEPTED | tm.modular_arithmetic_problems |
 | `kc.mole_stoichiometry` | Mole concept and stoichiometry | Chemistry | ACCEPTED | tm.stoichiometry_problems |
 | `kc.motion_equations_constant_acceleration` | Equations of motion (constant acceleration) | Physics | ACCEPTED | tm.solve_constant_acceleration |
 | `kc.motion_graph_interpretation` | Interpretation of motion graphs | Physics | ACCEPTED | tm.interpret_motion_graph |
 | `kc.newtons_laws` | Newton's laws of motion | Physics | ACCEPTED | tm.apply_newtons_second_law |
+| `kc.number_bases` | Number bases: conversion and operations (bases 2 to 10) | Number & Numeration | ACCEPTED | tm.number_base_problems |
 | `kc.organic_foundations` | Hydrocarbons and functional groups | Chemistry | ACCEPTED | tm.organic_problems |
 | `kc.parallel_line_angles` | Angles formed by parallel lines and a transversal | Geometry | ACCEPTED | tm.identify_parallel_line_angles |
 | `kc.parallel_perpendicular_lines` | Conditions for parallel and perpendicular lines | Coordinate Geometry | ACCEPTED | tm.classify_line_relationships |
@@ -91,6 +96,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.practical_chemistry` | Practical chemistry procedures | Chemistry | ACCEPTED | tm.practical_chemistry |
 | `kc.practical_measurement` | Experimental measurement practice | Physics | ACCEPTED | tm.practical_physics |
 | `kc.pressure_fluids` | Density, pressure and fluids at rest | Physics | ACCEPTED | tm.fluid_pressure_problems |
+| `kc.profit_and_loss` | Profit and loss per cent | Number & Numeration | ACCEPTED | tm.profit_loss_problems |
 | `kc.quadratic_by_factorisation` | Solving quadratic equations by factorisation | Algebra | ACCEPTED | tm.solve_quadratic_by_factorisation |
 | `kc.quadratic_formula` | Quadratic formula | Algebra | ACCEPTED | tm.apply_quadratic_formula |
 | `kc.quadratic_roots` | Roots of quadratic equations (any method) | Algebra | ACCEPTED | tm.find_quadratic_roots |
@@ -104,10 +110,14 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.semiconductor_electronics` | Semiconductor devices and logic basics | Physics | ACCEPTED | tm.electronics_problems |
 | `kc.sequences_series` | Arithmetic and geometric progressions | Mathematics | ACCEPTED | tm.sequences_series |
 | `kc.sets_operations` | Set theory: definitions, notation and operations | Mathematics | ACCEPTED | tm.set_operations |
+| `kc.shares_and_vat` | Shares and value added tax (VAT) | Number & Numeration | ACCEPTED | tm.shares_vat_problems |
+| `kc.simple_interest` | Simple interest | Number & Numeration | ACCEPTED | tm.simple_interest_problems |
 | `kc.simultaneous_linear_equations` | Simultaneous linear equations in two variables | Algebra | ACCEPTED | tm.solve_simultaneous_linear_two_vars |
 | `kc.simultaneous_linear_quadratic` | Simultaneous equations: one linear, one quadratic | Algebra | ACCEPTED | tm.solve_linear_quadratic_system |
 | `kc.sine_rule` | Sine rule for oblique triangles | Trigonometry | ACCEPTED | tm.solve_oblique_triangle |
 | `kc.special_angle_values` | Exact trigonometric values of special angles | Trigonometry | ACCEPTED | tm.recall_special_values |
+| `kc.standard_form` | Standard form: A x 10^n notation and calculations | Number & Numeration | ACCEPTED | tm.standard_form_problems |
+| `kc.surds` | Surds: simplification, operations and rationalisation | Number & Numeration | ACCEPTED | tm.surd_problems |
 | `kc.theoretical_probability` | Theoretical probability of an event | Statistics & Probability | ACCEPTED | tm.compute_probability |
 | `kc.triangle_angle_properties` | Triangle angle properties | Geometry | ACCEPTED | tm.triangle_angle_problems |
 | `kc.trig_ratios_acute` | Trigonometric ratios of acute angles | Trigonometry | ACCEPTED | tm.trig_ratio_problems |
@@ -122,6 +132,23 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 | `kc.integer_arithmetic` | → | `kc.sequences_series` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.linear_equations_one_var` | → | `kc.matrix_algebra` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
 | `kc.circle_angle_theorems` | → | `kc.mensuration` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.integer_arithmetic` | → | `kc.number_bases` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.modular_arithmetic` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.indices_laws` | → | `kc.equations_in_indices` | EXECUTE | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.integer_arithmetic` | → | `kc.indices_laws` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.surds` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.indices_laws` | → | `kc.surds` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
+| `kc.integer_arithmetic` | → | `kc.surds` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.fraction_decimal_operations` | → | `kc.approximation_errors` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.percentage_concept` | → | `kc.approximation_errors` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.indices_laws` | → | `kc.standard_form` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.indices_laws` | → | `kc.logarithms` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.percentage_concept` | → | `kc.profit_and_loss` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.percentage_concept` | → | `kc.shares_and_vat` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.ratio_proportion_rate` | → | `kc.shares_and_vat` | EXECUTE | SPECIFIC_METHOD | DERIVED |
+| `kc.percentage_concept` | → | `kc.simple_interest` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.algebraic_expressions` | → | `kc.factorisation_patterns` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
+| `kc.integer_arithmetic` | → | `kc.factorisation_patterns` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.factorisation_quadratic_trinomial` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.function_concept` | EXECUTE | SPECIFIC_TASK_MODEL | DERIVED |
 | `kc.algebraic_expressions` | → | `kc.quadratic_formula` | UNDERSTAND | ALL_RELEVANT_METHODS | ASSERTED |
@@ -308,6 +335,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.substitute_formula
 - Status: ACCEPTED
 
+### `tm.approximation_problems` — Approximate numbers and compute percentage error
+
+- Targets: kc.approximation_errors
+- Methods: m.percentage_error, m.round_to_precision
+- Status: ACCEPTED
+
 ### `tm.atomic_model_problems` — Deduce structure and predict periodic trends
 
 - Targets: kc.atomic_structure_periodicity
@@ -464,6 +497,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.evaluate_substitution, m.table_of_values
 - Status: ACCEPTED
 
+### `tm.factorise_common_patterns` — Factorise by common factors and difference of two squares
+
+- Targets: kc.factorisation_patterns
+- Methods: m.common_factor_extraction, m.difference_of_two_squares
+- Status: ACCEPTED
+
 ### `tm.factorise_quadratic_trinomial` — Factorise quadratic trinomials
 
 - Targets: kc.factorisation_quadratic_trinomial
@@ -536,6 +575,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.corresponding_alternate
 - Status: ACCEPTED
 
+### `tm.index_law_simplification` — Simplify and evaluate expressions using index laws
+
+- Targets: kc.indices_laws
+- Methods: m.apply_index_laws, m.evaluate_fractional_powers
+- Status: ACCEPTED
+
 ### `tm.integrate_polynomial` — Integrate a polynomial term-by-term
 
 - Targets: kc.integration_algebraic
@@ -563,7 +608,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.logarithm_problems` — Evaluate and manipulate logarithms
 
 - Targets: kc.logarithms
-- Methods: m.apply_log_laws, m.convert_exp_log
+- Methods: m.apply_log_laws, m.change_of_base, m.convert_exp_log
 - Status: ACCEPTED
 
 ### `tm.logical_reasoning` — Evaluate simple and compound logical statements
@@ -575,7 +620,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.make_subject` — Make a specified variable the subject
 
 - Targets: kc.change_of_subject
-- Methods: m.collect_factor_subject, m.inverse_operations
+- Methods: m.collect_factor_subject, m.inverse_operations, m.subject_powers_roots
 - Status: ACCEPTED
 
 ### `tm.matrix_algebra` — Work with matrices and determinants
@@ -596,10 +641,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.photoelectric_equation
 - Status: ACCEPTED
 
+### `tm.modular_arithmetic_problems` — Perform calculations in modular arithmetic
+
+- Targets: kc.modular_arithmetic
+- Methods: m.mod_notation_residue, m.mod_operations
+- Status: ACCEPTED
+
 ### `tm.momentum_problems` — Solve momentum and collision problems
 
 - Targets: kc.linear_momentum
 - Methods: m.conservation_collisions
+- Status: ACCEPTED
+
+### `tm.number_base_problems` — Convert and operate in number bases
+
+- Targets: kc.number_bases
+- Methods: m.base_arithmetic, m.convert_number_base
 - Status: ACCEPTED
 
 ### `tm.optics_problems` — Solve reflection/refraction/image problems
@@ -638,6 +695,12 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.instrument_tabulate, m.plot_gradient
 - Status: ACCEPTED
 
+### `tm.profit_loss_problems` — Solve profit and loss per cent problems
+
+- Targets: kc.profit_and_loss
+- Methods: m.profit_loss_percent
+- Status: ACCEPTED
+
 ### `tm.rate_equilibrium_problems` — Interpret rates and equilibria
 
 - Targets: kc.rates_equilibrium
@@ -674,10 +737,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.set_notation, m.set_operations
 - Status: ACCEPTED
 
+### `tm.shares_vat_problems` — Solve shares and VAT problems
+
+- Targets: kc.shares_and_vat
+- Methods: m.share_division, m.vat_calculation
+- Status: ACCEPTED
+
 ### `tm.signed_number_arithmetic` — Perform signed-number arithmetic
 
 - Targets: kc.integer_arithmetic
 - Methods: m.sign_rules
+- Status: ACCEPTED
+
+### `tm.simple_interest_problems` — Solve simple interest problems
+
+- Targets: kc.simple_interest
+- Methods: m.simple_interest_formula
 - Status: ACCEPTED
 
 ### `tm.solve_constant_acceleration` — Solve constant-acceleration motion problems
@@ -734,10 +809,22 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - Methods: m.solve_by_elimination, m.solve_by_substitution
 - Status: ACCEPTED
 
+### `tm.standard_form_problems` — Convert to standard form and compute with standard-form numbers
+
+- Targets: kc.standard_form
+- Methods: m.standard_form_arithmetic, m.write_standard_form
+- Status: ACCEPTED
+
 ### `tm.stoichiometry_problems` — Solve mole and equation problems
 
 - Targets: kc.mole_stoichiometry
 - Methods: m.empirical_formula, m.mole_ratio
+- Status: ACCEPTED
+
+### `tm.surd_problems` — Simplify surds and rationalise denominators
+
+- Targets: kc.surds
+- Methods: m.rationalise_denominator, m.simplify_surds, m.surd_operations
 - Status: ACCEPTED
 
 ### `tm.thermal_problems` — Solve heat/temperature/gas problems
@@ -812,6 +899,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.apply_quadratic_formula`
 
 - **`m.substitute_formula`** requires: kc.algebraic_expressions, kc.integer_arithmetic
+
+### `tm.approximation_problems`
+
+- **`m.percentage_error`** requires: kc.approximation_errors, kc.percentage_concept
+- **`m.round_to_precision`** requires: kc.approximation_errors, kc.fraction_decimal_operations
 
 ### `tm.atomic_model_problems`
 
@@ -925,6 +1017,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.evaluate_substitution`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.table_of_values`** requires: kc.algebraic_expressions
 
+### `tm.factorise_common_patterns`
+
+- **`m.common_factor_extraction`** requires: kc.algebraic_expressions, kc.factorisation_patterns, kc.integer_arithmetic
+- **`m.difference_of_two_squares`** requires: kc.algebraic_expressions, kc.factorisation_patterns, kc.integer_arithmetic
+
 ### `tm.factorise_quadratic_trinomial`
 
 - **`m.factorise_by_grouping`** requires: kc.algebraic_expressions, kc.integer_arithmetic
@@ -978,6 +1075,11 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.corresponding_alternate`** requires: kc.integer_arithmetic
 
+### `tm.index_law_simplification`
+
+- **`m.apply_index_laws`** requires: kc.indices_laws, kc.integer_arithmetic
+- **`m.evaluate_fractional_powers`** requires: kc.indices_laws, kc.integer_arithmetic
+
 ### `tm.integrate_polynomial`
 
 - **`m.reverse_power_rule`** requires: kc.algebraic_expressions, kc.function_concept
@@ -998,6 +1100,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 ### `tm.logarithm_problems`
 
 - **`m.apply_log_laws`** requires: kc.algebraic_expressions, kc.equations_in_indices
+- **`m.change_of_base`** requires: kc.algebraic_expressions, kc.indices_laws, kc.logarithms
 - **`m.convert_exp_log`** requires: kc.algebraic_expressions, kc.equations_in_indices
 
 ### `tm.logical_reasoning`
@@ -1009,6 +1112,7 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.collect_factor_subject`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 - **`m.inverse_operations`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
+- **`m.subject_powers_roots`** requires: kc.algebraic_expressions, kc.integer_arithmetic
 
 ### `tm.matrix_algebra`
 
@@ -1024,9 +1128,19 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.photoelectric_equation`** requires: kc.algebraic_expressions, kc.equations_in_indices
 
+### `tm.modular_arithmetic_problems`
+
+- **`m.mod_notation_residue`** requires: kc.integer_arithmetic, kc.modular_arithmetic
+- **`m.mod_operations`** requires: kc.integer_arithmetic, kc.modular_arithmetic
+
 ### `tm.momentum_problems`
 
 - **`m.conservation_collisions`** requires: kc.algebraic_expressions, kc.newtons_laws
+
+### `tm.number_base_problems`
+
+- **`m.base_arithmetic`** requires: kc.integer_arithmetic, kc.number_bases
+- **`m.convert_number_base`** requires: kc.integer_arithmetic, kc.number_bases
 
 ### `tm.optics_problems`
 
@@ -1054,6 +1168,10 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 
 - **`m.instrument_tabulate`** requires: kc.integer_arithmetic, kc.measurement_units_dimensions
 - **`m.plot_gradient`** requires: kc.gradient, kc.measurement_units_dimensions
+
+### `tm.profit_loss_problems`
+
+- **`m.profit_loss_percent`** requires: kc.percentage_concept, kc.profit_and_loss
 
 ### `tm.rate_equilibrium_problems`
 
@@ -1084,9 +1202,18 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.set_notation`** requires: kc.sets_operations
 - **`m.set_operations`** requires: kc.sets_operations
 
+### `tm.shares_vat_problems`
+
+- **`m.share_division`** requires: kc.ratio_proportion_rate, kc.shares_and_vat
+- **`m.vat_calculation`** requires: kc.percentage_concept, kc.shares_and_vat
+
 ### `tm.signed_number_arithmetic`
 
 - **`m.sign_rules`** requires: kc.integer_arithmetic
+
+### `tm.simple_interest_problems`
+
+- **`m.simple_interest_formula`** requires: kc.percentage_concept, kc.simple_interest
 
 ### `tm.solve_constant_acceleration`
 
@@ -1131,10 +1258,21 @@ by `tools/generate_math_cdg_docs.py`. Do not edit by hand.
 - **`m.solve_by_elimination`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 - **`m.solve_by_substitution`** requires: kc.algebraic_expressions, kc.linear_equations_one_var
 
+### `tm.standard_form_problems`
+
+- **`m.standard_form_arithmetic`** requires: kc.indices_laws, kc.standard_form
+- **`m.write_standard_form`** requires: kc.indices_laws, kc.standard_form
+
 ### `tm.stoichiometry_problems`
 
 - **`m.empirical_formula`** requires: kc.algebraic_expressions, kc.chemical_bonding, kc.percentage_concept
 - **`m.mole_ratio`** requires: kc.algebraic_expressions, kc.chemical_bonding, kc.ratio_proportion_rate
+
+### `tm.surd_problems`
+
+- **`m.rationalise_denominator`** requires: kc.algebraic_expressions, kc.integer_arithmetic, kc.surds
+- **`m.simplify_surds`** requires: kc.integer_arithmetic, kc.surds
+- **`m.surd_operations`** requires: kc.algebraic_expressions, kc.integer_arithmetic, kc.surds
 
 ### `tm.thermal_problems`
 
@@ -1244,3 +1382,11 @@ See [`docs/batch_records/`](../batch_records/).
 | 067 | kc.sequences_series |
 | 068 | kc.matrix_algebra |
 | 069 | kc.mensuration |
+| 070 | kc.number_bases |
+| 071 | kc.modular_arithmetic |
+| 072 | kc.indices_laws |
+| 073 | kc.surds |
+| 074 | kc.approximation_errors |
+| 075 | kc.standard_form |
+| 077 | kc.profit_and_loss, kc.shares_and_vat, kc.simple_interest |
+| 079 | kc.factorisation_patterns |

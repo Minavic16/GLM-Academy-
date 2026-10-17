@@ -24,7 +24,7 @@
 | CI-20 | Math | Sets not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 066)**: kc.sets_operations + TM + methods + item, NERDC SSS1 p.7 evidence; residual depth (cardinality, Venn ≤3 sets) triaged Phase 19 (M-22) | NERDC Math SSS1 p.7 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md |
 | CI-21 | Math | Logic not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 066)**: kc.logical_reasoning + TM + methods + item, NERDC SSS1 p.8 evidence; not an official JAMB topic (Phase 19) | NERDC Math SSS1 p.8 / SSS2 p.9 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md (M-02) |
 | CI-22 | Math | Mensuration not in CDG (newly mapped vs NERDC) | IMPLEMENTATION_GAP | **Closed at implementation level (Phase 17 batch 069)**: kc.mensuration + TM + methods + item, NERDC SSS1 p.11 evidence; residual depth (chords, plane figures, spheres, earth-as-sphere) triaged Phase 19 (M-28) | NERDC Math SSS1 p.11 | Owner decision (done) | Recorded in MATHEMATICS_SYLLABUS_COVERAGE.md; Phase 19 triage MATHEMATICS_GAP_REGISTER.md |
-| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | **Partially closed**: sequence & series implemented (Phase 17 batch 067); remaining items (modular, number bases, approximation, surds, bearings, proofs, construction, ogive) deduplicated and triaged Phase 19 — see MATHEMATICS_GAP_REGISTER.md | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Owner decisions grouped in OWNER_DECISION_BRIEF_PHASE19.md | Existing deferrals stand; no implementation authorized |
+| CI-23 | Math | Modular arithmetic, number bases (partial), approximation, surds, sequence & series, bearings, proofs, construction, ogive | IMPLEMENTATION_GAP | **Partially closed**: sequence & series implemented (Phase 17 batch 067); modular arithmetic, number bases, approximation/errors and surds implemented (Phase 20 batches 070/071/073/074). Remaining items: bearings, proofs, construction, ogive (unchanged; triaged Phase 19) | NERDC Math SSS1/SSS2 topic lists (NOT_COVERED rows; ogive documented deferral) | Phase 20 wave authorization executed (PHASE20_REPORT.md); remaining items still require owner authorization | Bearings/proofs/construction/ogive deferrals stand |
 | CI-24 | All | Official-board verification (JAMB/WAEC/NERDC alignment) | OFFICIAL_VERIFICATION_GAP | Open | CI-05; JAMB official UTME E-syllabus obtained + content-checked for Math/Phys/Chem (Phase 18 — IBASS static assets; see PHASE18_RETRIEVAL_REPORT.md); WAEC not obtained (downloads are CASS installers only); NERDC SSS1/SSS2 content-checked, SSS3 unretrieved (LMIS login-gated; nerdc.org.ng 500) | Continue retrieval: WAEC official WASSCE syllabus documents; NERDC SSS3; promote rows to BOARD_VERIFIED only on checked content; JAMB-side official matrices recorded (JAMB_*_OFFICIAL_COVERAGE.md) | M-1 official-source verification plan; Phase 18 retrieval report |
 | CI-25 | Chem | Practical chemistry — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | CI-05; kc.practical_chemistry implementation adequate | Obtain WAEC practical syllabus; map to practical KC methods/items | Same as CI-24 |
 | CI-26 | Phys | Practical physics — WAEC practical detail unverified | OFFICIAL_VERIFICATION_GAP | Open | Phase 14 roadmap R16; kc.practical_measurement implementation adequate | Same as CI-24 | Same as CI-24 |
@@ -145,3 +145,21 @@ Wave A recommended); documentation correction: v40 activity count is 204
 (Phase 17/18 reports printed the stale v39 figure 192). No promotion to
 BOARD_VERIFIED; WAEC official and NERDC SSS 3 still outstanding (CI-24
 Open); no schema/store change; no Biology/English artifacts.
+
+Phase 20 (2026-10-17): Mathematics implementation wave A (owner-authorized
+ten topics; batches 070–079; `examples/math_wave_a_phase20.py`,
+build_graph_v41). Ten new KCs (44→54: number bases, modular arithmetic,
+indices laws, surds, approximation/errors, standard form, simple interest,
+profit & loss, shares & VAT, factorisation patterns), each ACCEPTED with
+HUMAN review, TM, methods, items and evidence; plus depth extensions to
+kc.logarithms (change of base) and kc.change_of_subject (powers/roots).
+Official JAMB source SRC.JAMB.UTME.MATH.2025 registered in the canonical
+store (first time) and cited by all new evidence (JAMB Math p.2–3
+locators). M-03/M-04/M-05/M-19/M-20/M-21 closed at implementation level;
+M-23 partially extended (common factors, difference of two squares).
+Official JAMB counts now COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3.
+CI-23 updated (remaining: bearings, proofs, construction, ogive). No
+cross-subject edges added; no schema change; 13 entity types; `indicates`
+remains PROPOSED; no Biology/English artifacts. WAEC official and NERDC
+SSS 3 remain unretrieved: CI-24 stays Open; no promotion to
+BOARD_VERIFIED.

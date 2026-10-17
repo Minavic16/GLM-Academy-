@@ -26,6 +26,17 @@ MATHEMATICS_GAP_REGISTER.md; owner brief OWNER_DECISION_BRIEF_PHASE19.md).
 The Mathematics rows below remain the Phase 16B secondary record; no row
 was overwritten and no subject status changed.
 
+Phase 20 note (2026-10-17): the owner authorized a ten-topic Mathematics
+implementation wave (batches 070–079, build_graph_v41). Number bases,
+modular arithmetic, indices laws, surds, standard form and financial
+mathematics are now implemented, and log change-of-base, change-of-subject
+powers/roots depth and factorisation patterns were added. The Mathematics
+JAMB counts are now COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3
+(JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md). The Mathematics rows below remain
+the Phase 16B secondary record (secondary JAMB/WAEC rows never promote a
+subject); no row was overwritten, no subject status changed, WAEC official
+documents remain unretrieved, and nothing is BOARD_VERIFIED.
+
 ## MATHEMATICS
 
 CDG: 39 KCs (IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared OpenStax-based scope).

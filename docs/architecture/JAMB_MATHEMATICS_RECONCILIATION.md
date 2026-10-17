@@ -5,6 +5,20 @@ Scope: official-JAMB evidence reconciliation and Mathematics gap triage —
 documentation only. No canonical entity/claim/edge changes, no canonical
 implementation work, no Biology/English artifacts (OD-05 hold intact).
 
+Phase 20 addendum (2026-10-17; baseline commit `238056d`): the owner
+authorized a ten-topic Mathematics implementation wave (the Wave A variant,
+expanded with indices, change of subject and factorisation). Batches 070–079
+implemented it in `build_graph_v41` (`examples/math_wave_a_phase20.py`); the
+full record is `docs/PHASE20_REPORT.md`. Disposition of the rows this
+reconciliation tracks: M-03/M-04/M-05/M-19/M-20/M-21 → NO_ACTION_COVERED
+(implemented); M-23 partially extended (common factors and difference of two
+squares; cubic/theorem depth remains open). Coverage counts are now
+COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3. §5's modular-arithmetic
+"final classification" is superseded for the implementation dimension (the
+requirement is unchanged; an implementation now exists). The Phase 19 record
+below is preserved as written — nothing was backdated or rewritten; Phase 20
+only appended canonical records and updated dispositions.
+
 Authoritative inputs:
 
 - `docs/architecture/JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md` — Phase 18 matrix
@@ -123,7 +137,10 @@ Change vs the Phase 18 matrix: I.1 corrected PARTIALLY_COVERED → NOT_COVERED
 (the previously listed KCs are adjacent, not supporting, records — the
 coverage rule requires scope/depth support, not name adjacency); the other
 22 classifications stand, with gap descriptions refined where Phase 19 found
-additional depth exposures (§7).
+additional depth exposures (§7). Phase 20 update: the counts in this section
+are the Phase 19 record; after the Phase 20 implementation wave the counts
+are COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3 (see the addendum above
+and §12).
 
 ## 4. Phase 17 scope-expansion audit (five KCs)
 
@@ -274,6 +291,11 @@ remains **IMPLEMENTATION_COMPLETE (declared scope) / BOARD_UNVERIFIED**.
 Full rows, priorities and dedup mapping: `MATHEMATICS_GAP_REGISTER.md`.
 Owner decisions: `OWNER_DECISION_BRIEF_PHASE19.md`.
 
+Phase 20 update (2026-10-17): M-03, M-04, M-05, M-19, M-20 and M-21 moved
+from `OWNER_SCOPE_DECISION` to `NO_ACTION_COVERED` (implemented, batches
+070–077); M-23 is partially addressed (batch 079) and remains in the owner
+decision group for the outstanding polynomial depth. See §12.
+
 ## 11. What this phase does not change
 
 - No canonical entities, claims, evidence, edges, items or activities added,
@@ -287,3 +309,28 @@ Owner decisions: `OWNER_DECISION_BRIEF_PHASE19.md`.
 - No implementation of any gap: official syllabus evidence establishes the
   requirement; owner authorization determines whether and when
   implementation proceeds.
+
+## 12. Phase 20 disposition update (2026-10-17)
+
+Owner-authorized ten-topic wave (batches 070–079, `build_graph_v41`; full
+record in `docs/PHASE20_REPORT.md`). Dispositions of the reconciled rows:
+
+| Row | Phase 19 state | Phase 20 effect |
+|---|---|---|
+| M-03 modular arithmetic | NOT_COVERED | COVERED — kc.modular_arithmetic + TM + 2 methods + item (batch 071); boundary: residues and +, −, × implemented; modular division/inverses beyond the UTME treatment not included |
+| M-04 number bases | NOT_COVERED | COVERED — kc.number_bases + TM + 2 methods + 2 items (batch 070); conversion incl. fractional parts; four operations in bases 2–10 |
+| M-05 surds | NOT_COVERED | COVERED — kc.surds + TM + 3 methods + 2 items (batch 073) |
+| M-19 financial mathematics | PARTIALLY_COVERED | COVERED — kc.simple_interest, kc.profit_and_loss, kc.shares_and_vat (+ TMs/methods/items; batch 077); boundary: compound interest, depreciation and discount are not JAMB I.2 requirements |
+| M-20 approximation and errors | NOT_COVERED | COVERED — kc.approximation_errors + TM + 2 methods + 2 items (batch 074); boundary: absolute/relative error not required |
+| M-21 standard form; log change-of-base | PARTIALLY_COVERED | COVERED — kc.standard_form (+ TM/methods/items; batch 075); m.change_of_base + item on tm.logarithm_problems (batch 076); kc.indices_laws prerequisite (batch 072) |
+| M-23 polynomials depth | PARTIALLY_COVERED | PARTIALLY_COVERED (extended) — kc.factorisation_patterns (batch 079) adds common factors + difference of two squares; m.subject_powers_roots (batch 078); cubic/theorem/division/graph depth remains open |
+| kc.equations_in_indices depth | (adjacency note) | Extended — kc.indices_laws (batch 072) with a DERIVED prerequisite to kc.equations_in_indices; existing index-equation records untouched |
+
+Updated official counts (JAMB dimension): COVERED 5 / PARTIALLY_COVERED 15 /
+NOT_COVERED 3 (`JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md`). Extended entities
+keep their Phase 17/15/8 provenance: the matrices family and the original
+change-of-subject, index-equation and logarithms claims/evidence are
+untouched; Phase 20 added methods/claims/evidence only. WAEC official and
+NERDC SSS 3 remain unretrieved (CI-24); nothing promoted to BOARD_VERIFIED;
+the JAMB applicable cycle remains UNRESOLVED (no cycle year printed in the
+retrieved revision).

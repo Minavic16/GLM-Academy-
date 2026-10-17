@@ -4,6 +4,13 @@ Date: 2026-10-17. Baseline commit `765a292`. Evidence:
 `JAMB_MATHEMATICS_RECONCILIATION.md`,
 `MATHEMATICS_GAP_REGISTER.md`, `JAMB_MATHEMATICS_OFFICIAL_COVERAGE.md`.
 
+Resolution (Phase 20, 2026-10-17). Decision 1 was made: the owner
+authorized a ten-topic implementation wave — the Wave A variant, expanded
+with indices, change of subject and factorisation. It is implemented in
+batches 070–079 (`examples/math_wave_a_phase20.py`, `build_graph_v41`);
+see `docs/PHASE20_REPORT.md`. The Decision 2 items remain open as recorded.
+This brief is retained as the Phase 19 record.
+
 Scope rule reminder: official syllabus evidence establishes requirements;
 only the owner authorizes implementation. This brief contains only decisions
 that genuinely block the next implementation step. Already executed by

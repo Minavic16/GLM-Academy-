@@ -11,7 +11,7 @@ sys.path.insert(0, ROOT)
 
 from cdg.store import CDGStore
 from cdg.serialization import dumps_store  # noqa: F401
-from examples.math_scope_expansion import build_graph_v40
+from examples.math_wave_a_phase20 import build_graph_v41
 from cdg.enums import EntityType, RelationshipType
 
 OUT_CDG = os.path.join(ROOT, "docs", "MATHEMATICS_CDG.md")
@@ -108,6 +108,16 @@ DOMAIN_OF = {
     "kc.sequences_series": "Mathematics",
     "kc.matrix_algebra": "Mathematics",
     "kc.mensuration": "Mathematics",
+    "kc.number_bases": "Number & Numeration",
+    "kc.modular_arithmetic": "Number & Numeration",
+    "kc.indices_laws": "Number & Numeration",
+    "kc.surds": "Number & Numeration",
+    "kc.approximation_errors": "Number & Numeration",
+    "kc.standard_form": "Number & Numeration",
+    "kc.simple_interest": "Number & Numeration",
+    "kc.profit_and_loss": "Number & Numeration",
+    "kc.shares_and_vat": "Number & Numeration",
+    "kc.factorisation_patterns": "Algebra",
 }
 
 BATCH_OF = {
@@ -176,6 +186,16 @@ BATCH_OF = {
     "kc.sequences_series": "067",
     "kc.matrix_algebra": "068",
     "kc.mensuration": "069",
+    "kc.number_bases": "070",
+    "kc.modular_arithmetic": "071",
+    "kc.indices_laws": "072",
+    "kc.surds": "073",
+    "kc.approximation_errors": "074",
+    "kc.standard_form": "075",
+    "kc.simple_interest": "077",
+    "kc.profit_and_loss": "077",
+    "kc.shares_and_vat": "077",
+    "kc.factorisation_patterns": "079",
     "kc.parallel_perpendicular_lines": "024",
     "kc.ratio_proportion_rate": "025",
     "kc.direct_variation": "026",
@@ -209,7 +229,7 @@ def status_str(e):
 
 
 def main() -> None:
-    s = build_graph_v40()
+    s = build_graph_v41()
     kcs = sorted([e for e in s.entities.values() if e.entity_type == EntityType.KNOWLEDGE_COMPONENT], key=lambda e: e.id)
     tms = sorted([e for e in s.entities.values() if e.entity_type == EntityType.TASK_MODEL], key=lambda e: e.id)
     methods = sorted([e for e in s.entities.values() if e.entity_type == EntityType.METHOD], key=lambda e: e.id)

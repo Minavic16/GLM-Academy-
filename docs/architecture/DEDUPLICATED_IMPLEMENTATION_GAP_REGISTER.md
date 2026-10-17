@@ -184,3 +184,27 @@ experimental probability). Owner decisions are grouped in
 wave authorization; Wave A — Section I completion — recommended). No
 implementation was performed; no row above was deleted; WAEC official and
 NERDC SSS 3 remain unretrieved (CI-24); nothing promoted to BOARD_VERIFIED.
+
+## Phase 20 — Mathematics wave A implementation (2026-10-17)
+
+The owner authorized a ten-topic Mathematics implementation wave; batches
+070–079 implemented it in build_graph_v41
+(`examples/math_wave_a_phase20.py`). The rows above remain the historical
+record; the disposition detail lives in `MATHEMATICS_GAP_REGISTER.md` and the
+full record in `docs/PHASE20_REPORT.md`. Status changes:
+
+| Gap ID | Effect |
+|---|---|
+| M-03 | Closed at implementation level (batch 071: modular arithmetic) |
+| M-04 | Closed at implementation level (batch 070: number bases) |
+| M-05 | Closed at implementation level (batch 073: surds) |
+| M-19 | Closed at implementation level (batch 077: simple interest, profit/loss, shares, VAT) |
+| M-20 | Closed at implementation level (batch 074: approximation/errors) |
+| M-21 | Closed at implementation level (batches 075/076: standard form; log change-of-base) |
+| M-23 | Partially addressed (batch 079: common factors, difference of two squares); factor/remainder theorem, cubic factorisation, polynomial division and graph depth remain open |
+| kc.equations_in_indices depth | Extended (batch 072: kc.indices_laws with DERIVED prerequisite) |
+
+Official JAMB coverage counts: COVERED 5 / PARTIALLY_COVERED 15 /
+NOT_COVERED 3. M-17/M-18 (WAEC-secondary-only rows) are unaffected: WAEC
+official documents and NERDC SSS 3 remain unretrieved (CI-24); nothing
+promoted to BOARD_VERIFIED.

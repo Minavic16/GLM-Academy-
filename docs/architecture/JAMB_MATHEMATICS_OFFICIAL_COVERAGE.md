@@ -1,4 +1,4 @@
-# JAMB Mathematics — Official Coverage Matrix (Phase 18; refined Phase 19)
+# JAMB Mathematics — Official Coverage Matrix (Phase 18; refined Phase 19; refreshed Phase 20)
 
 Authority: JAMB (Joint Admissions and Matriculation Board), "UTME Syllabus —
 Mathematics", E-syllabus PDF as published on the official Integrated
@@ -28,6 +28,15 @@ perimeters/areas; spheres; experimental probability). Coverage counts are
 now COVERED 2 / PARTIALLY_COVERED 17 / NOT_COVERED 4. No subject status is
 promoted.
 
+Phase 20 note (2026-10-17): the owner authorized a ten-topic Mathematics
+implementation wave (batches 070–079, build_graph_v41). I.1, I.2 and I.3 are
+now COVERED and II.1 gained the Phase 20 methods (powers/roots
+change-of-subject; common factors and difference of two squares). Coverage
+counts: COVERED 5 / PARTIALLY_COVERED 15 / NOT_COVERED 3. The rows below are
+refreshed against build_graph_v41(); implementation provenance is the
+official JAMB source (SRC.JAMB.UTME.MATH.2025) registered in the canonical
+store. See `docs/PHASE20_REPORT.md`. No subject status is promoted.
+
 Phase 19 traceability: the cdg_entity_ids column records the actual
 implementation chain per requirement (KC → TM → methods → items), verified
 against build_graph_v40(); the full record-level analysis, gaps and
@@ -38,16 +47,17 @@ Coverage categories: COVERED | PARTIALLY_COVERED | NOT_COVERED |
 NOT_APPLICABLE | UNRESOLVED.
 Coverage rule: a topic is COVERED only if the CDG supports the relevant scope
 and depth of the listed topic/objective (matching names is insufficient).
-CDG baseline: build_graph_v40 — Mathematics 44 KCs (IMPLEMENTATION_COMPLETE /
-BOARD_UNVERIFIED, declared scope expanded Phase 17).
+CDG baseline: build_graph_v41 — Mathematics 54 KCs (44 baseline + 10 Phase 20;
+IMPLEMENTATION_COMPLETE / BOARD_UNVERIFIED, declared scope expanded
+Phase 17; implementation wave Phase 20).
 
 | authority | subject | document_version | official_topic | official_subtopic_or_objective | cdg_entity_ids | coverage_status | evidence_reference | gap_description | next_action |
 |---|---|---|---|---|---|---|---|---|---|
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17; no cycle year printed) | Section I.1 Number bases/Modular Arithmetic | Operations in bases 2–10; conversion incl. fractional parts; modular arithmetic | — (adjacency only: kc.equations_in_indices → tm.solve_index_equation; kc.integer_arithmetic → tm.signed_number_arithmetic) | NOT_COVERED | JAMB Math p.2 (official) | No number-base or modular-arithmetic method/item exists (Phase 19 search: 0 hits); the previously listed KCs are adjacency, not scope support — Phase 19 corrected the Phase 18 PARTIALLY_COVERED classification | M-03/M-04 owner decisions (requirements officially confirmed) |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section I.2 Fractions, Decimals, Approximations and Percentages | Fractions/decimals operations; significant figures; decimal places; percentage errors; simple interest; profit and loss; ratio/proportion/rate; shares and VAT | kc.fraction_decimal_operations → tm.fraction_decimal_operations {m.convert_common_denominator}; kc.percentage_concept → tm.percentage_problems {m.percent_as_fraction} + it.mcq.percentage; kc.ratio_proportion_rate → tm.solve_proportions {m.unitary_method} + it.mcq.ratio | PARTIALLY_COVERED | JAMB Math p.2 (official) | Implemented: fractions/decimals operations; percentages incl. change; ratio/proportion/rate. Not evidenced (Phase 19 search): significant figures, decimal places, percentage errors, simple interest, profit/loss percent, shares, VAT | M-19/M-20 owner decisions |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section I.3 Indices, Logarithms and Surds | Laws of indices; equations in indices; standard form; log laws; log to a given base; change of base; indices–log relation; surds | kc.equations_in_indices → tm.solve_index_equation {m.match_bases, m.logs} + it.mcq.index_eq; kc.logarithms → tm.logarithm_problems {m.convert_exp_log, m.apply_log_laws} | PARTIALLY_COVERED | JAMB Math p.2 (official); CDG logarithms KC (b055) | Implemented: equations in indices; log laws; indices–log conversion. Not evidenced: surds (simplify/rationalise/operations), standard form, change of base, log-to-given-base evaluation; index laws applied only within equations (no standalone simplification method) | M-05/M-21 owner decisions |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17; no cycle year printed) | Section I.1 Number bases/Modular Arithmetic | Operations in bases 2–10; conversion incl. fractional parts; modular arithmetic | kc.number_bases → tm.number_base_problems {m.convert_number_base, m.base_arithmetic} + it.math.number_base_convert, it.math.number_base_add; kc.modular_arithmetic → tm.modular_arithmetic_problems {m.mod_notation_residue, m.mod_operations} + it.math.modular (Phase 20 batches 070/071) | COVERED | JAMB Math p.2 (official); Phase 20 implementation evidence: SRC.JAMB.UTME.MATH.2025 (I.1a–c) | Covered (Phase 20): four operations in bases 2–10; conversion incl. fractional parts; modular residues and +, −, × operations. Boundary: modular division/inverses beyond the UTME treatment not included | — |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section I.2 Fractions, Decimals, Approximations and Percentages | Fractions/decimals operations; significant figures; decimal places; percentage errors; simple interest; profit and loss; ratio/proportion/rate; shares and VAT | kc.fraction_decimal_operations → tm.fraction_decimal_operations {m.convert_common_denominator}; kc.percentage_concept → tm.percentage_problems {m.percent_as_fraction} + it.mcq.percentage; kc.ratio_proportion_rate → tm.solve_proportions {m.unitary_method} + it.mcq.ratio; kc.approximation_errors → tm.approximation_problems {m.round_to_precision, m.percentage_error} + it.math.rounding, it.math.percent_error; kc.simple_interest → tm.simple_interest_problems {m.simple_interest_formula} + it.math.simple_interest; kc.profit_and_loss → tm.profit_loss_problems {m.profit_loss_percent} + it.math.profit_loss; kc.shares_and_vat → tm.shares_vat_problems {m.share_division, m.vat_calculation} + it.math.shares, it.math.vat (Phase 20 batches 074/077) | COVERED | JAMB Math p.2 (official); Phase 20 implementation evidence: SRC.JAMB.UTME.MATH.2025 (I.2b–h) | Covered (Phase 20): all I.2 items implemented (fractions/decimals; sig. figures; decimal places; percentage error; simple interest; profit/loss per cent; ratio/proportion/rate; shares; VAT). Boundary: compound interest, depreciation and discount are not JAMB I.2 requirements; absolute/relative error not required (percentage error implemented) | — |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section I.3 Indices, Logarithms and Surds | Laws of indices; equations in indices; standard form; log laws; log to a given base; change of base; indices–log relation; surds | kc.equations_in_indices → tm.solve_index_equation {m.match_bases, m.logs} + it.mcq.index_eq; kc.logarithms → tm.logarithm_problems {m.convert_exp_log, m.apply_log_laws, m.change_of_base} + it.mcq.log_change_base; kc.indices_laws → tm.index_law_simplification {m.apply_index_laws, m.evaluate_fractional_powers} + it.math.index_laws; kc.surds → tm.surd_problems {m.simplify_surds, m.surd_operations, m.rationalise_denominator} + it.math.surd_simplify, it.math.surd_rationalise; kc.standard_form → tm.standard_form_problems {m.write_standard_form, m.standard_form_arithmetic} + it.math.standard_form, it.math.standard_form_ops (Phase 20 batches 072/073/075/076) | COVERED | JAMB Math p.2 (official); Phase 20 implementation evidence: SRC.JAMB.UTME.MATH.2025 (I.3a–h) | Covered (Phase 20): standalone index laws, surds (simplify/operate/rationalise), standard form, log change-of-base / log-to-given-base implemented; equations in indices and log laws retained from earlier batches | — |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section I.4 Sets | Types of sets; algebra of sets; cardinality; set symbols; Venn diagrams ≤3 sets | kc.sets_operations → tm.set_operations {m.set_notation, m.set_operations} + it.math.sets_basic | PARTIALLY_COVERED | JAMB Math p.2 (official); CDG kc.sets_operations (b066) | Implemented: notation (roster/rule/set-builder); types (empty/subset/infinite/universal); union/intersection/complement. Not evidenced: cardinality problems, Venn diagrams ≤3 sets, disjoint/finite types | M-22 owner decision: extend sets TM/methods |
-| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.1 Polynomials | Change of subject; +,−,×,÷ of polynomials; factorisation ≤ degree 3; roots ≤ degree 3; factor and remainder theorems; simultaneous one-linear-one-quadratic; polynomial graphs | kc.change_of_subject → tm.make_subject {m.inverse_operations, m.collect_factor_subject} + it.mcq.subject; kc.algebraic_expressions → tm.handle_algebraic_expressions {m.collect_like_terms, m.expand_simplify} + it.mcq.alg_simplify; kc.factorisation_quadratic_trinomial → tm.factorise_quadratic_trinomial {m.factorise_unit_leading, m.factorise_by_grouping} + it.mcq.factorise; kc.quadratic_roots → tm.find_quadratic_roots {m.roots_via_factorisation, m.roots_via_formula, m.roots_via_completing_square} + it.mcq.quadratic_roots; kc.simultaneous_linear_quadratic → tm.solve_linear_quadratic_system {m.substitute_linear_into_quadratic} + it.mcq.linquad | PARTIALLY_COVERED | JAMB Math pp.2–3 (official) | Implemented: change of subject; +,−,× and like-term manipulation; quadratic factorisation/roots; one-linear-one-quadratic. Not evidenced: factor & remainder theorems, cubic factorisation, polynomial division, polynomial graphs ≤ degree 3, defined/undefined expressions, degree-3 roots | M-23 owner decision |
+| JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.1 Polynomials | Change of subject; +,−,×,÷ of polynomials; factorisation ≤ degree 3; roots ≤ degree 3; factor and remainder theorems; simultaneous one-linear-one-quadratic; polynomial graphs | kc.change_of_subject → tm.make_subject {m.inverse_operations, m.collect_factor_subject} + it.mcq.subject; kc.algebraic_expressions → tm.handle_algebraic_expressions {m.collect_like_terms, m.expand_simplify} + it.mcq.alg_simplify; kc.factorisation_quadratic_trinomial → tm.factorise_quadratic_trinomial {m.factorise_unit_leading, m.factorise_by_grouping} + it.mcq.factorise; kc.quadratic_roots → tm.find_quadratic_roots {m.roots_via_factorisation, m.roots_via_formula, m.roots_via_completing_square} + it.mcq.quadratic_roots; kc.simultaneous_linear_quadratic → tm.solve_linear_quadratic_system {m.substitute_linear_into_quadratic} + it.mcq.linquad; m.subject_powers_roots + it.mcq.subject_power on tm.make_subject (Phase 20 batch 078); kc.factorisation_patterns → tm.factorise_common_patterns {m.common_factor_extraction, m.difference_of_two_squares} + it.math.common_factor, it.math.difference_squares (Phase 20 batch 079) | PARTIALLY_COVERED | JAMB Math pp.2–3 (official); Phase 20 implementation evidence: SRC.JAMB.UTME.MATH.2025 (II.1a,c) | Implemented: change of subject (extended Phase 20 batch 078: powers/roots inversion); +,−,× and like-term manipulation; quadratic factorisation/roots; common-factor and difference-of-squares factorisation (batch 079); one-linear-one-quadratic. Not evidenced: factor & remainder theorems, cubic factorisation, polynomial division, polynomial graphs ≤ degree 3, defined/undefined expressions, degree-3 roots | M-23 owner decision (remaining polynomial depth) |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.2 Variation | Direct; inverse; joint; partial; percentage increase and decrease | kc.direct_variation → tm.direct_variation_problems {m.find_constant} + it.mcq.direct | PARTIALLY_COVERED | JAMB Math p.3 (official) | Implemented: direct variation. Not evidenced: inverse/joint/partial variation; variation percentage increase/decrease | M-24 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.3 Inequalities | Analytical and graphical linear inequalities; quadratic inequalities with integral roots | kc.linear_inequalities_analytic → tm.solve_linear_inequality {m.balance_inverse, m.test_graph} + it.mcq.linear_ineq | PARTIALLY_COVERED | JAMB Math p.3 (official) | Implemented: analytical linear inequalities incl. number-line representation. Not evidenced: graphical (region) solutions; quadratic inequalities | M-25 owner decision |
 | JAMB | Mathematics | UTME E-syllabus (IBASS, retrieved 2026-10-17) | Section II.4 Progression | Nth term of a progression; sum of AP and GP; sum to infinity of a G.P. | kc.sequences_series → tm.sequences_series {m.ap_gp_nth_term, m.ap_gp_problems} + it.math.ap_gp | PARTIALLY_COVERED | JAMB Math p.3 (official); CDG kc.sequences_series (b067) | Implemented: nth term of AP/GP; AP/GP problems incl. real-life. Not evidenced: sum of AP and GP; sum to infinity of a G.P. | M-26 owner decision: extend sequences TM |
@@ -69,21 +79,38 @@ BOARD_UNVERIFIED, declared scope expanded Phase 17).
 
 ## Summary
 
-- COVERED against the official JAMB Mathematics syllabus: 2 of 23 topics
-  (II.6 Matrices and Determinants; IV.2 Application of Differentiation).
-- PARTIALLY_COVERED: 17 topics. NOT_COVERED: 4 topics (I.1 Number
-  bases/Modular Arithmetic — Phase 19 correction; II.5 Binary Operations;
-  III.3 Loci; V.1 Representation of Data).
+- COVERED against the official JAMB Mathematics syllabus: 5 of 23 topics
+  (I.1 Number bases/Modular Arithmetic; I.2 Fractions, Decimals,
+  Approximations and Percentages; I.3 Indices, Logarithms and Surds;
+  II.6 Matrices and Determinants; IV.2 Application of Differentiation).
+- PARTIALLY_COVERED: 15 topics. NOT_COVERED: 3 topics (II.5 Binary
+  Operations; III.3 Loci; V.1 Representation of Data).
+- Phase 20 implementation (batches 070–079, build_graph_v41): the ten
+  owner-authorized topics are implemented — modular arithmetic; number
+  bases; surds; approximation/errors; standard form + log change-of-base;
+  financial mathematics (simple interest, profit/loss, shares, VAT);
+  indices laws; change of subject (powers/roots depth); factorisation
+  (common factors, difference of two squares). I.1/I.2/I.3 moved from
+  NOT_COVERED/PARTIALLY_COVERED to COVERED; II.1 depth extended. Coverage
+  counts before Phase 20: COVERED 2 / PARTIALLY_COVERED 17 / NOT_COVERED 4.
 - Official confirmation: Phase 17-batch-066…069 families (sets, sequences &
   series, matrices & determinants, mensuration) are all present in the
   official JAMB syllabus; the secondary-source basis of M-07 is now
   superseded by official confirmation (implementation evidence in the CDG is
   unchanged; only the requirement is confirmed).
-- Phase 19 additions: additional depth exposures itemized in the rows above
-  (midpoint; standard form; log change-of-base; polygons/cyclic
+- Phase 19 additions to this matrix (retained): additional depth exposures
+  itemized in the rows above (midpoint; log change-of-base; polygons/cyclic
   quadrilaterals/intersecting chords; chord lengths; plane-figure areas;
   spheres; experimental probability); activity-count documentation
-  correction recorded in the reconciliation report.
+  correction recorded in the reconciliation report. Standard form
+  (Phase 19 exposure) is implemented in Phase 20 batch 075.
+- Phase 20 boundaries (disclosed, not gaps against the official list):
+  modular division/inverses beyond the UTME treatment; absolute/relative
+  error not required (percentage error only); compound interest,
+  depreciation and discount are not JAMB I.2 requirements; cubic
+  factorisation and factor/remainder theorem depth remain open under M-23.
 - All gaps above map to register rows M-01…M-29 in
   `MATHEMATICS_GAP_REGISTER.md`; no status is promoted to BOARD_VERIFIED —
-  WAEC official documents and NERDC SSS 3 remain unretrieved.
+  WAEC official documents and NERDC SSS 3 remain unretrieved (CI-24), and
+  the JAMB applicable cycle remains UNRESOLVED (no cycle year printed in
+  the retrieved revision).
